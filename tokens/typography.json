@@ -1,0 +1,20 @@
+{
+  "fonts": {
+    "primary": "SF Pro Text",
+    "display": "SF Pro Display",
+    "mono": "SF Mono"
+  },
+  "roles": {
+    "largeTitle": { "font": "display", "size": 34, "lineHeight": 41, "weight": "Bold" },
+    "title1": { "font": "display", "size": 28, "lineHeight": 34, "weight": "Semibold" },
+    "title2": { "font": "primary", "size": 22, "lineHeight": 28, "weight": "Semibold" },
+    "title3": { "font": "primary", "size": 20, "lineHeight": 25, "weight": "Medium" },
+    "headline": { "font": "primary", "size": 17, "lineHeight": 22, "weight": "Semibold" },
+    "body": { "font": "primary", "size": 17, "lineHeight": 22, "weight": "Regular" },
+    "subheadline": { "font": "primary", "size": 15, "lineHeight": 20, "weight": "Medium" },
+    "footnote": { "font": "primary", "size": 13, "lineHeight": 18, "weight": "Regular" },
+    "caption": { "font": "primary", "size": 12, "lineHeight": 16, "weight": "Regular" },
+    "price": { "font": "primary", "size": 20, "lineHeight": 24, "weight": "Semibold", "features": ["monospaced"] },
+    "code": { "font": "mono", "size": 13, "lineHeight": 16, "weight": "Regular", "tracking": 0.02 }
+  }
+}
