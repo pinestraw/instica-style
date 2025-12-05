@@ -13,24 +13,32 @@ export default defineConfig({
 	themeConfig: {
 		logo: '/logo.png',
 		nav: [
+			{ text: 'Brand', link: '/guide/brand-foundation' },
 			{ text: 'Guide', link: '/guide/core-principles' },
 			{ text: 'Inspiration', link: '/inspiration/' },
-			{ text: 'Tokens', link: '/guide/color-system#neutral-base' }
+			{ text: 'Tokens', link: '/guide/design-tokens#21-spacing-scale' }
 		],
 		sidebar: {
 			'/guide/': [
 				{
-					text: 'Foundation',
+					text: 'Brand Foundation',
 					items: [
-						{ text: 'Core Principles', link: '/guide/core-principles' },
+						{ text: 'Brand Playbook', link: '/guide/brand-foundation' },
+						{ text: 'Core Principles', link: '/guide/core-principles' }
+					]
+				},
+				{
+					text: 'Design System',
+					items: [
 						{ text: 'Color System', link: '/guide/color-system' },
 						{ text: 'Typography', link: '/guide/typography' },
-						{ text: 'Spacing & Layout', link: '/guide/spacing-layout' }
+						{ text: 'Spacing & Layout', link: '/guide/spacing-layout' },
+						{ text: 'Design Tokens', link: '/guide/design-tokens' }
 					]
 				},
 				{
 					text: 'Components',
-					items: [{ text: 'Components Library', link: '/guide/components' }]
+					items: [{ text: 'UI Library', link: '/guide/components' }]
 				}
 			],
 			'/inspiration/': [
