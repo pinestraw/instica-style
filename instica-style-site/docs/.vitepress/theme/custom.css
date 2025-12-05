@@ -1,0 +1,56 @@
+:root {
+	--swatch-size: 2.5rem;
+	--swatch-radius: 8px;
+	--swatch-border: 1px solid rgba(25, 32, 36, 0.15);
+}
+
+.color-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-bottom: 1.5rem;
+	font-size: 0.95rem;
+}
+
+.color-table th,
+.color-table td {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+	padding: 0.75rem;
+	text-align: left;
+}
+
+.dark .color-table th,
+.dark .color-table td {
+	border-color: rgba(255, 255, 255, 0.08);
+}
+
+.light .color-table th,
+.light .color-table td {
+	border-color: rgba(25, 32, 36, 0.08);
+}
+
+.color-swatch {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--swatch-size);
+	height: var(--swatch-size);
+	border-radius: var(--swatch-radius);
+	border: var(--swatch-border);
+	background-color: var(--color-value, #ffffff);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+	font-size: 0.7rem;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.7);
+}
+
+.dark .color-swatch {
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.35);
+}
+
+.color-swatch.is-light {
+	color: #1a1f24;
+}
+
+.color-swatch.is-dark {
+	color: #ffffff;
+}
