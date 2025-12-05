@@ -11,7 +11,7 @@ export default defineConfig({
 	lang: 'en-US',
 	lastUpdated: true,
 	themeConfig: {
-		logo: '/logo.svg',
+		logo: '/logo.png',
 		nav: [
 			{ text: 'Guide', link: '/guide/core-principles' },
 			{ text: 'Inspiration', link: '/inspiration/' },
