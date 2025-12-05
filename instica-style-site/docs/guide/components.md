@@ -20,6 +20,21 @@ This section stays in lockstep with the `.style_inspiration` references and adds
 - Maintain 16px horizontal padding, 12px vertical.
 - Loading state: replace label with an activity indicator but keep width.
 - **Don’t** turn links into buttons—use textual links for secondary navigation.
+- **Icon pairing:** icons sit `space.sm` left of the label. Don’t trail icons on primary CTAs.
+- **Hit area:** minimum 48×48pt; add invisible padding if UI feels crowded.
+
+| State | Token | Behavior |
+| --- | --- | --- |
+| Hover | `state.hover.overlay` | Light overlay (`rgba(255,255,255,0.06)`) for primary buttons, `rgba(60,100,255,0.08)` for secondary |
+| Focus | `state.focus` | 2px outline using `color.brand` at 60% opacity |
+| Active | `state.active` | Darken fill by 8% and reduce shadow |
+| Loading | `state.loading` | Spinner replaces text; button remains same width |
+
+**Do / Don’t**
+- ✅ Keep button labels to ≤ 24 characters. Prefer verbs (“Print label”).
+- ✅ Stack secondary buttons beneath primary on mobile.
+- ❌ Mix destructive + primary next to each other; insert `space.2xl` or move destructive to sheet footer.
+- ❌ Use all caps; title case only.
 
 ```swift
 struct InsticaButton: View {
@@ -68,6 +83,18 @@ struct InsticaButton: View {
 	- Quantities → `.numberPad` with `.monospacedDigit()` value
 	- Names → `.namePhonePad` with `.autocapitalization(.words)`
 - **Auto-capitalization:** off for SKUs, on for addresses. Always disable Smart Quotes for SKU/ID fields.
+- **Accessory icons:** left icons reserve `space.md`; never place icons on both ends unless the right icon is for password reveal.
+
+| State | Stroke | Background | Helper text |
+| --- | --- | --- | --- |
+| Default | 1px `color.border` | `color.surface` | Optional caption |
+| Focused | 2px `color.brand` | `color.surface` | Move helper to top to avoid jump |
+| Error | 2px `color.error` | `color.surface` | Caption switches to `color.error` |
+| Disabled | 1px `color.borderMuted` | `color.surfaceMuted` | Text at 60% opacity |
+
+- **Group forms:** stack related fields in blocks of three, separated by `space.xl` and a section label.
+- **Assistive text:** describe expected format (“AA-12345”) rather than restating label.
+- **Error writing style:** “Add a tracking number” instead of “Tracking number required.”
 
 ```swift
 struct InsticaTextField: View {
@@ -99,6 +126,16 @@ struct InsticaTextField: View {
 - **Elevation:** Raised level shadow; add 1px border in dark mode.
 - **Metadata placement:** top-right for status pills, bottom row for timestamps.
 - **Layout grid:** 12-column desktop grid; mobile cards stretch edge-to-edge with 16px gutters.
+- **Thumbnail usage:** If cards display imagery, keep aspect ratio 4:3 and align thumbnails left with `radius.md`.
+- **Content order:** Title → KPI → Meta. Avoid placing actions inside cards; use a single trailing chevron or button row below the card.
+
+| Card type | Description |
+| --- | --- |
+| Metric card | Display single KPI with sparkline; use `space.md` between value and trend |
+| Collection card | Contains list of SKUs; keep list ≤ 4 items before truncating |
+| Warning card | Uses `color.warning` border and icon, standard surface background |
+
+- **Don’t:** mix two different radii in the same grid or set cards flush against viewport edges.
 
 ```swift
 struct InventoryCard: View {
@@ -125,6 +162,9 @@ struct InventoryCard: View {
 - **NavigationStack:** prefer `.navigationBarTitleDisplayMode(.large)` on root screens, `.inline` after drill-down.
 - **Buttons in nav bars:** use secondary button style with minimal border.
 - **Back button:** system default; avoid custom glyphs unless mirroring brand arrow.
+- **Side navigation (desktop):** 64px rail with icons centered; expanded rail reveals labels on hover.
+- **Breadcrumbs:** show on desktop detail pages when depth ≥ 3. Use micro separators `›` with `color.textSecondary`.
+- **Sticky footers:** mobile nav can pin “Scan” or “Add item” button as floating action aligned to center of tab bar.
 
 ```swift
 struct RootView: View {
@@ -145,6 +185,9 @@ struct RootView: View {
 - **Dividers:** use subtle dividers (`color.border`) on dense data; omit on cards.
 - **Trailing icons:** 16px from right edge. Use `chevron.right` for navigation rows only.
 - **Batch actions:** keep selection state inside toolbar rather than per-row toggles.
+- **Selection:** multi-select uses `color.brandSoft` background + checkmark. For single select, highlight text and show left accent bar.
+- **Density modes:** list items support `compact` (40px height) and `regular` (56px). Default to `regular` except on analytics tables.
+- **Empty states:** show icon + 1 headline + 1 sentence + single CTA; align illustration left on desktop, centered on mobile.
 
 ```swift
 struct InventoryRow: View {
@@ -169,6 +212,13 @@ struct InventoryRow: View {
 ### When not to use a button
 - Use plain links for secondary navigation, especially inside inline sentences.
 - Use chips or toggles for filter selections rather than stacking multiple secondary buttons.
+
+### QA checklist per component
+- Buttons: verify focus ring appears on keyboard nav; confirm disabled state removes hover.
+- Inputs: ensure labels stay visible when fields are empty; never rely on placeholder alone.
+- Cards: confirm dark mode adds 1px inner border; check for responsive wrapping at tablet breakpoints.
+- Navigation: test orientation changes; nav should resize assets without cropping.
+- Lists: confirm swipe actions map to logical colors (trash = red, archive = brand).
 
 ### Supporting assets
 - Store SwiftUI playgrounds in `/resources/swiftui/` (create if needed) so designers can snapshot updates.

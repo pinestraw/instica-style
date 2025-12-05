@@ -8,44 +8,103 @@ outline: deep
 Instica exists to give sellers retail-grade control without retail overhead. This section anchors every visual and verbal decision.
 
 ## 1.1 Brand Overview
-- **What Instica is:** an inventory operating system that unifies sourcing, cataloging, pricing, and fulfillment in one calm workspace.
-- **Brand pillars:**
-  1. **Trust:** data accuracy, dependable payouts, transparent automation.
-  2. **Efficiency:** workflows tuned for one-hand entry, batch actions, and automation.
-  3. **Mobility:** every surface adapts from iPhone to desktop so sellers can work anywhere.
-  4. **Modern control:** analytics and AI helpers feel premium yet immediately useful.
-- **Primary audience:** solo resellers, vintage shop owners, boutique retailers, and operations leads at fast-growing e-commerce brands.
+- **What Instica is:** an inventory operating system that unifies sourcing, cataloging, pricing, fulfillment, and payouts in one calm workspace. It reduces taps, exposes margin insight inline, and keeps automation transparent.
+
+| Pillar | Proof points | Visual cues |
+| --- | --- | --- |
+| **Trust** | Accurate valuations, synced payouts, human-readable logs | High-contrast data tables, neutral surfaces, calm motion |
+| **Efficiency** | Batch publish, barcode ingest, automations | Dense-but-ordered layouts, single accent color |
+| **Mobility** | Works on iPhone, iPad, desktop with parity | Thumb-friendly CTAs, pinned bottom nav, compact filters |
+| **Modern control** | Insights, forecasting, AI recommendations | Gradient hero metrics, confident typography |
+
+**Primary audience**
+- Solo resellers managing 50–500 SKUs.
+- Vintage + collectible shops that need better cataloging.
+- Boutique retailers and ops leads in fast-scaling DTC brands.
+
+> **Positioning sentence:** *Instica is the retail brain for independent sellers who need enterprise-grade clarity without the ops overhead.*
 
 ## 1.2 Mission & Voice
 - **Mission statement:** *Give every independent retailer the clarity and leverage of an enterprise ops stack.*
-- **Personality:** confident, minimal, contemporary, quietly premium.
-- **Tone:** short, crisp, and “friendly pro.” Avoid slang; prefer action verbs and sentence case.
+- **Personality sliders:**
+  - Informative ↔️ **Guiding** (lean guiding but concise)
+  - Friendly ↔️ **Professional** (friendly-pro is the target)
+  - Playful ↔️ **Minimal** (avoid jokes; rely on warmth in phrasing)
+- **Tone habits:** short, crisp, present tense. Prefer verbs like *ship, verify, protect, automate*.
+- **Do / Don’t examples:**
+  - ✅ “Ship 24 items without leaving this screen.”
+  - ⚠️ “You can now ship 24 items with our brand new multi-pack feature!!!”
 - **Voice checklist:**
-  - Use present tense and active voice.
-  - Lead with benefit before feature.
-  - Confirm empathy (“We keep payouts predictable…”) before instruction.
+  - Lead with the seller benefit, then describe the feature.
+  - State the action before the requirement (e.g., “Print the label, then confirm weight.”).
+  - Mirror the UI copy in marketing so transitions feel seamless.
 
 ## 1.3 Logo & Usage
-- **Primary logo:** `resources/assets/icons/instica-logo-october-24-transparent.png` for light backgrounds; use the grey variant for dark surfaces.
-- **Clear space:** keep padding ≥ height of the capital “I” on all sides.
-- **Incorrect usage:** never stretch, rotate, or add drop shadows; avoid placing on busy photography.
-- **Monochrome version:** use `instica-logo-october-24-cream.png` when only a single color is available.
-- **App icon grid:** 8pt safe area with 12pt rounded corners. Align the logomark vertically centered—see `resources/assets/icons/app-icon-grid.pdf` for reference.
+- **Primary logo:** `resources/assets/icons/instica-logo-october-24-transparent.png` for light backgrounds; use the grey variant for dark surfaces. Export at 2× and 3×.
+- **Clear space:** keep padding ≥ height of the capital “I” on all sides. In code, add `padding: clamp(16px, 1vw, 24px);` around the asset.
+- **Incorrect usage:** never stretch, rotate, apply drop shadows, pair with gradients, or place on busy photography without a neutral overlay.
+- **Lockups:** wordmark + logomark only. Partner lockups get a shared divider set to `color.border`.
+- **Monochrome version:** `instica-logo-october-24-cream.png` when only a single color is available.
+- **App icon grid:** 8pt safe area with 12pt rounded corners. Align the logomark vertically centered—see `resources/assets/icons/app-icon-grid.pdf`. Background uses `color.brand` gradient overlay 60°.
+
+| Asset | File | Use case |
+| --- | --- | --- |
+| Full-color PNG | `instica-logo-october-24-transparent.png` | Marketing decks, docs |
+| Grey logo | `instica-logo-october-24-grey-transparent.png` | Dark UI, nav bar |
+| Cream mono | `instica-logo-october-24-cream.png` | Embossed surfaces, monochrome prints |
 
 ## 1.4 Color Palette
-- **Primary palette:** `color.brand`, `color.surface`, `color.textPrimary` from `tokens/colors.json`.
-- **Secondary accents:** `color.brandSoft` plus success/warning/error tokens for feedback surfaces.
-- **System colors:** map tokens to `UIColor`/`Color` assets so `Color.brand` adapts with light/dark automatically.
-- **Accessibility:** maintain ≥ 4.5:1 contrast for text and 3:1 for icon-only controls. Use paired icons and labels for non-text indicators.
-- See the [Color System](/guide/color-system) page for live swatches and dark-mode mappings.
+- **Primary palette:** `color.brand`, `color.surface`, `color.textPrimary` from `tokens/colors.json`. Backgrounds should vary by ≤ 2% tint and share the same hue family so interfaces feel cohesive.
+- **Secondary accents:** `color.brandSoft`, `color.success`, `color.warning`, `color.error`, `color.info` (coming soon) cover feedback surfaces, while `color.muted` tones down secondary text or dividers.
+- **System colors:** map tokens to platform assets (iOS `Color("BrandPrimary")`, Android `colorBrandPrimary`, web `--color-brand`). Maintain both light and dark variants in the asset catalog.
+- **Contrast guardrails:**
+  - Text vs. background ≥ 4.5:1.
+  - Icon-only vs. background ≥ 3:1.
+  - Inline charts can dip to 2:1 only when text labels are adjacent.
+- **Gradient usage:** the hero gradient runs 60° from `color.brand` (start) to `#8EC5FF` (end) at 70% opacity. Never apply gradients to buttons.
+
+| Token | Light mode | Dark mode | Notes |
+| --- | --- | --- | --- |
+| `color.brand` | `#3C64FF` | `#82A0FF` | Buttons, key icons |
+| `color.brandSoft` | `#E8EEFF` | `#1E2240` | Background tints |
+| `color.surface` | `#FFFFFF` | `#0E1224` | Cards, containers |
+| `color.surfaceMuted` | `#F3F5FF` | `#151932` | Subpanels, filters |
+| `color.textPrimary` | `#0C1020` | `#EFF2FF` | Headlines, data |
+| `color.textSecondary` | `#4A5270` | `#A9B8E0` | Helper text |
+| `color.success` | `#15B88A` | `#27E1A8` | Confirmations |
+| `color.warning` | `#E7A437` | `#F3C15C` | Caution states |
+| `color.error` | `#E04E4E` | `#FF6E6E` | Destructive actions |
+
+**Implementation snippet (web):**
+
+```css
+:root {
+  --color-brand: #3C64FF;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #F3F5FF;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-brand: #82A0FF;
+    --color-surface: #0E1224;
+  }
+}
+```
+
+For deeper swatches and pairings visit the [Color System](/guide/color-system) page.
 
 ## 1.5 Typography Overview
-- **Hierarchy:** Display → H1 → H2 → H3 → Body → Caption → Micro.
-- **Line height:** Keep 1.2× for headings, 1.5× for body/caption.
+- **Hierarchy:** Display → H1 → H2 → H3 → Body → Caption → Micro. If a screen needs two data-heavy blocks, prefer H3 paired with Body and reserve Display/H1 for hero sections.
+- **Line height:** 1.2× for headings, 1.4× for numeric stats, 1.5× for body/caption. Never go below 1.4× on paragraph text.
 - **Tracking:** -1% on headings, -0.2pt on body text, 0 on captions/micro.
 - **Weights:**
   - Display/H1/H2: Semibold
   - H3: Medium
   - Body: Regular, with Semibold for emphasis
   - Caption/Micro: Medium for clarity
-- Dive deeper in the [Typography](/guide/typography) section for platform stacks and code snippets.
+- **Numeral usage:** default to tabular lining numerals for reports. Use stylistic set `ss02` in Inter for currency pairs.
+- **Platform mapping:**
+  - Web: `font-family: "Inter", "SF Pro Display", system;`
+  - iOS: Text styles built on `SF Pro Rounded` for hero metrics, `SF Pro Display` elsewhere.
+  - Android: `Google Sans` fallback when Inter unavailable.
+- Dive deeper in the [Typography](/guide/typography) section for platform stacks, code snippets, and downloadable styles.
