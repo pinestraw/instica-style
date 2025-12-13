@@ -34,3 +34,9 @@ Instica spacing tokens keep content blocks tidy across form factors. Values live
 - Switch from cards → table layout after 1024px.
 - Keep primary action pinned within thumb reach (< 88px from bottom) on mobile.
 - Reserve at least `space.2xl` between stacked CTAs to avoid accidental taps.
+
+## Inspiration-driven layouts
+- **Nike mega-nav:** Use a 6-column grid with `space.xl` gutters when surfacing category flyouts. Each column gets a subtle divider (`color.border` at 40% opacity) and 12px vertical rhythm between links.
+- **Apple hero split:** Keep hero imagery occupying 55% of the width, with text constrained to 45% and a max width of 520px for copy.
+- **Oura developer docs:** Split documentation pages 60/40. The left column houses the outline and metadata, while the right column can switch between white content blocks and navy “console” blocks using `space.xl` padding.
+- **Meta docs breadcrumbs:** Breadcrumb rows sit above page titles with 8px spacing, mirroring Meta’s doc header. Integrate them into the layout before the H1 so navigation feels anchored.

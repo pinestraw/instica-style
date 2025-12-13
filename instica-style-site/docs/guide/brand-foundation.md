@@ -108,3 +108,17 @@ For deeper swatches and pairings visit the [Color System](/guide/color-system) p
   - iOS: Text styles built on `SF Pro Rounded` for hero metrics, `SF Pro Display` elsewhere.
   - Android: `Google Sans` fallback when Inter unavailable.
 - Dive deeper in the [Typography](/guide/typography) section for platform stacks, code snippets, and downloadable styles.
+
+## 1.6 Reference Moodboard
+The refresh leans on specific product screenshots you provided to calibrate tone, layout, and interaction depth.
+
+| Reference | Observations | Instica adaptation |
+| --- | --- | --- |
+| Nike Women’s mega-nav | Mega menus span the full width with confident whitespace, micro icons, and ultra-light dividers. | Navigation drawers keep the generous spacing, borderless columns, and slim weight lines when we surface multi-category link groups. |
+| Apple.com iPhone hero | Massive photography sits against a quiet neutral field with a tight headline and dual CTAs. | Hero rows mix our code/token modules with full-bleed imagery + overline copy, mirroring the Apple rhythm but using Instica tokens. |
+| Oura marketing hero | Glassy gradients, serif headlines, and floating hardware tell a premium hardware story. | Token previews adopt the layered gradient treatment with soft blur borders to echo Oura’s depth without leaving our palette. |
+| Oura developer docs | Split-screen layout with a dense left nav and dark right-hand request panel. | Guide pages now ship with a left rail, sticky outline, and contrasting code blocks so spec content feels like an API console. |
+| Meta developer docs | Clear breadcrumb + hero card, persistent on-page nav. | We mirror the doc shell so readers always see context, breadcrumbs, and status callouts. |
+| Anthropic marketing hero | Editorial typography with underlines, warm neutrals, and cards stacked like note cards. | Section headings borrow the editorial spacing and introduce underline accents to keep prose lively while still product-focused. |
+
+> **Use the moodboard when reviewing new work:** if a layout drifts off-brand, gut-check it against these reference pillars and the Instica tokens before shipping.

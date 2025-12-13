@@ -222,3 +222,39 @@ struct InventoryRow: View {
 
 ### Supporting assets
 - Store SwiftUI playgrounds in `/resources/swiftui/` (create if needed) so designers can snapshot updates.
+
+## 3.6 Doc shell + inspiration cards
+Blend Meta’s developer docs with the Oura console to modernize long-form guides.
+
+| Element | Spec | Reference |
+| --- | --- | --- |
+| Left rail | 248px wide, `space.md` vertical rhythm, uppercase micro labels | Meta doc sidebar |
+| Breadcrumb bar | 40px tall, 8px gap before H1, subtle divider | Meta doc header |
+| Console panel | `doc.console.surface` background, pill badges for HTTP verbs or component status | Oura developer panel |
+| Inspiration cards | 24px radius, gradient backgrounds, inline CTA like Nike hero modules | Nike seasonal hero |
+
+- Cards should support annotations: add a `badge` slot for “LIVE”, “DRAFT”, or “WIP”.
+- Use staggered `motion.base` delays (80ms increments) to recreate the subtle hover reveals from the inspiration captures.
+
+```vue
+<section class="doc-shell">
+	<aside>
+		<nav>
+			<a class="active">Overview</a>
+			<a>API tokens</a>
+		</nav>
+	</aside>
+	<article>
+		<header>
+			<p class="breadcrumb">Docs / Components</p>
+			<h1>Form patterns</h1>
+		</header>
+		<div class="console-panel">
+			<span class="badge get">GET</span>
+			<code>POST /inventory/bulk-update</code>
+		</div>
+	</article>
+</section>
+```
+
+> This shell keeps our docs feeling as intentional as the Nike, Apple, Meta, and Oura experiences the team referenced.

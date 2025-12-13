@@ -81,3 +81,13 @@ Text(value)
 - Limit CTA labels to 24 characters to avoid wrapping on compact widths.
 - Use sentence case in buttons and all caps only for badges using `type.micro`.
 - Keep vertical rhythm by pairing `type.h*` headings with `space.md` spacing before the next block.
+
+## Editorial references
+Use the reference captures as typographic guardrails:
+
+- **Apple hero:** Centered H1 with thin supporting copy. When presenting a flagship feature, mirror this structure with `type.display` for the headline and `type.body` for the lede stacked within 24px.
+- **Anthropic homepage:** Employ underline accents sparingly to call attention to action verbs. The underline color should be `color.brand` at 60% opacity.
+- **Nike navigation:** Uppercase, micro letter-spacing belongs in nav rails or category labels only. Keep it to 0.18em to preserve legibility.
+- **Oura docs:** Code headings use mono fonts with pill badges (“GET”) to echo API vernacular. Map those to `type.micro` with `font-variant-caps: all-small-caps;` on the web for authenticity.
+
+> If a page doesn’t echo at least one of these references, reevaluate the typographic system you’re applying.
