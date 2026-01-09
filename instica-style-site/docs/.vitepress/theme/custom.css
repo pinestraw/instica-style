@@ -76,10 +76,9 @@ body {
 
 body {
 	background:
-		radial-gradient(140% 90% at 20% 10%, rgba(110, 243, 197, 0.08), transparent),
-		radial-gradient(120% 90% at 85% 5%, rgba(98, 184, 255, 0.08), transparent),
-		radial-gradient(180% 120% at 50% 90%, rgba(255, 177, 111, 0.08), transparent),
-		var(--ink-900);
+		radial-gradient(120% 90% at 10% 5%, rgba(98, 184, 255, 0.12), transparent),
+		radial-gradient(140% 90% at 85% 0%, rgba(110, 243, 197, 0.12), transparent),
+		linear-gradient(180deg, #0b1118 0%, #0a1016 100%);
 	color: var(--vp-c-text-1);
 	min-height: 100vh;
 	position: relative;
@@ -89,10 +88,9 @@ body::before {
 	content: "";
 	position: fixed;
 	inset: 0;
-	background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-		linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-	background-size: 220px 220px;
-	opacity: 0.6;
+	background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+	background-size: 120px 120px;
+	opacity: 0.3;
 	pointer-events: none;
 	z-index: 0;
 }
@@ -153,7 +151,7 @@ a:hover {
 }
 
 .landing-page section {
-	margin-bottom: 5.25rem;
+	margin-bottom: 4.75rem;
 }
 
 .eyebrow {
@@ -216,11 +214,11 @@ a:hover {
 
 .hero.shell {
 	display: flex;
-	flex-wrap: wrap;
-	gap: 2.5rem;
-	padding: 3.1rem;
-	border-radius: 32px;
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(110, 243, 197, 0.05));
+	flex-direction: column;
+	gap: 1.8rem;
+	padding: 2.8rem;
+	border-radius: 28px;
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(110, 243, 197, 0.04));
 	border: 1px solid var(--outline);
 	box-shadow: var(--shadow-card);
 	position: relative;
@@ -230,11 +228,11 @@ a:hover {
 .hero.shell::after {
 	content: "";
 	position: absolute;
-	top: -20%;
+	top: -10%;
 	right: -10%;
-	width: 360px;
-	height: 360px;
-	background: radial-gradient(circle, rgba(110, 243, 197, 0.25), transparent 65%);
+	width: 320px;
+	height: 320px;
+	background: radial-gradient(circle, rgba(110, 243, 197, 0.18), transparent 65%);
 	filter: blur(30px);
 	opacity: 0.9;
 	z-index: 0;
@@ -261,6 +259,22 @@ a:hover {
 	flex-direction: column;
 	gap: 0.65rem;
 	color: var(--vp-c-text-2);
+}
+
+.quick-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	margin-top: 0.4rem;
+}
+
+.quick-links a {
+	padding: 0.55rem 0.9rem;
+	border-radius: 999px;
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	color: var(--vp-c-text-1);
+	background: rgba(255, 255, 255, 0.02);
+	font-weight: 500;
 }
 
 .hero__visual {
@@ -603,6 +617,57 @@ a:hover {
 	display: inline-flex;
 	margin-top: 0.7rem;
 	font-weight: 600;
+}
+
+.docs-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.6rem;
+}
+
+.doc-highlights {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+	gap: 1.6rem;
+}
+
+.doc-highlight {
+	padding: 1.8rem;
+	border-radius: 22px;
+	border: 1px solid var(--outline);
+	background: rgba(12, 19, 30, 0.8);
+	box-shadow: var(--shadow-soft);
+}
+
+.doc-highlight h3 {
+	margin: 0.35rem 0 0.5rem;
+}
+
+.doc-highlight p {
+	color: var(--vp-c-text-2);
+	margin: 0 0 0.5rem;
+}
+
+.doc-highlight a {
+	font-weight: 600;
+}
+
+.resource-bar {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 2.2rem 2.6rem;
+	border-radius: 24px;
+	border: 1px solid var(--outline);
+	background: rgba(11, 17, 26, 0.85);
+	box-shadow: var(--shadow-soft);
+}
+
+.resource-bar p {
+	color: var(--vp-c-text-2);
+	max-width: 38rem;
 }
 
 .cta-ribbon {
