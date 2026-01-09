@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
 	--ink-900: #0c1118;
@@ -19,6 +19,21 @@
 	--surface: rgba(255, 255, 255, 0.04);
 	--outline: rgba(255, 255, 255, 0.12);
 	--outline-strong: rgba(110, 243, 197, 0.2);
+	--font-family-base: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--type-large-title-size: 2.5rem; /* 40px */
+	--type-large-title-line: 2.875rem; /* 46px */
+	--type-title1-size: 2rem; /* 32px */
+	--type-title1-line: 2.375rem; /* 38px */
+	--type-title2-size: 1.625rem; /* 26px */
+	--type-title2-line: 2rem; /* 32px */
+	--type-title3-size: 1.375rem; /* 22px */
+	--type-title3-line: 1.75rem; /* 28px */
+	--type-headline-size: 1.125rem; /* 18px */
+	--type-headline-line: 1.625rem; /* 26px */
+	--type-body-size: 0.9375rem; /* 15px */
+	--type-body-line: 1.375rem; /* 22px */
+	--type-caption-size: 0.75rem; /* 12px */
+	--type-caption-line: 1rem; /* 16px */
 	--swatch-size: 2.5rem;
 	--swatch-radius: 10px;
 	--swatch-border: 1px solid rgba(255, 255, 255, 0.08);
@@ -55,7 +70,7 @@
 
 :root,
 body {
-	font-family: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-family: var(--font-family-base);
 	font-feature-settings: 'liga' on, 'tnum' off;
 }
 
@@ -150,15 +165,16 @@ a:hover {
 }
 
 .landing-page h1 {
-	font-size: 3.35rem;
-	line-height: 1.1;
+	font-size: var(--type-large-title-size);
+	line-height: var(--type-large-title-line);
 	margin: 1rem 0;
 	color: var(--vp-c-text-1);
 }
 
 .landing-page h2 {
-	font-size: 1.35rem;
-	margin: 0.35rem 0 0.6rem;
+	font-size: var(--type-title2-size);
+	line-height: var(--type-title2-line);
+	margin: 0.25rem 0 0.6rem;
 	color: var(--vp-c-text-1);
 }
 
@@ -398,21 +414,26 @@ a:hover {
 }
 
 .type-specimen .large-title {
-	font-size: 2rem;
-	font-weight: 600;
+	font-size: var(--type-large-title-size);
+	line-height: var(--type-large-title-line);
+	font-weight: 700;
 }
 
 .type-specimen .title-one {
-	font-size: 1.45rem;
+	font-size: var(--type-title1-size);
+	line-height: var(--type-title1-line);
 	font-weight: 600;
 }
 
 .type-specimen .body {
+	font-size: var(--type-body-size);
+	line-height: var(--type-body-line);
 	color: var(--vp-c-text-2);
 }
 
 .type-specimen .caption {
-	font-size: 0.92rem;
+	font-size: var(--type-caption-size);
+	line-height: var(--type-caption-line);
 	color: var(--vp-c-text-2);
 }
 
@@ -627,7 +648,7 @@ a:hover {
 }
 
 .VPDoc .content pre code {
-	font-family: "Space Grotesk", "SFMono-Regular", Menlo, monospace;
+	font-family: "SFMono-Regular", Menlo, monospace;
 }
 
 .VPDoc .aside {

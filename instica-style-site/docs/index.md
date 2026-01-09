@@ -99,12 +99,12 @@ pageClass: landing-page
 		<article>
 			<header><span>Type stack</span><code>typography.json</code></header>
 			<div class="type-specimen">
-				<p class="large-title">Display — 44 / 52 · Semibold</p>
-				<p class="title-one">Title 1 — 32 / 40 · Semibold</p>
-				<p class="body">Body — 16 / 24 · Regular</p>
-				<p class="caption">Caption — 14 / 20 · Medium</p>
+				<p class="large-title">Display — 40 / 46 · Bold</p>
+				<p class="title-one">Title 1 — 32 / 38 · Semibold</p>
+				<p class="body">Body — 15 / 22 · Regular</p>
+				<p class="caption">Caption — 12 / 16 · Regular</p>
 			</div>
-			<p>Editorial cadence references Anthropic’s hero typography but stays inside our SF/Inter stack.</p>
+			<p>Editorial cadence references Anthropic’s hero typography but now stays inside the marketing Manrope stack.</p>
 		</article>
 		<article>
 			<header><span>Spacing map</span><code>spacing.json</code></header>
