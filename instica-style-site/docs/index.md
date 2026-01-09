@@ -43,47 +43,6 @@ pageClass: landing-page
 	</div>
 </section>
 
-<section class="tokens-stage" id="tokens">
-	<div class="stage__intro">
-		<p class="eyebrow">Token stage</p>
-		<h2>Quick peek at color, type, and spacing.</h2>
-	</div>
-	<div class="stage__grid">
-		<article>
-			<header><span>Color chips</span><code>colors.json</code></header>
-			<div class="color-grid">
-				<span style="--swatch:#1a73e8">Brand / 500</span>
-				<span style="--swatch:#0f5bd8">Brand / 600</span>
-				<span style="--swatch:#dcebff">Brand / 050</span>
-				<span class="ink" style="--swatch:#0f1418">Depth</span>
-				<span style="--swatch:#5f6c75">Slate</span>
-				<span style="--swatch:#f7f8fa">Surface</span>
-			</div>
-			<p>Copy token names directly into SwiftUI colors, CSS vars, or Compose themes.</p>
-		</article>
-		<article>
-			<header><span>Type stack</span><code>typography.json</code></header>
-			<div class="type-specimen">
-				<p class="large-title">Display — 40 / 46 · Bold</p>
-				<p class="title-one">Title 1 — 32 / 38 · Semibold</p>
-				<p class="body">Body — 15 / 22 · Regular</p>
-				<p class="caption">Caption — 12 / 16 · Regular</p>
-			</div>
-			<p>Editorial cadence references Anthropic’s hero typography but now stays inside the marketing Manrope stack.</p>
-		</article>
-		<article>
-			<header><span>Spacing map</span><code>spacing.json</code></header>
-			<div class="spacing-map">
-				<div data-label="Space 06" data-value="24"></div>
-				<div data-label="Space 08" data-value="32"></div>
-				<div data-label="Space 10" data-value="44"></div>
-				<div data-label="Space 12" data-value="64"></div>
-			</div>
-			<p>Nike-style mega-nav columns, Apple hero gutters, and Meta doc rails all sit on this 8pt grid.</p>
-		</article>
-	</div>
-</section>
-
 <section class="doc-highlights" id="guide">
 	<div class="doc-highlight">
 		<p class="eyebrow">Brand</p>

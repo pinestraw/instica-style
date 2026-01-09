@@ -625,6 +625,10 @@ a:hover {
 	gap: 1.6rem;
 }
 
+.docs-cards + .doc-highlights {
+	margin-top: 2.6rem;
+}
+
 .doc-highlights {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
