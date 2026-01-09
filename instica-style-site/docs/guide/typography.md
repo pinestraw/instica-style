@@ -5,18 +5,21 @@ outline: deep
 
 # Typography
 
-Instica typography balances retail polish with utilitarian clarity. All values map to `tokens/typography.json` and SwiftUI text styles.
+Instica typography balances retail polish with utilitarian clarity.
+
+- Token source of truth: `tokens/typography.json`
+- Web exports: CSS variables generated from tokens
+- Native: map roles to platform text styles (and honor Dynamic Type)
 
 ## Typeface
-- **Primary:** Inter (Variable) for both product and marketing.
-- **Fallback stack (web + native):** `"Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif`.
-- **Optical sizing:** enable for headings on iOS/macOS (`.fontDesign(.rounded)` optional) and `font-optical-sizing: auto;` on the web.
+- **Web:** Use the product/marketing brand font (currently Manrope variable where available) with system fallbacks.
+- **Native:** Use system typography by default (SF Pro Text/Display on Apple platforms) and map tokens to Dynamic Type styles.
 
 ### Platform stacks
 | Surface | Font stack | Notes |
 | --- | --- | --- |
-| Web | `"Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif` | Add `font-feature-settings: "tnum" off, "ss01" on;` for rounded terminals. |
-| iOS / iPadOS | Inter variable as custom font, fallback to `SF Pro Text` via `UIFontMetrics` | Use `.font(.custom("Inter", size: ... , relativeTo: .body))` and opt into Dynamic Type. |
+| Web | `"Manrope", "Inter", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif` | Prefer variable font. Keep letter-spacing tight; don’t over-bold body copy. |
+| iOS / iPadOS | System (SF Pro) via Dynamic Type | Map tokens to text styles, then let Dynamic Type scale. |
 | Android / Jetpack Compose (future) | `FontFamily(Font("inter_regular"), Font("inter_semibold"))` | Keep tabular numerals enabled for commerce metrics. |
 
 ### CSS + Swift snippets
@@ -39,22 +42,33 @@ Text(value)
 	.monospacedDigit()
 ```
 
-## Text scale
-| Token | Size | Weight | Usage |
-| --- | --- | --- | --- |
-| `type.display` | 44/52 | Semibold | Hero metrics |
-| `type.h1` | 32/40 | Semibold | Page titles |
-| `type.h2` | 24/32 | Medium | Section titles |
-| `type.h3` | 20/28 | Medium | Module headings |
-| `type.body` | 16/24 | Regular | Default copy |
-| `type.bodyBold` | 16/24 | Semibold | Emphasis |
-| `type.caption` | 14/20 | Medium | Metadata |
-| `type.micro` | 12/16 | Medium | Labels, table headers |
+## Text scale (token roles)
+These roles come directly from `tokens/typography.json`:
+
+| Role | Typical usage |
+| --- | --- |
+| `largeTitle` | Hero headlines / top-level page title (native-first) |
+| `title1` | Page titles |
+| `title2` | Section titles |
+| `title3` | Subsection titles |
+| `headline` | Labels, short emphasis headings |
+| `body` | UI copy (forms, tables, controls) |
+| `subheadline` | Secondary UI copy / long-form reading on web |
+| `footnote` | Metadata, helper text |
+| `caption` | Dense labels, table headers |
+| `code` | Monospace snippets |
 
 ### Dynamic Type guidance
 - Use system text styles on native platforms; map tokens to `UIFont.TextStyle` equivalents.
-- Keep minimum body size at 16pt for readability.
+- Keep body text readable; prefer native defaults (e.g., 17pt baseline on iOS) and never block Dynamic Type.
 - Allow captions/micro text to wrap; never truncate critical data.
+
+## Web density (docs-like default)
+For web properties with lots of reading (marketing pages, docs-like content, legal, long-form help), default body copy should feel tighter and more “documentation” than “marketing poster.”
+
+- Use **15/22** (or the equivalent of the `subheadline` role) for long-form paragraphs.
+- Keep line length around **65–75 characters** (roughly `72ch`).
+- Use `headline` sparingly; avoid making paragraph text Semibold.
 
 ### Token → platform mapping
 | Token | CSS variable | SwiftUI style | Min contrast |
