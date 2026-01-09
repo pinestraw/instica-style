@@ -883,3 +883,63 @@ html:not(.dark) .VPDoc .outline {
 	background: rgba(15, 23, 38, 0.03);
 	border-color: rgba(15, 23, 38, 0.08);
 }
+
+/* Dark mode restores deep surfaces and glow accents */
+.dark body::before {
+	background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+	opacity: 0.3;
+}
+
+.dark .VPNavBar {
+	background: var(--ink-800);
+	border: 1px solid rgba(255, 255, 255, 0.12);
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+}
+
+.dark .hero.shell {
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(110, 243, 197, 0.04));
+	border-color: var(--outline);
+	box-shadow: var(--shadow-card);
+}
+
+.dark .hero.shell::after {
+	background: radial-gradient(circle, rgba(110, 243, 197, 0.18), transparent 65%);
+	opacity: 0.9;
+}
+
+.dark .hero-card {
+	background: rgba(10, 15, 24, 0.75);
+	box-shadow: 0 26px 80px rgba(0, 0, 0, 0.4);
+}
+
+.dark .hero-card code {
+	background: rgba(255, 255, 255, 0.05);
+	color: var(--mint-500);
+}
+
+.dark .track-card {
+	background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(10, 17, 26, 0.8));
+}
+
+.dark .tokens-stage article {
+	background: rgba(12, 19, 30, 0.85);
+}
+
+.dark .doc-highlight {
+	background: rgba(12, 19, 30, 0.8);
+}
+
+.dark .resource-bar {
+	background: rgba(11, 17, 26, 0.85);
+}
+
+.dark .VPDoc .content {
+	background: rgba(11, 16, 26, 0.9);
+	border-color: var(--outline);
+	box-shadow: var(--shadow-soft);
+}
+
+.dark .VPDoc .outline {
+	background: rgba(255, 255, 255, 0.03);
+	border-color: var(--outline);
+}
