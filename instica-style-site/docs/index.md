@@ -10,14 +10,14 @@ pageClass: landing-page
 		<h1>Documentation-first design language.</h1>
 		<p class="lede">Concise, production-backed tokens and patterns for web, mobile, and ops surfaces. Built to read like documentation, not marketing splash.</p>
 		<div class="hero__cta">
-			<a class="cta primary" href="/guide/core-principles">Open the docs</a>
+			<a class="cta primary" href="guide/core-principles">Open the docs</a>
 			<a class="cta ghost" href="https://github.com/instica/instica-style/tree/main/tokens">View tokens</a>
 		</div>
 		<div class="quick-links">
-			<a href="/guide/design-tokens">Design tokens</a>
-			<a href="/guide/components">Components</a>
-			<a href="/guide/typography">Typography</a>
-			<a href="/inspiration/">Inspiration</a>
+			<a href="guide/design-tokens">Design tokens</a>
+			<a href="guide/components">Components</a>
+			<a href="guide/typography">Typography</a>
+			<a href="inspiration/">Inspiration</a>
 		</div>
 	</div>
 </section>
@@ -27,19 +27,19 @@ pageClass: landing-page
 		<p class="eyebrow">Start here</p>
 		<h2>Guide overview</h2>
 		<p>How we name, space, and ship across Instica surfaces. Start with tone, then move into primitives.</p>
-		<a href="/guide/core-principles">Read the guide →</a>
+		<a href="guide/core-principles">Read the guide →</a>
 	</div>
 	<div class="track-card">
 		<p class="eyebrow">Tokens</p>
 		<h2>JSON-first foundation</h2>
 		<p>Colors, spacing, typography, elevation, motion, and states live in `/tokens` and sync into product builds.</p>
-		<a href="/guide/design-tokens">Open tokens →</a>
+		<a href="guide/design-tokens">Open tokens →</a>
 	</div>
 	<div class="track-card">
 		<p class="eyebrow">Components</p>
 		<h2>Retail-ready patterns</h2>
 		<p>Navigation, doc shells, cards, and buttons mirror our production stack with guardrails and states.</p>
-		<a href="/guide/components">Browse components →</a>
+		<a href="guide/components">Browse components →</a>
 	</div>
 </section>
 
@@ -48,25 +48,25 @@ pageClass: landing-page
 		<p class="eyebrow">Brand</p>
 		<h3>Brand foundation</h3>
 		<p>Voice, tone, iconography, and motion guardrails for Instica surfaces.</p>
-		<a href="/guide/brand-foundation">Open brand foundation →</a>
+		<a href="guide/brand-foundation">Open brand foundation →</a>
 	</div>
 	<div class="doc-highlight">
 		<p class="eyebrow">System</p>
 		<h3>Spacing & layout</h3>
 		<p>Grid, gutters, and density defaults for dashboards and mobile views.</p>
-		<a href="/guide/spacing-layout">View spacing & layout →</a>
+		<a href="guide/spacing-layout">View spacing & layout →</a>
 	</div>
 	<div class="doc-highlight">
 		<p class="eyebrow">Components</p>
 		<h3>UI library</h3>
 		<p>Buttons, navigation, inputs, and doc shells ready for product builds.</p>
-		<a href="/guide/components">Browse UI library →</a>
+		<a href="guide/components">Browse UI library →</a>
 	</div>
 	<div class="doc-highlight">
 		<p class="eyebrow">Inspiration</p>
 		<h3>Production stories</h3>
 		<p>Examples pulled from shipping flows to show tokens and patterns in context.</p>
-		<a href="/inspiration/">See inspiration →</a>
+		<a href="inspiration/">See inspiration →</a>
 	</div>
 </section>
 

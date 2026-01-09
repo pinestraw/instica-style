@@ -2,23 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-	--ink-900: #0c1118;
-	--ink-800: #111a26;
-	--ink-700: #152235;
-	--ink-600: #1a2c42;
-	--ink-500: #22344a;
-	--fog-300: #d8e0ed;
-	--fog-200: #c3ccdb;
-	--fog-150: #b5bfd0;
-	--fog-100: #a5b0c4;
+	/* Light theme defaults (marketing-aligned) */
+	--ink-900: #f6f8fc;
+	--ink-800: #ffffff;
+	--ink-700: #e9eef7;
+	--ink-600: #d7dfed;
+	--ink-500: #c7d2e6;
+	--fog-300: #6f7d90;
+	--fog-200: #8c9ab0;
+	--fog-150: #a6b3c8;
+	--fog-100: #c2cbdb;
 	--mint-500: #6ef3c5;
 	--mint-600: #4dd9ae;
-	--mint-700: #3fbf9b;
+	--mint-700: #3bf7ef;
 	--sky-500: #62b8ff;
-	--sunrise-400: #ffb16f;
-	--surface: rgba(255, 255, 255, 0.04);
-	--outline: rgba(255, 255, 255, 0.12);
-	--outline-strong: rgba(110, 243, 197, 0.2);
+	--sunrise-400: #b28cff;
+	--surface: #ffffff;
+	--outline: rgba(15, 23, 38, 0.08);
+	--outline-strong: rgba(98, 184, 255, 0.16);
 	--font-family-base: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 	--type-large-title-size: 2.5rem; /* 40px */
 	--type-large-title-line: 2.875rem; /* 46px */
@@ -36,12 +37,49 @@
 	--type-caption-line: 1rem; /* 16px */
 	--swatch-size: 2.5rem;
 	--swatch-radius: 10px;
-	--swatch-border: 1px solid rgba(255, 255, 255, 0.08);
-	--shadow-soft: 0 24px 90px rgba(0, 0, 0, 0.32);
-	--shadow-card: 0 30px 120px rgba(0, 0, 0, 0.45);
+	--swatch-border: 1px solid rgba(15, 23, 38, 0.08);
+	--shadow-soft: 0 24px 70px rgba(15, 23, 38, 0.12);
+	--shadow-card: 0 30px 90px rgba(15, 23, 38, 0.14);
 	--vp-c-brand-1: var(--mint-500);
 	--vp-c-brand-2: var(--mint-600);
 	--vp-c-brand-3: var(--mint-700);
+	--vp-c-bg: var(--ink-900);
+	--vp-c-bg-soft: var(--ink-800);
+	--vp-c-bg-alt: var(--ink-700);
+	--vp-c-border: var(--outline);
+	--vp-c-text-1: #0f1726;
+	--vp-c-text-2: rgba(15, 23, 38, 0.7);
+	--vp-nav-bg-color: #ffffff;
+	--vp-home-hero-name-color: var(--mint-600);
+	--vp-home-hero-name-background: linear-gradient(120deg, #b28cff, #6ef3c5);
+	--vp-home-hero-text-color: var(--vp-c-text-1);
+	--vp-home-hero-tagline-color: var(--vp-c-text-2);
+	--doc-console-bg: #ecf1fb;
+	--doc-console-code: #e2e8f5;
+	--doc-console-border: rgba(15, 23, 38, 0.08);
+	--doc-console-get: #0f9960;
+	--doc-console-error: #d14343;
+	--body-gradient: radial-gradient(80% 60% at 10% 10%, rgba(178, 140, 255, 0.18), transparent),
+		radial-gradient(80% 50% at 80% 0%, rgba(110, 243, 197, 0.18), transparent),
+		linear-gradient(180deg, #f7f9fd 0%, #eef2fa 100%);
+}
+
+:root.dark {
+	--ink-900: #0c1118;
+	--ink-800: #111a26;
+	--ink-700: #152235;
+	--ink-600: #1a2c42;
+	--ink-500: #22344a;
+	--fog-300: #d8e0ed;
+	--fog-200: #c3ccdb;
+	--fog-150: #b5bfd0;
+	--fog-100: #a5b0c4;
+	--surface: rgba(255, 255, 255, 0.04);
+	--outline: rgba(255, 255, 255, 0.12);
+	--outline-strong: rgba(110, 243, 197, 0.2);
+	--swatch-border: 1px solid rgba(255, 255, 255, 0.08);
+	--shadow-soft: 0 24px 90px rgba(0, 0, 0, 0.32);
+	--shadow-card: 0 30px 120px rgba(0, 0, 0, 0.45);
 	--vp-c-bg: var(--ink-900);
 	--vp-c-bg-soft: var(--ink-800);
 	--vp-c-bg-alt: var(--ink-700);
@@ -58,14 +96,10 @@
 	--doc-console-border: rgba(255, 255, 255, 0.12);
 	--doc-console-get: #82ffc9;
 	--doc-console-error: #ff8f8f;
-}
-
-:root.dark {
-	--vp-c-bg: var(--ink-900);
-	--vp-c-bg-soft: var(--ink-800);
-	--vp-c-bg-alt: var(--ink-700);
-	--vp-c-text-1: #f2f6ff;
-	--vp-c-text-2: rgba(242, 246, 255, 0.7);
+	--body-gradient:
+		radial-gradient(120% 90% at 10% 5%, rgba(98, 184, 255, 0.12), transparent),
+		radial-gradient(140% 90% at 85% 0%, rgba(110, 243, 197, 0.12), transparent),
+		linear-gradient(180deg, #0b1118 0%, #0a1016 100%);
 }
 
 :root,
@@ -75,10 +109,7 @@ body {
 }
 
 body {
-	background:
-		radial-gradient(120% 90% at 10% 5%, rgba(98, 184, 255, 0.12), transparent),
-		radial-gradient(140% 90% at 85% 0%, rgba(110, 243, 197, 0.12), transparent),
-		linear-gradient(180deg, #0b1118 0%, #0a1016 100%);
+	background: var(--body-gradient);
 	color: var(--vp-c-text-1);
 	min-height: 100vh;
 	position: relative;
@@ -88,9 +119,9 @@ body::before {
 	content: "";
 	position: fixed;
 	inset: 0;
-	background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 0);
+	background-image: radial-gradient(rgba(0, 24, 64, 0.06) 1px, transparent 0);
 	background-size: 120px 120px;
-	opacity: 0.3;
+	opacity: 0.35;
 	pointer-events: none;
 	z-index: 0;
 }
@@ -114,9 +145,9 @@ a:hover {
 .VPNavBar {
 	background: var(--ink-800);
 	backdrop-filter: none;
-	border: 1px solid rgba(255, 255, 255, 0.12);
+	border: 1px solid var(--outline);
 	border-radius: 16px;
-	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
+	box-shadow: 0 14px 46px rgba(15, 23, 38, 0.16);
 	margin-top: 1.1rem;
 	padding: 0.35rem 1.35rem;
 }
@@ -141,7 +172,7 @@ a:hover {
 }
 
 .landing-page .VPContent {
-	padding-top: 3.75rem;
+	padding-top: 3rem;
 }
 
 .landing-page .content-container {
@@ -151,7 +182,7 @@ a:hover {
 }
 
 .landing-page section {
-	margin-bottom: 4.75rem;
+	margin-bottom: 3.5rem;
 }
 
 .eyebrow {
@@ -215,10 +246,10 @@ a:hover {
 .hero.shell {
 	display: flex;
 	flex-direction: column;
-	gap: 1.8rem;
-	padding: 2.8rem;
+	gap: 1.4rem;
+	padding: 2.2rem;
 	border-radius: 28px;
-	background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(110, 243, 197, 0.04));
+	background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(178, 140, 255, 0.06));
 	border: 1px solid var(--outline);
 	box-shadow: var(--shadow-card);
 	position: relative;
@@ -232,9 +263,9 @@ a:hover {
 	right: -10%;
 	width: 320px;
 	height: 320px;
-	background: radial-gradient(circle, rgba(110, 243, 197, 0.18), transparent 65%);
+	background: radial-gradient(circle, rgba(178, 140, 255, 0.22), transparent 65%);
 	filter: blur(30px);
-	opacity: 0.9;
+	opacity: 0.8;
 	z-index: 0;
 }
 
@@ -289,8 +320,8 @@ a:hover {
 	border-radius: 20px;
 	padding: 1.35rem;
 	border: 1px solid var(--outline);
-	background: rgba(10, 15, 24, 0.75);
-	box-shadow: 0 26px 80px rgba(0, 0, 0, 0.4);
+	background: rgba(255, 255, 255, 0.92);
+	box-shadow: 0 20px 70px rgba(15, 23, 38, 0.12);
 }
 
 .hero-card header {
@@ -365,7 +396,7 @@ a:hover {
 .track-card {
 	padding: 2.4rem;
 	border-radius: 28px;
-	background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(10, 17, 26, 0.8));
+	background: linear-gradient(160deg, rgba(255, 255, 255, 0.96), rgba(233, 238, 247, 0.8));
 	border: 1px solid var(--outline);
 	box-shadow: var(--shadow-soft);
 }
@@ -384,7 +415,7 @@ a:hover {
 	padding: 2.2rem;
 	border-radius: 26px;
 	border: 1px solid var(--outline);
-	background: rgba(12, 19, 30, 0.85);
+	background: rgba(255, 255, 255, 0.95);
 	box-shadow: var(--shadow-soft);
 }
 
@@ -639,7 +670,7 @@ a:hover {
 	padding: 1.8rem;
 	border-radius: 22px;
 	border: 1px solid var(--outline);
-	background: rgba(12, 19, 30, 0.8);
+	background: rgba(255, 255, 255, 0.95);
 	box-shadow: var(--shadow-soft);
 }
 
@@ -665,7 +696,7 @@ a:hover {
 	padding: 2.2rem 2.6rem;
 	border-radius: 24px;
 	border: 1px solid var(--outline);
-	background: rgba(11, 17, 26, 0.85);
+	background: rgba(255, 255, 255, 0.95);
 	box-shadow: var(--shadow-soft);
 }
 
@@ -674,6 +705,7 @@ a:hover {
 	max-width: 38rem;
 }
 
+/* CTA ribbon is unused on the landing but keep a lighter style if reused */
 .cta-ribbon {
 	display: flex;
 	flex-wrap: wrap;
@@ -682,20 +714,20 @@ a:hover {
 	gap: 1.6rem;
 	padding: 2.8rem 3rem;
 	border-radius: 32px;
-	background: linear-gradient(125deg, var(--mint-500), var(--sky-500));
-	color: #031017;
-	box-shadow: 0 40px 90px rgba(98, 184, 255, 0.35);
+	background: linear-gradient(125deg, #b28cff, #6ef3c5);
+	color: #0f1726;
+	box-shadow: 0 40px 90px rgba(98, 184, 255, 0.24);
 }
 
 .cta-ribbon p {
-	color: rgba(3, 16, 23, 0.75);
+	color: rgba(15, 23, 38, 0.76);
 	max-width: 36rem;
 }
 
 .cta-ribbon .cta.ghost {
-	color: #031017;
-	border-color: rgba(3, 16, 23, 0.1);
-	background: rgba(255, 255, 255, 0.4);
+	color: #0f1726;
+	border-color: rgba(15, 23, 38, 0.12);
+	background: rgba(255, 255, 255, 0.75);
 }
 
 .VPDoc .container {
@@ -806,4 +838,48 @@ a:hover {
 
 .dark .color-swatch {
 	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Light mode overrides to stay closer to marketing site */
+html:not(.dark) .hero.shell {
+	background: linear-gradient(150deg, rgba(255, 255, 255, 0.98), rgba(233, 238, 247, 0.82));
+	border-color: rgba(15, 23, 38, 0.08);
+}
+
+html:not(.dark) .hero-card header,
+html:not(.dark) .track-card .eyebrow,
+html:not(.dark) .doc-highlight .eyebrow,
+html:not(.dark) .resource-bar .eyebrow {
+	color: rgba(15, 23, 38, 0.55);
+}
+
+html:not(.dark) .hero-card code {
+	background: rgba(15, 23, 38, 0.06);
+	color: #0f1726;
+}
+
+html:not(.dark) .hero-card.palette span,
+html:not(.dark) .color-grid span {
+	box-shadow: inset 0 0 0 1px rgba(15, 23, 38, 0.08);
+}
+
+html:not(.dark) .doc-highlight a,
+html:not(.dark) .track-card a,
+html:not(.dark) .resource-bar a {
+	color: #0f1726;
+}
+
+html:not(.dark) .resource-bar p {
+	color: rgba(15, 23, 38, 0.7);
+}
+
+html:not(.dark) .VPDoc .content {
+	background: #ffffff;
+	border-color: rgba(15, 23, 38, 0.08);
+	box-shadow: 0 24px 60px rgba(15, 23, 38, 0.12);
+}
+
+html:not(.dark) .VPDoc .outline {
+	background: rgba(15, 23, 38, 0.03);
+	border-color: rgba(15, 23, 38, 0.08);
 }
