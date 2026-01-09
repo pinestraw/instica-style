@@ -114,11 +114,11 @@ a:hover {
 }
 
 .VPNavBar {
-	background: rgba(17, 26, 38, 0.78);
-	backdrop-filter: blur(16px);
-	border: 1px solid rgba(255, 255, 255, 0.08);
+	background: var(--ink-800);
+	backdrop-filter: none;
+	border: 1px solid rgba(255, 255, 255, 0.12);
 	border-radius: 16px;
-	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+	box-shadow: 0 24px 60px rgba(0, 0, 0, 0.38);
 	margin-top: 1.1rem;
 	padding: 0.35rem 1.35rem;
 }
@@ -149,11 +149,11 @@ a:hover {
 .landing-page .content-container {
 	max-width: 1220px;
 	margin: 0 auto;
-	padding: 0 2rem 4.5rem;
+	padding: 0 2.4rem 5rem;
 }
 
 .landing-page section {
-	margin-bottom: 4.5rem;
+	margin-bottom: 5.25rem;
 }
 
 .eyebrow {
@@ -349,33 +349,28 @@ a:hover {
 }
 
 .track-card {
-	padding: 2.2rem;
+	padding: 2.4rem;
 	border-radius: 28px;
 	background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(10, 17, 26, 0.8));
 	border: 1px solid var(--outline);
 	box-shadow: var(--shadow-soft);
 }
 
-.track-card p {
-	color: var(--vp-c-text-2);
-	margin-bottom: 0.7rem;
-}
-
-.track-card a {
-	font-weight: 600;
-}
-
 .tokens-stage .stage__grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-	gap: 1.3rem;
+	gap: 1.8rem;
+}
+
+.tokens-stage .stage__intro {
+	margin-bottom: 1.4rem;
 }
 
 .tokens-stage article {
-	padding: 1.8rem;
+	padding: 2.2rem;
 	border-radius: 26px;
 	border: 1px solid var(--outline);
-	background: rgba(12, 19, 30, 0.8);
+	background: rgba(12, 19, 30, 0.85);
 	box-shadow: var(--shadow-soft);
 }
 
@@ -399,7 +394,7 @@ a:hover {
 	display: inline-flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 0.62rem 0.78rem;
+	padding: 0.72rem 0.9rem;
 	border-radius: 14px;
 	background: var(--swatch, var(--surface));
 	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
@@ -410,7 +405,7 @@ a:hover {
 }
 
 .type-specimen p {
-	margin: 0.25rem 0;
+	margin: 0.28rem 0;
 }
 
 .type-specimen .large-title {
