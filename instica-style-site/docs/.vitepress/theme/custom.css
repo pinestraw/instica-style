@@ -123,6 +123,12 @@ body {
 	background: var(--body-gradient);
 }
 
+.VPSidebar {
+	background: var(--body-gradient);
+	border: none;
+	box-shadow: none;
+}
+
 body::before {
 	display: none;
 }
@@ -136,9 +142,17 @@ a:hover {
 	color: var(--mint-600);
 }
 
+.VPSite,
+.VPSite .Layout,
 .VPSite .VPHome,
-.VPSite .VPDoc {
-	background: transparent;
+.VPSite .VPDoc,
+.VPSite .VPContent,
+.VPSite .content-container,
+.VPSite .VPDoc .container,
+.VPSite .VPDoc .content-container {
+	background: var(--body-gradient);
+	box-shadow: none;
+	border: none;
 	position: relative;
 	z-index: 1;
 }
