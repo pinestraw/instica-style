@@ -111,6 +111,18 @@ body {
 	position: relative;
 }
 
+.VPSite,
+.VPSite .Layout,
+.VPSite .VPNav,
+.VPSite .VPLocalNav,
+.VPSidebar,
+.VPSidebar .nav,
+.VPSidebar .group,
+.VPSidebar .group .title,
+.VPSidebar .group .items {
+	background: var(--body-gradient);
+}
+
 body::before {
 	display: none;
 }
