@@ -266,6 +266,6 @@ if let image = UIImage(named: "scan-search") {
 
 ## Related
 
-- [Colors](./colors.md) - Color palette and gradients used in icons
+- [Colors](./color-system.md) - Color palette and gradients used in icons
 - [Components](./components.md) - How to integrate icons into components
 - [Typography](./typography.md) - Pairing icons with text
