@@ -213,7 +213,7 @@ a:hover {
 }
 
 .landing-page section {
-	margin-bottom: 3.5rem;
+	margin-bottom: 4rem;
 }
 
 .eyebrow {
@@ -327,7 +327,7 @@ a:hover {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 0.6rem;
-	margin-top: 0.4rem;
+	margin-top: 0;
 }
 
 .quick-links a {
@@ -688,7 +688,7 @@ a:hover {
 }
 
 .docs-cards + .doc-highlights {
-	margin-top: 2.6rem;
+	margin-top: 4rem;
 }
 
 .doc-highlights {
