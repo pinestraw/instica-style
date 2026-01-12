@@ -59,7 +59,6 @@
 	--doc-console-border: rgba(15, 23, 38, 0.08);
 	--doc-console-get: #0f9960;
 	--doc-console-error: #d14343;
-	--body-gradient: #0d151f;
 }
 
 
@@ -95,7 +94,6 @@
 	--doc-console-border: rgba(255, 255, 255, 0.12);
 	--doc-console-get: #82ffc9;
 	--doc-console-error: #ff8f8f;
-	--body-gradient: #0b1118;
 }
 
 :root,
@@ -105,10 +103,14 @@ body {
 }
 
 body {
-	background: var(--body-gradient);
+	background: linear-gradient(180deg, #f8fafc 0%, #f4f6fb 40%, #f7f9fc 100%);
 	color: var(--vp-c-text-1);
 	min-height: 100vh;
 	position: relative;
+}
+
+:root.dark body {
+	background: linear-gradient(180deg, #0c1118 0%, #0f1420 50%, #0d1219 100%);
 }
 
 .VPSite,
@@ -120,11 +122,11 @@ body {
 .VPSidebar .group,
 .VPSidebar .group .title,
 .VPSidebar .group .items {
-	background: var(--body-gradient);
+	background: transparent;
 }
 
 .VPSidebar {
-	background: var(--body-gradient);
+	background: transparent;
 	border: none;
 	box-shadow: none;
 }
@@ -150,7 +152,7 @@ a:hover {
 .VPSite .content-container,
 .VPSite .VPDoc .container,
 .VPSite .VPDoc .content-container {
-	background: var(--body-gradient);
+	background: transparent;
 	box-shadow: none;
 	border: none;
 	position: relative;
@@ -159,19 +161,26 @@ a:hover {
 
 .VPNav,
 .VPLocalNav {
-	background: var(--body-gradient);
+	background: transparent;
 	border: none;
 	box-shadow: none;
 }
 
 .VPNavBar {
 	background: transparent;
-	backdrop-filter: none;
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
 	border: none;
 	border-radius: 0;
-	box-shadow: none;
+	box-shadow: 0 1px 0 0 rgba(15, 23, 38, 0.05);
 	margin-top: 0;
 	padding: 0.35rem 0;
+}
+
+:root.dark .VPNavBar {
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.05);
 }
 
 .VPNavBarTitle .title {
