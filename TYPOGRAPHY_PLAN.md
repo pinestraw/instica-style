@@ -4,32 +4,40 @@
 
 ### Observations from Professional Sites
 
-**Stripe**
-- Large, bold headings (likely 48-56px for hero)
-- Clean Inter/system font stack
-- Generous line-height (1.4-1.5 for headings, 1.6-1.7 for body)
+**Linear**
+- Compact typography (body ~14px)
+- Tight line-heights for density
+- Clear hierarchy with minimal size jumps
+- Professional, utility-first aesthetic
+- Font weights: 400 (regular), 500 (medium), 600 (semibold)
+
+**Notion**
+- Dense but readable layouts
+- Small body text (~14px) with good contrast
+- Information-first design
+- Efficient use of space
+- Consistent, predictable hierarchy
+
+**GitHub**
+- Developer-focused density
+- Compact UI elements
+- Small but legible text (13-14px body)
+- Monospace integration
+- Clear information architecture
+
+**Stripe Dashboard**
+- Data-dense interface
+- Compact tables and metrics
+- Professional polish with tight spacing
+- Small body copy with excellent readability
 - Card-based layouts with subtle elevation
-- Font weights: 400 (regular), 600 (semibold), 700 (bold)
 
-**Apple**
-- SF Pro Text/Display with exceptional readability
-- Very large headings (56-72px for hero sections)
-- Extremely generous whitespace
-- Minimal font weight variation (mostly 400, 600, 700)
-- Line-height: ~1.1-1.2 for large headings, 1.5+ for body
-- Letter-spacing: tight on headings (-0.02em to -0.04em)
-
-**Oura**
-- Professional dark theme typography
-- Clear hierarchy with proper size jumps
-- Good use of font-weight for emphasis
-- Consistent spacing between sections
-
-**Meta/Facebook Docs**
-- Developer-focused clarity
-- Clean section headers with proper nesting
-- Font size scale with meaningful jumps
-- Excellent information density without feeling cramped
+**Vercel Dashboard**
+- Modern web app typography
+- Tight hierarchy
+- Small but legible throughout
+- Inter font stack
+- Clean, minimal aesthetic
 
 ### Current Issues in Instica Style
 
@@ -182,10 +190,11 @@ font-family: "SF Mono", "Monaco", "Cascadia Code", "Courier New", monospace;
 
 ### 5. Line-Height Principles
 
-- **Display/Headings**: 1.1-1.25 (tighter)
-- **Body text**: 1.5-1.6 (comfortable reading)
-- **UI elements**: 1.4-1.5 (compact)
-- **Dense data**: 1.3-1.4 (tables, lists)
+- **Display/Headings**: 1.1-1.25 (tight, compact aesthetic)
+- **Body text**: 1.4-1.5 (readable but not spacious)
+- **UI elements**: 1.3-1.4 (compact interface density)
+- **Dense data**: 1.2-1.3 (tables, lists, dashboards)
+- **Buttons/Labels**: 1.0-1.2 (tight, minimal padding)
 
 ### 6. Responsive Scaling
 
@@ -224,25 +233,30 @@ font-family: "SF Mono", "Monaco", "Cascadia Code", "Courier New", monospace;
 4. Update component-specific overrides
 
 ### Phase 3: Style Guide Updates
-1. Update typography.md documentation
-2. Add visual examples with live specimens
-3. Document do's and don'ts
-4. Add responsive behavior examples
-5. Update components.md with new type usage
+1. Update typography.md documentation with compact scale philosophy
+2. Add visual examples with live specimens showing density and hierarchy
+3. Document do's and don'ts (when to use compact vs. standard spacing)
+4. Add responsive behavior examples across breakpoints
+5. Update components.md with new type usage and dashboard patterns
+6. Add comparison examples (before/after with screenshots)
 
 ### Phase 4: Component Migration
-1. Update hero sections
-2. Update card components
-3. Update navigation/headers
-4. Update form labels and inputs
-5. Update tables and data displays
+1. Update hero sections (compact display text, tighter line-height)
+2. Update card components (denser typography for information density)
+3. Update navigation/headers (smaller but readable nav links)
+4. Update form labels and inputs (compact labels, 14px inputs)
+5. Update tables and data displays (tight cells, dense rows, small headers)
+6. Update buttons and CTAs (compact padding with tight line-height)
+7. Update footer and secondary navigation
 
 ### Phase 5: QA & Refinement
-1. Test on multiple screen sizes
-2. Verify contrast ratios (WCAG AA)
-3. Test with real content
-4. Gather feedback
-5. Fine-tune as needed
+1. Test on multiple screen sizes (mobile especially critical with smaller text)
+2. Verify contrast ratios (WCAG AA compliance - crucial for 14px body text)
+3. Test with real content (ensure 14px is readable with actual data)
+4. Test across different browsers and OS (rendering differences)
+5. Gather user feedback on readability and information density
+6. Fine-tune letter-spacing and line-heights if needed
+7. Adjust responsive breakpoints for optimal mobile experience
 
 ## Key Improvements Expected
 
@@ -265,11 +279,13 @@ font-family: "SF Mono", "Monaco", "Cascadia Code", "Courier New", monospace;
 
 ## Success Metrics
 
-- [ ] All headings follow new scale with proper weights
-- [ ] Body text is 16px with 1.5 line-height minimum
-- [ ] Letter-spacing applied to all large headings
+- [ ] All headings follow new compact scale with proper weights
+- [ ] Body text is 14px with ~1.4 line-height for density
+- [ ] Letter-spacing applied to headings for refinement
 - [ ] Responsive scaling works across breakpoints
-- [ ] Style guide shows clear visual examples
-- [ ] All documentation updated
-- [ ] WCAG AA contrast maintained
-- [ ] Visual hierarchy is immediately clear
+- [ ] Style guide shows clear visual examples with live type specimens
+- [ ] All documentation updated to reflect new scale
+- [ ] WCAG AA contrast maintained (critical for smaller text)
+- [ ] Visual hierarchy is immediately clear despite compact sizing
+- [ ] Information density improved without sacrificing readability
+- [ ] Dashboard/utility aesthetic achieved across all pages
