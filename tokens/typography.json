@@ -1,20 +1,115 @@
 {
   "fonts": {
-    "primary": "SF Pro Text",
-    "display": "SF Pro Display",
+    "primary": "Manrope Variable",
+    "display": "Manrope Variable",
     "mono": "SF Mono"
   },
   "roles": {
-    "largeTitle": { "font": "display", "size": 34, "lineHeight": 41, "weight": "Bold" },
-    "title1": { "font": "display", "size": 28, "lineHeight": 34, "weight": "Semibold" },
-    "title2": { "font": "primary", "size": 22, "lineHeight": 28, "weight": "Semibold" },
-    "title3": { "font": "primary", "size": 20, "lineHeight": 25, "weight": "Medium" },
-    "headline": { "font": "primary", "size": 17, "lineHeight": 22, "weight": "Semibold" },
-    "body": { "font": "primary", "size": 17, "lineHeight": 22, "weight": "Regular" },
-    "subheadline": { "font": "primary", "size": 15, "lineHeight": 20, "weight": "Medium" },
-    "footnote": { "font": "primary", "size": 13, "lineHeight": 18, "weight": "Regular" },
-    "caption": { "font": "primary", "size": 12, "lineHeight": 16, "weight": "Regular" },
-    "price": { "font": "primary", "size": 20, "lineHeight": 24, "weight": "Semibold", "features": ["monospaced"] },
-    "code": { "font": "mono", "size": 13, "lineHeight": 16, "weight": "Regular", "tracking": 0.02 }
+    "display": {
+      "font": "display",
+      "size": 32,
+      "lineHeight": 40,
+      "weight": 700,
+      "letterSpacing": -0.03,
+      "description": "Hero headlines, landing pages"
+    },
+    "h1": {
+      "font": "display",
+      "size": 28,
+      "lineHeight": 36,
+      "weight": 700,
+      "letterSpacing": -0.02,
+      "description": "Page titles"
+    },
+    "h2": {
+      "font": "primary",
+      "size": 24,
+      "lineHeight": 32,
+      "weight": 600,
+      "letterSpacing": -0.01,
+      "description": "Major section headers"
+    },
+    "h3": {
+      "font": "primary",
+      "size": 20,
+      "lineHeight": 28,
+      "weight": 600,
+      "letterSpacing": 0,
+      "description": "Section headers"
+    },
+    "h4": {
+      "font": "primary",
+      "size": 18,
+      "lineHeight": 24,
+      "weight": 600,
+      "letterSpacing": 0,
+      "description": "Subsection headers"
+    },
+    "h5": {
+      "font": "primary",
+      "size": 16,
+      "lineHeight": 24,
+      "weight": 600,
+      "letterSpacing": 0,
+      "description": "Small headers"
+    },
+    "large": {
+      "font": "primary",
+      "size": 15,
+      "lineHeight": 24,
+      "weight": 400,
+      "letterSpacing": 0,
+      "description": "Large body text, lede paragraphs"
+    },
+    "body": {
+      "font": "primary",
+      "size": 14,
+      "lineHeight": 20,
+      "weight": 400,
+      "letterSpacing": 0,
+      "description": "Default body text"
+    },
+    "small": {
+      "font": "primary",
+      "size": 13,
+      "lineHeight": 18,
+      "weight": 400,
+      "letterSpacing": 0,
+      "description": "Small UI text, labels"
+    },
+    "caption": {
+      "font": "primary",
+      "size": 12,
+      "lineHeight": 16,
+      "weight": 400,
+      "letterSpacing": 0.01,
+      "description": "Captions, metadata"
+    },
+    "micro": {
+      "font": "primary",
+      "size": 11,
+      "lineHeight": 14,
+      "weight": 500,
+      "letterSpacing": 0.02,
+      "description": "Tiny labels, dense tables"
+    },
+    "price": {
+      "font": "primary",
+      "size": 20,
+      "lineHeight": 24,
+      "weight": 600,
+      "letterSpacing": 0,
+      "features": ["monospaced"],
+      "description": "Pricing, totals with tabular alignment"
+    },
+    "code": {
+      "font": "mono",
+      "size": 13,
+      "lineHeight": 18,
+      "weight": 400,
+      "letterSpacing": 0,
+      "features": ["tabular"],
+      "description": "Code snippets, inline code"
+    }
   }
 }

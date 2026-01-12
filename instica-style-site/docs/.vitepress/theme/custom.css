@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root {
-	/* Light theme defaults (marketing-aligned) */
+	/* Light theme defaults (compact utility typography) */
 	--ink-900: #f6f8fc;
 	--ink-800: #ffffff;
 	--ink-700: #e9eef7;
@@ -20,21 +20,49 @@
 	--surface: #ffffff;
 	--outline: rgba(15, 23, 38, 0.08);
 	--outline-strong: rgba(98, 184, 255, 0.16);
-	--font-family-base: "Manrope", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-	--type-large-title-size: 2.5rem; /* 40px */
-	--type-large-title-line: 2.875rem; /* 46px */
-	--type-title1-size: 2rem; /* 32px */
-	--type-title1-line: 2.375rem; /* 38px */
-	--type-title2-size: 1.625rem; /* 26px */
-	--type-title2-line: 2rem; /* 32px */
-	--type-title3-size: 1.375rem; /* 22px */
-	--type-title3-line: 1.75rem; /* 28px */
-	--type-headline-size: 1.125rem; /* 18px */
-	--type-headline-line: 1.625rem; /* 26px */
-	--type-body-size: 0.9375rem; /* 15px */
-	--type-body-line: 1.375rem; /* 22px */
+	--font-family-base: "Manrope Variable", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", "SF Pro Text", system-ui, sans-serif;
+	--type-display-size: 2rem; /* 32px */
+	--type-display-line: 2.5rem; /* 40px */
+	--type-display-letter: -0.03em;
+	--type-h1-size: 1.75rem; /* 28px */
+	--type-h1-line: 2.25rem; /* 36px */
+	--type-h1-letter: -0.02em;
+	--type-h2-size: 1.5rem; /* 24px */
+	--type-h2-line: 2rem; /* 32px */
+	--type-h2-letter: -0.01em;
+	--type-h3-size: 1.25rem; /* 20px */
+	--type-h3-line: 1.75rem; /* 28px */
+	--type-h3-letter: 0em;
+	--type-h4-size: 1.125rem; /* 18px */
+	--type-h4-line: 1.5rem; /* 24px */
+	--type-h4-letter: 0em;
+	--type-h5-size: 1rem; /* 16px */
+	--type-h5-line: 1.5rem; /* 24px */
+	--type-h5-letter: 0em;
+	--type-large-size: 0.9375rem; /* 15px */
+	--type-large-line: 1.5rem; /* 24px */
+	--type-large-letter: 0em;
+	--type-body-size: 0.875rem; /* 14px */
+	--type-body-line: 1.25rem; /* 20px */
+	--type-body-letter: 0em;
+	--type-small-size: 0.8125rem; /* 13px */
+	--type-small-line: 1.125rem; /* 18px */
+	--type-small-letter: 0em;
 	--type-caption-size: 0.75rem; /* 12px */
 	--type-caption-line: 1rem; /* 16px */
+	--type-caption-letter: 0.01em;
+	--type-micro-size: 0.6875rem; /* 11px */
+	--type-micro-line: 0.875rem; /* 14px */
+	--type-micro-letter: 0.02em;
+	/* Legacy aliases to keep existing selectors working */
+	--type-large-title-size: var(--type-display-size);
+	--type-large-title-line: var(--type-display-line);
+	--type-title1-size: var(--type-h1-size);
+	--type-title1-line: var(--type-h1-line);
+	--type-title2-size: var(--type-h2-size);
+	--type-title2-line: var(--type-h2-line);
+	--type-title3-size: var(--type-h3-size);
+	--type-title3-line: var(--type-h3-line);
 	--swatch-size: 2.5rem;
 	--swatch-radius: 10px;
 	--swatch-border: 1px solid rgba(15, 23, 38, 0.08);
@@ -216,6 +244,62 @@ a:hover {
 	margin-bottom: 4rem;
 }
 
+.VPDoc h1 {
+	font-size: var(--type-h1-size);
+	line-height: var(--type-h1-line);
+	letter-spacing: var(--type-h1-letter);
+	font-weight: 700;
+}
+
+.VPDoc h2 {
+	font-size: var(--type-h2-size);
+	line-height: var(--type-h2-line);
+	letter-spacing: var(--type-h2-letter);
+	font-weight: 600;
+}
+
+.VPDoc h3 {
+	font-size: var(--type-h3-size);
+	line-height: var(--type-h3-line);
+	letter-spacing: var(--type-h3-letter);
+	font-weight: 600;
+}
+
+.VPDoc h4 {
+	font-size: var(--type-h4-size);
+	line-height: var(--type-h4-line);
+	letter-spacing: var(--type-h4-letter);
+	font-weight: 600;
+}
+
+.VPDoc h5 {
+	font-size: var(--type-h5-size);
+	line-height: var(--type-h5-line);
+	letter-spacing: var(--type-h5-letter);
+	font-weight: 600;
+}
+
+.VPDoc p,
+.VPDoc li {
+	font-size: var(--type-body-size);
+	line-height: var(--type-body-line);
+	letter-spacing: var(--type-body-letter);
+}
+
+.VPDoc small,
+.VPDoc .small {
+	font-size: var(--type-small-size);
+	line-height: var(--type-small-line);
+	letter-spacing: var(--type-small-letter);
+}
+
+.VPDoc .caption,
+.VPDoc figcaption {
+	font-size: var(--type-caption-size);
+	line-height: var(--type-caption-line);
+	letter-spacing: var(--type-caption-letter);
+}
+
 .eyebrow {
 	text-transform: uppercase;
 	letter-spacing: 0.22em;
@@ -227,6 +311,8 @@ a:hover {
 .landing-page h1 {
 	font-size: var(--type-large-title-size);
 	line-height: var(--type-large-title-line);
+	letter-spacing: var(--type-display-letter);
+	font-weight: 700;
 	margin: 1rem 0;
 	color: var(--vp-c-text-1);
 }
@@ -234,13 +320,15 @@ a:hover {
 .landing-page h2 {
 	font-size: var(--type-title2-size);
 	line-height: var(--type-title2-line);
+	letter-spacing: var(--type-h2-letter);
+	font-weight: 600;
 	margin: 0.25rem 0 0.6rem;
 	color: var(--vp-c-text-1);
 }
 
 .landing-page .lede {
-	font-size: 1.05rem;
-	line-height: 1.7;
+	font-size: 1rem;
+	line-height: 1.5;
 	color: var(--vp-c-text-2);
 	max-width: 48rem;
 }
@@ -484,27 +572,83 @@ a:hover {
 	margin: 0.28rem 0;
 }
 
+.type-specimen .display,
 .type-specimen .large-title {
-	font-size: var(--type-large-title-size);
-	line-height: var(--type-large-title-line);
+	font-size: var(--type-display-size);
+	line-height: var(--type-display-line);
+	letter-spacing: var(--type-display-letter);
 	font-weight: 700;
 }
 
+.type-specimen .h1,
 .type-specimen .title-one {
-	font-size: var(--type-title1-size);
-	line-height: var(--type-title1-line);
+	font-size: var(--type-h1-size);
+	line-height: var(--type-h1-line);
+	letter-spacing: var(--type-h1-letter);
+	font-weight: 700;
+}
+
+.type-specimen .h2 {
+	font-size: var(--type-h2-size);
+	line-height: var(--type-h2-line);
+	letter-spacing: var(--type-h2-letter);
 	font-weight: 600;
+}
+
+.type-specimen .h3,
+.type-specimen .title-three {
+	font-size: var(--type-h3-size);
+	line-height: var(--type-h3-line);
+	letter-spacing: var(--type-h3-letter);
+	font-weight: 600;
+}
+
+.type-specimen .h4 {
+	font-size: var(--type-h4-size);
+	line-height: var(--type-h4-line);
+	letter-spacing: var(--type-h4-letter);
+	font-weight: 600;
+}
+
+.type-specimen .h5 {
+	font-size: var(--type-h5-size);
+	line-height: var(--type-h5-line);
+	letter-spacing: var(--type-h5-letter);
+	font-weight: 600;
+}
+
+.type-specimen .large {
+	font-size: var(--type-large-size);
+	line-height: var(--type-large-line);
+	letter-spacing: var(--type-large-letter);
 }
 
 .type-specimen .body {
 	font-size: var(--type-body-size);
 	line-height: var(--type-body-line);
+	letter-spacing: var(--type-body-letter);
+	color: var(--vp-c-text-2);
+}
+
+.type-specimen .small {
+	font-size: var(--type-small-size);
+	line-height: var(--type-small-line);
+	letter-spacing: var(--type-small-letter);
 	color: var(--vp-c-text-2);
 }
 
 .type-specimen .caption {
 	font-size: var(--type-caption-size);
 	line-height: var(--type-caption-line);
+	letter-spacing: var(--type-caption-letter);
+	color: var(--vp-c-text-2);
+}
+
+.type-specimen .micro {
+	font-size: var(--type-micro-size);
+	line-height: var(--type-micro-line);
+	letter-spacing: var(--type-micro-letter);
+	text-transform: uppercase;
 	color: var(--vp-c-text-2);
 }
 
