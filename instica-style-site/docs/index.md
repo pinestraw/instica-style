@@ -4,6 +4,8 @@ title: Instica Style
 pageClass: landing-page
 ---
 
+<div class="content-container">
+
 <section class="hero shell">
 	<div class="hero__copy">
 		<p class="eyebrow">Instica design system</p>
@@ -80,3 +82,5 @@ pageClass: landing-page
 		<a class="cta ghost" href="https://github.com/instica/instica-style/releases">View changelog</a>
 	</div>
 </section>
+
+</div>
