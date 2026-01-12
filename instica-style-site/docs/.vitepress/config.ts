@@ -33,6 +33,7 @@ export default defineConfig({
 						{ text: 'Color System', link: '/guide/color-system' },
 						{ text: 'Typography', link: '/guide/typography' },
 						{ text: 'Spacing & Layout', link: '/guide/spacing-layout' },
+						{ text: 'Icons', link: '/guide/icons' },
 						{ text: 'Design Tokens', link: '/guide/design-tokens' }
 					]
 				},

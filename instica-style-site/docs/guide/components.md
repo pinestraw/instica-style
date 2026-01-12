@@ -7,6 +7,148 @@ outline: deep
 
 This section stays in lockstep with the `.style_inspiration` references and adds SwiftUI snippets so engineering can copy → paste.
 
+## 3.0 Icons
+
+Icons are integrated throughout our component system to enhance usability and provide visual context. See the [Icons guide](./icons.md) for comprehensive specifications.
+
+### Icon Integration Patterns
+
+**Button Icons**
+- Place icons to the left of labels with `space.sm` (8px) spacing
+- Use 24px icons for standard buttons, 20px for compact buttons
+- Never trail icons on primary CTAs unless indicating external navigation
+
+```swift
+Button(action: scanAction) {
+	HStack(spacing: 8) {
+		Image("scan-search")
+			.resizable()
+			.frame(width: 24, height: 24)
+		Text("Scan Item")
+	}
+	.padding(.vertical, 12)
+	.padding(.horizontal, 16)
+}
+```
+
+**List Row Icons**
+- Use 32px icons to lead list rows for feature identification
+- Maintain 12px spacing between icon and text content
+- Reserve trailing icons for navigation chevrons only
+
+```swift
+HStack(spacing: 12) {
+	Image("organize-items")
+		.resizable()
+		.frame(width: 32, height: 32)
+	VStack(alignment: .leading) {
+		Text("Category Settings")
+		Text("Organize your inventory").font(.caption)
+	}
+	Spacer()
+	Image(systemName: "chevron.right")
+}
+```
+
+**Card Headers**
+- Use 48px–64px icons in card headers for feature emphasis
+- Pair with headline text at `space.md` (12px) distance
+- Consider tinted backgrounds that complement icon gradients
+
+```swift
+VStack(alignment: .leading, spacing: 12) {
+	Image("price-optimization")
+		.resizable()
+		.frame(width: 48, height: 48)
+	VStack(alignment: .leading, spacing: 4) {
+		Text("Smart Pricing")
+			.font(.title3.weight(.semibold))
+		Text("Optimize your listing prices")
+			.font(.caption)
+			.foregroundColor(Color("textSecondary"))
+	}
+}
+.padding(24)
+```
+
+**Empty States**
+- Use 128px icons for empty state illustrations
+- Center align on mobile, left align on desktop
+- Maintain `space.xl` (24px) between icon and messaging
+
+```swift
+VStack(spacing: 24) {
+	Image("upload-multiple")
+		.resizable()
+		.frame(width: 128, height: 128)
+	VStack(spacing: 8) {
+		Text("No items yet")
+			.font(.title2.weight(.semibold))
+		Text("Start by uploading your first item")
+			.font(.body)
+			.foregroundColor(Color("textSecondary"))
+	}
+	Button("Upload Now", action: uploadAction)
+}
+```
+
+**Workflow Step Indicators**
+- Use 40px icons for multi-step workflows
+- Display in horizontal arrangement with connecting lines
+- Highlight active step with brand color accent
+
+```swift
+HStack(spacing: 16) {
+	ForEach(steps) { step in
+		VStack(spacing: 8) {
+			Image(step.icon)
+				.resizable()
+				.frame(width: 40, height: 40)
+				.opacity(step.isActive ? 1.0 : 0.5)
+			Text(step.name)
+				.font(.caption)
+		}
+	}
+}
+```
+
+### Icon Accessibility in Components
+
+- Always provide descriptive labels via `.accessibilityLabel()`
+- Use `.accessibilityHidden(true)` for purely decorative icons
+- Ensure icon + text combinations meet WCAG AA contrast requirements
+- Test icons on both light and dark backgrounds during component design
+
+```swift
+Image("quick-actions")
+	.resizable()
+	.frame(width: 24, height: 24)
+	.accessibilityLabel("Quick actions menu")
+```
+
+### Platform-Specific Guidelines
+
+**iOS**
+- Use `.renderingMode(.original)` to preserve PNG gradients
+- Consider SF Symbols for system actions, workflow icons for app-specific features
+- Test icons at 1x, 2x, 3x scales to ensure clarity
+
+**Web**
+- Set `alt` attributes with meaningful descriptions
+- Use CSS `object-fit: contain` to prevent distortion
+- Provide loading="lazy" for below-the-fold icon usage
+
+**Responsive Sizing**
+- Mobile: Scale icons down by 25% in dense layouts
+- Tablet: Use default sizes as specified
+- Desktop: Scale up to 150% for hero sections only
+
+### Related Resources
+
+- [Icons Guide](./icons.md) - Complete icon specifications and catalog
+- [Icons Token File](../../tokens/icons.json) - Programmatic access to icon metadata
+- [Color System](./color-system.md) - Gradient colors used in icons
+
 ## 3.1 Buttons
 
 | Variant | Anatomy | When to use |

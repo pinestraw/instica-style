@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Instica Icon Design Tokens",
+  "description": "Design tokens for the Instica icon system, including sizes, specifications, and workflow icon metadata",
+  "version": "1.0.0",
+  "icons": {
+    "sizes": {
+      "xs": {
+        "value": "16px",
+        "description": "Extra small - UI elements, dense layouts",
+        "pixels": 16
+      },
+      "sm": {
+        "value": "24px",
+        "description": "Small - Buttons, navigation",
+        "pixels": 24
+      },
+      "md": {
+        "value": "32px",
+        "description": "Medium - Default size, cards",
+        "pixels": 32
+      },
+      "lg": {
+        "value": "48px",
+        "description": "Large - Feature highlights",
+        "pixels": 48
+      },
+      "xl": {
+        "value": "64px",
+        "description": "Extra large - Hero sections",
+        "pixels": 64
+      },
+      "marketing": {
+        "value": "128px",
+        "description": "Marketing - Landing pages, promotional materials",
+        "pixels": 128
+      }
+    },
+    "specifications": {
+      "format": "PNG with alpha channel",
+      "sourceDimensions": "1024x1024px",
+      "backgroundColor": "transparent (alpha=0)",
+      "frameFill": "65-70%",
+      "style": "Soft 3D illustration",
+      "averageFileSize": "1.3MB"
+    },
+    "workflow": {
+      "scan-search": {
+        "name": "Scan & Search",
+        "concept": "Smartphone with scan interface",
+        "gradient": "blue-purple",
+        "colors": ["#4F46E5", "#7C3AED"],
+        "useCase": "Product scanning and search functionality",
+        "file": "scan-search.png"
+      },
+      "add-photos": {
+        "name": "Add Photos",
+        "concept": "Camera",
+        "gradient": "orange-coral",
+        "colors": ["#F97316", "#FB923C"],
+        "useCase": "Photo capture and upload features",
+        "file": "add-photos.png"
+      },
+      "enter-details": {
+        "name": "Enter Details",
+        "concept": "Fountain pen",
+        "gradient": "teal-turquoise",
+        "colors": ["#14B8A6", "#2DD4BF"],
+        "useCase": "Manual data entry and editing",
+        "file": "enter-details.png"
+      },
+      "save-list": {
+        "name": "Save to List",
+        "concept": "Badge with checkmark",
+        "gradient": "green-emerald",
+        "colors": ["#10B981", "#34D399"],
+        "useCase": "Saving items and creating lists",
+        "file": "save-list.png"
+      },
+      "organize-items": {
+        "name": "Organize Items",
+        "concept": "Storage box",
+        "gradient": "purple-magenta",
+        "colors": ["#A855F7", "#C084FC"],
+        "useCase": "Categorization and organization features",
+        "file": "organize-items.png"
+      },
+      "track-status": {
+        "name": "Track Status",
+        "concept": "Location pin",
+        "gradient": "cyan-blue",
+        "colors": ["#06B6D4", "#0EA5E9"],
+        "useCase": "Status tracking and location features",
+        "file": "track-status.png"
+      },
+      "price-optimization": {
+        "name": "Price Optimization",
+        "concept": "Gold coin",
+        "gradient": "gold-amber",
+        "colors": ["#F59E0B", "#FBBF24"],
+        "useCase": "Pricing tools and optimization",
+        "file": "price-optimization.png"
+      },
+      "quick-actions": {
+        "name": "Quick Actions",
+        "concept": "Lightning bolt",
+        "gradient": "yellow-orange",
+        "colors": ["#EAB308", "#F59E0B"],
+        "useCase": "Fast actions and shortcuts",
+        "file": "quick-actions.png"
+      },
+      "take-photos": {
+        "name": "Take Photos",
+        "concept": "Camera lens",
+        "gradient": "blue-cyan",
+        "colors": ["#3B82F6", "#06B6D4"],
+        "useCase": "Photography and image capture",
+        "file": "take-photos.png"
+      },
+      "upload-multiple": {
+        "name": "Upload Multiple",
+        "concept": "Upward arrow",
+        "gradient": "pink-purple",
+        "colors": ["#EC4899", "#A855F7"],
+        "useCase": "Batch upload functionality",
+        "file": "upload-multiple.png"
+      },
+      "customize-listing": {
+        "name": "Customize Listing",
+        "concept": "Paintbrush",
+        "gradient": "rainbow",
+        "colors": ["#F59E0B", "#EC4899", "#8B5CF6", "#3B82F6"],
+        "useCase": "Customization and styling tools",
+        "file": "customize-listing.png"
+      },
+      "publish-track": {
+        "name": "Publish & Track",
+        "concept": "Star",
+        "gradient": "gold-yellow",
+        "colors": ["#FBBF24", "#FCD34D"],
+        "useCase": "Publishing and tracking published items",
+        "file": "publish-track.png"
+      }
+    },
+    "generation": {
+      "model": "gpt-image-1.5",
+      "quality": "high",
+      "promptTemplate": "Create a [ICON_CONCEPT] icon with these specifications:\n\nStyle & Appearance:\n- Soft 3D illustration style with subtle depth and dimension\n- Clean, modern, professional aesthetic\n- Smooth surfaces and polished finish\n- [GRADIENT_DESCRIPTION] color scheme\n\nComposition:\n- Single cohesive object, not multiple separate elements\n- Centered in frame, filling 65-70% of the canvas\n- Clear silhouette that's recognizable at any size\n- Adequate negative space for breathing room\n\nTechnical Requirements:\n- Fully transparent background (alpha=0, no white/cream backgrounds)\n- High contrast between icon and transparency\n- Sharp, clean edges\n- Optimized for both light and dark UI backgrounds\n\nVisual Inspiration:\n- Dribbble UI icon best practices\n- Contemporary app icon design\n- Material Design principles\n- iOS/macOS icon guidelines\n\nAvoid:\n- Multiple disconnected objects\n- Busy or cluttered compositions\n- Flat 2D design (needs dimensional depth)\n- Drop shadows or glows\n- Text or labels",
+      "variables": {
+        "ICON_CONCEPT": "The specific object to illustrate (e.g., 'smartphone', 'camera', 'fountain pen')",
+        "GRADIENT_DESCRIPTION": "The gradient colors (e.g., 'vibrant blue-to-purple gradient', 'warm orange-to-coral gradient')"
+      }
+    },
+    "accessibility": {
+      "altTextRequired": true,
+      "minContrast": "WCAG AA compliant",
+      "textLabelsRecommended": "Provide text labels alongside icons when context isn't immediately clear"
+    }
+  }
+}
