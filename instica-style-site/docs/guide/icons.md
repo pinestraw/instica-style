@@ -45,89 +45,79 @@ Icons are **centered and fill 65-70% of the frame**, providing:
 
 Our workflow icons represent key user actions in the Instica inventory management system.
 
-### Scan & Search
-<img src="/icons/workflow/scan-search.png" alt="Scan & Search icon" width="200" />
-
-**Concept:** Smartphone with scan interface  
-**Gradient:** Blue-purple  
-**Use Case:** Product scanning and search functionality
-
-### Add Photos
-<img src="/icons/workflow/add-photos.png" alt="Add Photos icon" width="200" />
-
-**Concept:** Camera  
-**Gradient:** Orange-coral  
-**Use Case:** Photo capture and upload features
-
-### Enter Details
-<img src="/icons/workflow/enter-details.png" alt="Enter Details icon" width="200" />
-
-**Concept:** Fountain pen  
-**Gradient:** Teal-turquoise  
-**Use Case:** Manual data entry and editing
-
-### Save to List
-<img src="/icons/workflow/save-list.png" alt="Save to List icon" width="200" />
-
-**Concept:** Badge with checkmark  
-**Gradient:** Green-emerald  
-**Use Case:** Saving items and creating lists
-
-### Organize Items
-<img src="/icons/workflow/organize-items.png" alt="Organize Items icon" width="200" />
-
-**Concept:** Storage box  
-**Gradient:** Purple-magenta  
-**Use Case:** Categorization and organization features
-
-### Track Status
-<img src="/icons/workflow/track-status.png" alt="Track Status icon" width="200" />
-
-**Concept:** Location pin  
-**Gradient:** Cyan-blue  
-**Use Case:** Status tracking and location features
-
-### Price Optimization
-<img src="/icons/workflow/price-optimization.png" alt="Price Optimization icon" width="200" />
-
-**Concept:** Gold coin  
-**Gradient:** Gold-amber  
-**Use Case:** Pricing tools and optimization
-
-### Quick Actions
-<img src="/icons/workflow/quick-actions.png" alt="Quick Actions icon" width="200" />
-
-**Concept:** Lightning bolt  
-**Gradient:** Yellow-orange  
-**Use Case:** Fast actions and shortcuts
-
-### Take Photos
-<img src="/icons/workflow/take-photos.png" alt="Take Photos icon" width="200" />
-
-**Concept:** Camera lens  
-**Gradient:** Blue-cyan  
-**Use Case:** Photography and image capture
-
-### Upload Multiple
-<img src="/icons/workflow/upload-multiple.png" alt="Upload Multiple icon" width="200" />
-
-**Concept:** Upward arrow  
-**Gradient:** Pink-purple  
-**Use Case:** Batch upload functionality
-
-### Customize Listing
-<img src="/icons/workflow/customize-listing.png" alt="Customize Listing icon" width="200" />
-
-**Concept:** Paintbrush  
-**Gradient:** Rainbow  
-**Use Case:** Customization and styling tools
-
-### Publish & Track
-<img src="/icons/workflow/publish-track.png" alt="Publish & Track icon" width="200" />
-
-**Concept:** Star  
-**Gradient:** Gold-yellow  
-**Use Case:** Publishing and tracking published items
+<div class="icon-grid">
+  <div class="icon-card">
+    <img src="/icons/workflow/scan-search.png" alt="Scan & Search icon" />
+    <h4>Scan & Search</h4>
+    <p class="icon-meta">Smartphone · Blue-purple</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/add-photos.png" alt="Add Photos icon" />
+    <h4>Add Photos</h4>
+    <p class="icon-meta">Camera · Orange-coral</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/enter-details.png" alt="Enter Details icon" />
+    <h4>Enter Details</h4>
+    <p class="icon-meta">Fountain pen · Teal-turquoise</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/save-list.png" alt="Save to List icon" />
+    <h4>Save to List</h4>
+    <p class="icon-meta">Badge with checkmark · Green-emerald</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/organize-items.png" alt="Organize Items icon" />
+    <h4>Organize Items</h4>
+    <p class="icon-meta">Storage box · Purple-magenta</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/track-status.png" alt="Track Status icon" />
+    <h4>Track Status</h4>
+    <p class="icon-meta">Location pin · Cyan-blue</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/price-optimization.png" alt="Price Optimization icon" />
+    <h4>Price Optimization</h4>
+    <p class="icon-meta">Gold coin · Gold-amber</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/quick-actions.png" alt="Quick Actions icon" />
+    <h4>Quick Actions</h4>
+    <p class="icon-meta">Lightning bolt · Yellow-orange</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/take-photos.png" alt="Take Photos icon" />
+    <h4>Take Photos</h4>
+    <p class="icon-meta">Camera lens · Blue-cyan</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/upload-multiple.png" alt="Upload Multiple icon" />
+    <h4>Upload Multiple</h4>
+    <p class="icon-meta">Upward arrow · Pink-purple</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/customize-listing.png" alt="Customize Listing icon" />
+    <h4>Customize Listing</h4>
+    <p class="icon-meta">Paintbrush · Rainbow</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/workflow/publish-track.png" alt="Publish & Track icon" />
+    <h4>Publish & Track</h4>
+    <p class="icon-meta">Star · Gold-yellow</p>
+  </div>
+</div>
 
 ## Usage Guidelines
 

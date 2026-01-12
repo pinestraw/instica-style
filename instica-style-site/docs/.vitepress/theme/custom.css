@@ -1047,3 +1047,80 @@ html:not(.dark) .VPDoc .outline {
 	background: rgba(255, 255, 255, 0.03);
 	border-color: var(--outline);
 }
+
+
+/* Icon Grid */
+.icon-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 24px;
+margin: 32px 0;
+}
+
+.icon-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding: 24px 16px;
+border-radius: 12px;
+background: rgba(255, 255, 255, 0.04);
+border: 1px solid var(--vp-c-border);
+transition: all 0.2s ease;
+}
+
+.icon-card:hover {
+background: rgba(255, 255, 255, 0.06);
+border-color: var(--mint-500);
+transform: translateY(-2px);
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.dark .icon-card:hover {
+box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.icon-card img {
+width: 120px;
+height: 120px;
+object-fit: contain;
+margin-bottom: 16px;
+}
+
+.icon-card h4 {
+margin: 0 0 8px 0;
+font-size: 16px;
+font-weight: 600;
+color: var(--vp-c-text-1);
+}
+
+.icon-card .icon-meta {
+margin: 0;
+font-size: 13px;
+color: var(--vp-c-text-2);
+line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+.icon-grid {
+grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+gap: 16px;
+}
+
+.icon-card {
+padding: 20px 12px;
+}
+
+.icon-card img {
+width: 96px;
+height: 96px;
+}
+
+.icon-card h4 {
+font-size: 14px;
+}
+
+.icon-card .icon-meta {
+font-size: 12px;
+}
+}
