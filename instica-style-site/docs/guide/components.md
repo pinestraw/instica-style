@@ -299,30 +299,33 @@ struct InventoryCard: View {
 }
 ```
 
-## 3.4 Navigation
-- **Tab bar:** up to four tabs; icons 28×28pt with labels using `type.micro`.
-- **NavigationStack:** prefer `.navigationBarTitleDisplayMode(.large)` on root screens, `.inline` after drill-down.
-- **Buttons in nav bars:** use secondary button style with minimal border.
-- **Back button:** system default; avoid custom glyphs unless mirroring brand arrow.
-- **Side navigation (desktop):** 64px rail with icons centered; expanded rail reveals labels on hover.
-- **Breadcrumbs:** show on desktop detail pages when depth ≥ 3. Use micro separators `›` with `color.textSecondary`.
-- **Sticky footers:** mobile nav can pin “Scan” or “Add item” button as floating action aligned to center of tab bar.
+## 3.4 Navigation (glass)
+- **Web glass bar (light):** sticky at `top: 0`, backdrop blur 18px, gradient fill `rgba(255,255,255,0.42→0.42)`, 1px bottom border `rgba(15,23,42,0.06)`, shadow `0 8px 28px rgba(15,23,42,0.08)`.
+- **Web glass bar (dark):** keep blur 18px; gradient `rgba(12,17,24,0.78→0.78)`, border `rgba(255,255,255,0.08)`, shadow `0 10px 30px rgba(0,0,0,0.45)`.
+- **Content lock:** nav contents live in a 1160px max-width shell with 20px side padding so logo/links never touch edges; bar itself stays full-bleed.
+- **Links:** uppercase tracking, active/hover shifts to `color.textStrong`; avoid pills in nav unless surface is marketing hero.
+- **CTAs:** primary uses brand gradient with white text; match secondary height (≈40px) and 12×14px padding; shadow dialed down on scroll states.
+- **Mobile/dense:** collapse to menu button at ≤900px; drawer uses 12px radius, 94% white/6% ink fill and mirrors link styling.
+- **Side rails (desktop app):** 64px collapsed rail with center-aligned icons; expanded flyout uses `space.md` rhythm and the same glass tokens on hover.
+- **Breadcrumbs:** on doc/detail pages when depth ≥3; use `type.micro` + `color.textSecondary` separators.
 
-```swift
-struct RootView: View {
-	var body: some View {
-		TabView {
-			InventoryList()
-				.tabItem { Label("Inventory", systemImage: "shippingbox") }
-			AnalyticsView()
-				.tabItem { Label("Insights", systemImage: "chart.bar") }
-		}
-		.tint(Color("brand"))
-	}
-}
+```css
+/* Web glass header tokens (light) */
+backdrop-filter: blur(18px) saturate(140%);
+background: linear-gradient(90deg, rgba(255,255,255,0.42) 0%, rgba(243,246,252,0.42) 50%, rgba(255,255,255,0.42) 100%);
+border-bottom: 1px solid rgba(15,23,42,0.06);
+box-shadow: 0 8px 28px rgba(15,23,42,0.08);
 ```
 
-## 3.5 Lists & Rows
+## 3.5 Hero (marketing)
+- **Layout:** headline/copy max 520px; imagery or secondary column takes ~55% width. Keep `space.3xl` vertical padding.
+- **Surface:** glass card with 1px `color.border` stroke, 18–20px radius, background `rgba(surface, 0.9)` on light and `rgba(ink-700, 0.78)` on dark.
+- **Blur & glow:** add backdrop blur 14–18px plus soft radial accents (`brand`/`sky`) behind the card for depth.
+- **CTAs:** primary gradient uses brand → brandDark with white text; secondary ghost uses faint border and transparent fill.
+- **Hero nav alignment:** nav container matches hero width (1160px) so text and controls align.
+- **Content spacing:** eyebrow → H1 → lede uses `space.md` steps; CTA row uses `space.md` gap and wraps on narrow widths.
+
+## 3.6 Lists & Rows
 - **Spacing:** 12px between cells, 16px internal padding.
 - **Dividers:** use subtle dividers (`color.border`) on dense data; omit on cards.
 - **Trailing icons:** 16px from right edge. Use `chevron.right` for navigation rows only.
@@ -365,7 +368,7 @@ struct InventoryRow: View {
 ### Supporting assets
 - Store SwiftUI playgrounds in `/resources/swiftui/` (create if needed) so designers can snapshot updates.
 
-## 3.6 Doc shell + inspiration cards
+## 3.7 Doc shell + inspiration cards
 Blend Meta’s developer docs with the Oura console to modernize long-form guides.
 
 | Element | Spec | Reference |
