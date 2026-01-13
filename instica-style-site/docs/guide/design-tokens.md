@@ -123,13 +123,13 @@ Store SVG sources in `resources/assets/icons/` and optimize via `svgo` before co
 
 These state tokens keep behavior consistent across components. When shipping features, reference token names in commits to make audit trails easy.
 
-## 2.8 Hero gradient tokens (Apple + Oura cues)
+## 2.8 Hero gradient tokens (hardware hero cues)
 - `hero.background.start`: `rgba(26,115,232,0.08)`
 - `hero.background.end`: `#EEF3FF`
 - `hero.highlight`: `rgba(255,255,255,0.9)`
 - `hero.blur`: `rgba(255,255,255,0.35)` border overlay
 
-Use these tokens to recreate the soft gradients from the Apple and Oura screenshots. Keep gradient stops stored as tokens so marketing and product surfaces stay aligned.
+Use these tokens to recreate the soft gradients from the provided hero captures. Keep gradient stops stored as tokens so marketing and product surfaces stay aligned.
 
 ```json
 "hero": {
@@ -141,11 +141,11 @@ Use these tokens to recreate the soft gradients from the Apple and Oura screensh
 }
 ```
 
-## 2.9 Doc console tokens (Meta + Oura docs)
+## 2.9 Doc console tokens (split-shell docs)
 - `doc.console.surface`: `#0B1D33`
 - `doc.console.code`: `#071729`
 - `doc.console.border`: `rgba(255,255,255,0.04)`
 - `doc.console.badge.get`: `#21D07A`
 - `doc.console.badge.error`: `#FF7A7A`
 
-These tokens enable a split-shell developer experience: pale content on the left, console-style status blocks on the right—exactly like the references.
+These tokens enable a split-shell developer experience: pale content on the left, console-style status blocks on the right—matching the provided references.

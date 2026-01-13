@@ -23,6 +23,7 @@ export default defineConfig({
 				{
 					text: 'Brand Foundation',
 					items: [
+						{ text: 'Logo & Usage', link: '/guide/logo' },
 						{ text: 'Brand Playbook', link: '/guide/brand-foundation' },
 						{ text: 'Core Principles', link: '/guide/core-principles' }
 					]
