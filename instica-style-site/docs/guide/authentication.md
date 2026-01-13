@@ -38,11 +38,21 @@ Email/password appears first because it's the universal fallback and sets user e
 
 ## Third-party login buttons
 
-**Critical requirement: Follow official brand guidelines exactly.** Every OAuth provider publishes strict requirements for button styling, placement, and copy. Deviating from these guidelines can result in app rejection or provider policy violations.
+**Critical requirement: Follow official brand guidelines exactly.** Every OAuth provider publishes strict requirements for button styling, placement, and copy. 
+
+### Why strict compliance matters
+
+Deviating from official guidelines can result in:
+- **App Store rejection** (Apple reviews check SIWA button compliance)
+- **Provider policy violations** (termination of API access)
+- **User trust erosion** (non-standard buttons appear suspicious)
+- **Legal issues** (trademark misuse)
+
+**Never improvise login button designs.** Always consult the provider's official documentation before implementation and verify compliance before each release.
 
 ### Sign in with Apple
 
-Apple provides comprehensive [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple) that must be followed precisely.
+Apple provides comprehensive [Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple) that must be followed precisely. App Store reviewers actively check SIWA implementation; non-compliant buttons are a common rejection reason.
 
 #### Dark mode (default)
 ```css
@@ -81,14 +91,14 @@ Apple provides comprehensive [Human Interface Guidelines](https://developer.appl
 Use inline SVG with proper fill color that adapts to theme:
 
 **Dark mode (white logo):**
-```svg
+```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="white">
   <path d="M15.768 3.635c1.027-1.232 1.72-2.949 1.53-4.635-1.48.06-3.273.986-4.337 2.23-.952 1.107-1.785 2.875-1.56 4.567 1.653.128 3.34-.839 4.367-2.162zm.65 2.113c-2.416-.139-4.472 1.374-5.615 1.374-1.143 0-2.91-1.302-4.789-1.266-2.463.037-4.736 1.431-6.006 3.638-2.563 4.43-.657 10.998 1.843 14.598 1.222 1.763 2.68 3.745 4.595 3.673 1.843-.073 2.544-1.192 4.772-1.192 2.229 0 2.857 1.192 4.79 1.155 1.978-.037 3.263-1.8 4.486-3.563 1.413-2.04 1.996-4.019 2.032-4.119-.045-.018-3.896-1.496-3.933-5.926-.036-3.708 3.025-5.486 3.165-5.596-1.724-2.524-4.411-2.8-5.34-2.876z"/>
 </svg>
 ```
 
 **Light mode (black logo):**
-```svg
+```html
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 26" fill="black">
   <path d="M15.768 3.635c1.027-1.232 1.72-2.949 1.53-4.635-1.48.06-3.273.986-4.337 2.23-.952 1.107-1.785 2.875-1.56 4.567 1.653.128 3.34-.839 4.367-2.162zm.65 2.113c-2.416-.139-4.472 1.374-5.615 1.374-1.143 0-2.91-1.302-4.789-1.266-2.463.037-4.736 1.431-6.006 3.638-2.563 4.43-.657 10.998 1.843 14.598 1.222 1.763 2.68 3.745 4.595 3.673 1.843-.073 2.544-1.192 4.772-1.192 2.229 0 2.857 1.192 4.79 1.155 1.978-.037 3.263-1.8 4.486-3.563 1.413-2.04 1.996-4.019 2.032-4.119-.045-.018-3.896-1.496-3.933-5.926-.036-3.708 3.025-5.486 3.165-5.596-1.724-2.524-4.411-2.8-5.34-2.876z"/>
 </svg>
@@ -106,12 +116,23 @@ Follow [Google Identity Branding Guidelines](https://developers.google.com/ident
 
 ### General third-party button rules
 
-1. **Never modify provider logos** (color, aspect ratio, padding)
-2. **Use exact copy** specified by the provider
-3. **Respect minimum sizes** (usually 44px height for accessibility)
-4. **Follow theme requirements** (light/dark mode variants)
-5. **Test on actual devices** to ensure rendering matches guidelines
-6. **Review provider docs** before each release for updated requirements
+1. **Never modify provider logos** (color, aspect ratio, padding). Use official assets only.
+2. **Use exact copy** specified by the provider—no synonyms or creative rewording.
+3. **Respect minimum sizes** (usually 44px height for accessibility; Apple requires 44pt minimum).
+4. **Follow theme requirements** (light/dark mode variants per provider specs).
+5. **Test on actual devices** in both light and dark modes to ensure rendering matches guidelines.
+6. **Review provider docs before each release** for updated requirements—guidelines change.
+7. **Document your implementation** with links to official guidelines for future reference.
+
+### Common rejection reasons (Apple)
+- Custom Apple logo (recreated SVG instead of official asset)
+- Wrong button copy ("Login with Apple" instead of "Sign in with Apple")
+- Incorrect colors (e.g., gray background instead of black/white)
+- Wrong corner radius (6px instead of 8px)
+- Button too small (<44pt height)
+- Missing dark mode variant
+
+**Prevention**: Use the official Apple "Sign in with Apple" buttons API where available (iOS/macOS native), or meticulously follow HIG for web implementations.
 
 ### Button order
 When multiple third-party options are available:
@@ -229,8 +250,9 @@ When building a new login page:
 
 - **Web login**: [jungle/templates/auth/login.html](https://github.com/instica/jungle/blob/main/jungle/templates/auth/login.html)
 - **Apple HIG**: [developer.apple.com/design/human-interface-guidelines/sign-in-with-apple](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple)
+- **Apple button generator**: [developer.apple.com/design/resources/](https://developer.apple.com/design/resources/)
 - **Google branding**: [developers.google.com/identity/branding-guidelines](https://developers.google.com/identity/branding-guidelines)
 
 ---
 
-**Key takeaway**: Third-party login buttons must be pixel-perfect reproductions of official brand guidelines. When in doubt, consult the provider's documentation before shipping.
+**Key takeaway**: Third-party login buttons must be pixel-perfect reproductions of official brand guidelines. Non-compliance is a leading cause of App Store rejection. When in doubt, use the provider's official button component or consult their documentation before shipping.
