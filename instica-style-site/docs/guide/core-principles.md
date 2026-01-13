@@ -31,6 +31,7 @@ Instica’s interface should feel calm, credible, and focused on helping sellers
 
 ## 6. Platform awareness (cross-platform parity)
 - Keep SwiftUI-ready tokens for iOS, CSS variables for web, and Compose readiness in mind. Dynamic Type, RTL, and dark mode must be in the first mock, not a later pass.
+- **Web pages must support both light and dark themes** via CSS custom properties and `prefers-color-scheme` media queries.
 - Navigation parity: if a menu pattern inspires a large-screen treatment, ensure the mobile equivalent respects one-hand ergonomics.
 
 ## 7. Story-first documentation (developer portal shell)

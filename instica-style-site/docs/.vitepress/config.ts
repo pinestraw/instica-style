@@ -40,7 +40,10 @@ export default defineConfig({
 				},
 				{
 					text: 'Components',
-					items: [{ text: 'UI Library', link: '/guide/components' }]
+					items: [
+						{ text: 'UI Library', link: '/guide/components' },
+						{ text: 'Authentication & Login', link: '/guide/authentication' }
+					]
 				}
 			],
 			'/inspiration/': [

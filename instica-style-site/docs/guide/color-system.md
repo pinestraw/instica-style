@@ -123,6 +123,40 @@ Instica uses a three-tier palette: foundation neutrals, accent blues, and suppor
 
 Dark tokens live in the same JSON file to minimize theme switching logic.
 
+## Theme Requirements for Web
+
+**All web pages must support both light and dark themes** using CSS custom properties and `prefers-color-scheme` media queries. This ensures users get a consistent experience across platforms that respects their system-level preferences.
+
+### Implementation pattern
+```css
+:root {
+  /* Dark theme (default) */
+  --text: #e9edf5;
+  --bg: #05080f;
+  --panel: rgba(13, 18, 32, 0.8);
+  /* ... additional dark theme tokens */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Light theme */
+    --text: #1a202e;
+    --bg: #f8f9fb;
+    --panel: rgba(255, 255, 255, 0.92);
+    /* ... additional light theme tokens */
+  }
+}
+```
+
+### Theme checklist
+- Define both light and dark color sets as CSS custom properties
+- Use `prefers-color-scheme: light` media query for automatic theme detection
+- Maintain 4.5:1 minimum contrast ratio in both themes
+- Test gradient overlays and backdrop blur effects in both themes
+- Ensure accent colors remain accessible against both light and dark backgrounds
+
+This pattern matches iOS Dynamic Color behavior and provides seamless theme switching without JavaScript.
+
 ### Hero gradients
 - Keep the background whisper-quiet. Start with `color.surface` and introduce a 60° gradient blending `color.brand` (8% opacity) into `#E7EEFF`.
 - Overlay a second radial highlight at 20% opacity to create a floating hardware glow. This subtle halo supports 3D renders of tokens or screenshots without fighting the copy.
