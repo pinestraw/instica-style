@@ -62,6 +62,29 @@
           </button>
         </nav>
       </div>
+
+      <!-- Vertical Navigation Menu -->
+      <div class="demo-section">
+        <h4>Vertical Menu</h4>
+        <nav class="vertical-nav">
+          <a href="#" class="nav-item active">
+            <span class="nav-icon">📊</span>
+            Dashboard
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">📦</span>
+            Products
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">🛒</span>
+            Orders
+          </a>
+          <a href="#" class="nav-item">
+            <span class="nav-icon">⚙️</span>
+            Settings
+          </a>
+        </nav>
+      </div>
     </div>
   </div>
 </template>
@@ -316,5 +339,63 @@ const toggleTheme = () => {
 .pagination-btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.vertical-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: white;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  max-width: 250px;
+}
+
+.dark-theme .vertical-nav {
+  background: #0F172A;
+  border-color: #475569;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  color: #64748B;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-item:hover {
+  color: #334155;
+  background: #F8FAFC;
+}
+
+.dark-theme .nav-item {
+  color: #94A3B8;
+}
+
+.dark-theme .nav-item:hover {
+  color: #E2E8F0;
+  background: #1E293B;
+}
+
+.nav-item.active {
+  color: #4F46E5;
+  background: #EEF2FF;
+}
+
+.dark-theme .nav-item.active {
+  color: #818CF8;
+  background: #1E293B;
+}
+
+.nav-icon {
+  font-size: 18px;
+  flex-shrink: 0;
 }
 </style>

@@ -66,6 +66,40 @@
           <button class="btn btn-primary btn-lg">Large</button>
         </div>
       </div>
+
+      <!-- Button Groups -->
+      <div class="demo-section">
+        <h4>Button Groups</h4>
+        <div class="btn-group">
+          <button class="btn-group-item">Day</button>
+          <button class="btn-group-item active">Week</button>
+          <button class="btn-group-item">Month</button>
+          <button class="btn-group-item">Year</button>
+        </div>
+      </div>
+
+      <!-- Split Button -->
+      <div class="demo-section">
+        <h4>Split Button</h4>
+        <div class="split-button">
+          <button class="btn btn-primary split-main">Publish Listing</button>
+          <button class="btn btn-primary split-dropdown" aria-label="More options">▼</button>
+        </div>
+      </div>
+
+      <!-- Full Width Button -->
+      <div class="demo-section">
+        <h4>Full Width Button</h4>
+        <button class="btn btn-primary btn-block">Continue to Checkout</button>
+      </div>
+
+      <!-- Floating Action Button -->
+      <div class="demo-section">
+        <h4>Floating Action Button</h4>
+        <button class="btn-fab" aria-label="Add new item">
+          <span style="font-size: 24px;">+</span>
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -274,5 +308,96 @@ const toggleTheme = () => {
 
 @keyframes spin {
   to { transform: rotate(360deg); }
+}
+
+.btn-group {
+  display: inline-flex;
+  background: #F1F5F9;
+  padding: 4px;
+  border-radius: 8px;
+  gap: 4px;
+}
+
+.dark-theme .btn-group {
+  background: #0F172A;
+}
+
+.btn-group-item {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748B;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-group-item:hover {
+  color: #334155;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.dark-theme .btn-group-item:hover {
+  background: #1E293B;
+}
+
+.btn-group-item.active {
+  color: #0F172A;
+  background: white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme .btn-group-item.active {
+  color: #F1F5F9;
+  background: #334155;
+}
+
+.split-button {
+  display: inline-flex;
+  gap: 1px;
+}
+
+.split-main {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.split-dropdown {
+  padding: 12px 16px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-block {
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-fab {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.4);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-fab:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.5);
+}
+
+.btn-fab:active {
+  transform: translateY(0);
 }
 </style>

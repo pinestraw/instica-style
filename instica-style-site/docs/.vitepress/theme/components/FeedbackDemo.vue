@@ -76,6 +76,48 @@
           </div>
         </div>
       </div>
+
+      <!-- Tooltips -->
+      <div class="demo-section">
+        <h4>Tooltips</h4>
+        <div class="tooltip-demo">
+          <button class="tooltip-trigger">
+            ℹ️ Hover me
+            <span class="tooltip">This is helpful information</span>
+          </button>
+          <button class="tooltip-trigger">
+            ⚙️ Settings
+            <span class="tooltip">Configure your preferences</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading States -->
+      <div class="demo-section">
+        <h4>Loading States</h4>
+        <div class="loading-demo">
+          <div class="spinner-demo">
+            <div class="spinner-large"></div>
+            <span>Loading...</span>
+          </div>
+          <div class="skeleton-demo">
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text short"></div>
+            <div class="skeleton skeleton-rect"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress Bar -->
+      <div class="demo-section">
+        <h4>Progress Indicator</h4>
+        <div class="progress-demo">
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 65%"></div>
+          </div>
+          <span class="progress-label">65% Complete</span>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -393,5 +435,185 @@ const toggleTheme = () => {
 
 .btn-destructive:hover {
   background: #DC2626;
+}
+
+.tooltip-demo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.tooltip-trigger {
+  position: relative;
+  padding: 12px 24px;
+  background: #F1F5F9;
+  color: #334155;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.dark-theme .tooltip-trigger {
+  background: #334155;
+  color: #F1F5F9;
+  border-color: #475569;
+}
+
+.tooltip-trigger:hover {
+  background: #E2E8F0;
+}
+
+.dark-theme .tooltip-trigger:hover {
+  background: #475569;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #FFFFFF;
+  background: #1E293B;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: #1E293B;
+}
+
+.tooltip-trigger:hover .tooltip {
+  opacity: 1;
+}
+
+.loading-demo {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.spinner-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner-large {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #E2E8F0;
+  border-top-color: #4F46E5;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.dark-theme .spinner-large {
+  border-color: #475569;
+  border-top-color: #818CF8;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.spinner-demo span {
+  font-size: 14px;
+  color: #64748B;
+}
+
+.dark-theme .spinner-demo span {
+  color: #94A3B8;
+}
+
+.skeleton-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #F1F5F9 25%, #E2E8F0 50%, #F1F5F9 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+.dark-theme .skeleton {
+  background: linear-gradient(90deg, #1E293B 25%, #334155 50%, #1E293B 75%);
+  background-size: 200% 100%;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.skeleton-text {
+  height: 16px;
+  width: 100%;
+}
+
+.skeleton-text.short {
+  width: 60%;
+}
+
+.skeleton-rect {
+  height: 120px;
+  width: 100%;
+}
+
+.progress-demo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.dark-theme .progress-bar {
+  background: #334155;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #4F46E5;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.dark-theme .progress-label {
+  color: #94A3B8;
 }
 </style>
