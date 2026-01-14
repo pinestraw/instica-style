@@ -308,7 +308,7 @@ const toggleTheme = () => {
 }
 
 .dark-theme .demo-section h4 {
-  color: #94A3B8;
+  color: #F8FAFC;
 }
 
 .table-wrapper {
