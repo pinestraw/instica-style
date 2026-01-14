@@ -142,34 +142,38 @@ Data display components present information clearly and enable users to scan, un
     <table class="table">
       <thead>
         <tr>
-          <th>Product</th>
-          <th>SKU</th>
-          <th>Quantity</th>
-          <th>Price</th>
+          <th>Order ID</th>
+          <th>Customer</th>
           <th>Status</th>
+          <th>Delivery</th>
+          <th>Payment</th>
+          <th>Amount</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Vintage Camera</td>
-          <td>CAM-001</td>
-          <td>5</td>
-          <td>$249.99</td>
-          <td><span class="badge badge-success">Active</span></td>
+          <td>ORD-2025-00112</td>
+          <td>Selena Senca</td>
+          <td><span class="badge badge-warning">Pending</span></td>
+          <td>19/01/2025</td>
+          <td>COD</td>
+          <td>$311.00</td>
         </tr>
         <tr>
-          <td>Leather Bag</td>
-          <td>BAG-045</td>
-          <td>0</td>
-          <td>$89.99</td>
-          <td><span class="badge badge-warning">Out of Stock</span></td>
+          <td>ORD-2025-00111</td>
+          <td>K. Houston</td>
+          <td><span class="badge badge-info">Shipped</span></td>
+          <td>29/01/2025</td>
+          <td>UPI</td>
+          <td>$223.00</td>
         </tr>
         <tr>
-          <td>Wooden Desk</td>
-          <td>DESK-112</td>
-          <td>3</td>
-          <td>$399.00</td>
-          <td><span class="badge badge-success">Active</span></td>
+          <td>ORD-2025-00110</td>
+          <td>Ramnik Volzkat</td>
+          <td><span class="badge badge-success">Delivered</span></td>
+          <td>28/01/2025</td>
+          <td>Credit Card</td>
+          <td>$1,200.00</td>
         </tr>
       </tbody>
     </table>
@@ -181,37 +185,40 @@ Data display components present information clearly and enable users to scan, un
   <table class="table">
     <thead>
       <tr>
-        <th>Product</th>
-        <th>SKU</th>
-        <th>Quantity</th>
-        <th>Price</th>
+        <th>Order ID</th>
+        <th>Customer</th>
         <th>Status</th>
+        <th>Delivery</th>
+        <th>Payment</th>
+        <th>Amount</th>
       </tr>
     </thead>
     <tbody>
       <tr>
+        <td>ORD-2025-00112</td>
         <td>
           <div class="table-cell-content">
             <img src="/placeholder.png" alt="" class="table-thumb" />
-            <span>Vintage Camera</span>
+            <span>Selena Senca</span>
           </div>
         </td>
-        <td>CAM-001</td>
-        <td>5</td>
-        <td>$249.99</td>
-        <td><span class="badge badge-success">Active</span></td>
+        <td><span class="badge badge-warning">Pending</span></td>
+        <td>19/01/2025</td>
+        <td>COD</td>
+        <td>$311.00</td>
       </tr>
       <tr>
+        <td>ORD-2025-00111</td>
         <td>
           <div class="table-cell-content">
             <img src="/placeholder.png" alt="" class="table-thumb" />
-            <span>Leather Bag</span>
+            <span>K. Houston</span>
           </div>
         </td>
-        <td>BAG-045</td>
-        <td>0</td>
-        <td>$89.99</td>
-        <td><span class="badge badge-warning">Out of Stock</span></td>
+        <td><span class="badge badge-info">Shipped</span></td>
+        <td>29/01/2025</td>
+        <td>UPI</td>
+        <td>$223.00</td>
       </tr>
     </tbody>
   </table>

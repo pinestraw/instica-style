@@ -14,36 +14,46 @@
           <table class="data-table">
             <thead>
               <tr>
-                <th>Product</th>
-                <th>SKU</th>
+                <th>Order ID</th>
+                <th>Customer</th>
                 <th>Status</th>
-                <th>Price</th>
+                <th>Delivery</th>
+                <th>Payment</th>
+                <th>Amount</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>iPhone 13 Pro</td>
-                <td>APL-IP13P-128</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td>$999.00</td>
+                <td>ORD-2025-00112</td>
+                <td>Selena Senca</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td>19/01/2025</td>
+                <td>COD</td>
+                <td>$311.00</td>
               </tr>
               <tr>
-                <td>MacBook Air M2</td>
-                <td>APL-MBA-M2-256</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td>$1,199.00</td>
+                <td>ORD-2025-00111</td>
+                <td>K. Houston</td>
+                <td><span class="badge badge-info">Shipped</span></td>
+                <td>29/01/2025</td>
+                <td>UPI</td>
+                <td>$223.00</td>
               </tr>
               <tr>
-                <td>AirPods Pro</td>
-                <td>APL-APP-2ND</td>
-                <td><span class="badge badge-warning">Low Stock</span></td>
-                <td>$249.00</td>
+                <td>ORD-2025-00110</td>
+                <td>Ramnik Volzkat</td>
+                <td><span class="badge badge-success">Delivered</span></td>
+                <td>28/01/2025</td>
+                <td>Credit Card</td>
+                <td>$1,200.00</td>
               </tr>
               <tr>
-                <td>Apple Watch Series 8</td>
-                <td>APL-AWS8-41</td>
-                <td><span class="badge badge-error">Out of Stock</span></td>
-                <td>$399.00</td>
+                <td>ORD-2025-00109</td>
+                <td>Jennifer Kline</td>
+                <td><span class="badge badge-error">Cancelled</span></td>
+                <td>19/01/2025</td>
+                <td>COD</td>
+                <td>$311.00</td>
               </tr>
             </tbody>
           </table>
@@ -57,79 +67,66 @@
           <table class="data-table data-table-condensed">
             <thead>
               <tr>
-                <th>Product</th>
-                <th>Category</th>
-                <th>Stock</th>
+                <th>Order</th>
+                <th>Customer</th>
                 <th>Status</th>
-                <th>Price</th>
-                <th>Last Updated</th>
+                <th>Delivery</th>
+                <th>Amount</th>
+                <th>Updated</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
                   <div class="table-cell-product">
-                    <div class="table-thumb">📱</div>
-                    <span>iPhone 13 Pro</span>
+                    <div class="table-thumb">📦</div>
+                    <span>ORD-2025-00112</span>
                   </div>
                 </td>
-                <td>Electronics</td>
-                <td>45</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td>$999.00</td>
+                <td>Selena Senca</td>
+                <td><span class="badge badge-warning">Pending</span></td>
+                <td>19/01/2025</td>
+                <td>$311.00</td>
                 <td>2 hours ago</td>
               </tr>
               <tr>
                 <td>
                   <div class="table-cell-product">
-                    <div class="table-thumb">💻</div>
-                    <span>MacBook Air M2</span>
+                    <div class="table-thumb">🚚</div>
+                    <span>ORD-2025-00111</span>
                   </div>
                 </td>
-                <td>Computers</td>
-                <td>12</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td>$1,199.00</td>
+                <td>K. Houston</td>
+                <td><span class="badge badge-info">Shipped</span></td>
+                <td>29/01/2025</td>
+                <td>$223.00</td>
                 <td>5 hours ago</td>
               </tr>
               <tr>
                 <td>
                   <div class="table-cell-product">
-                    <div class="table-thumb">🎧</div>
-                    <span>AirPods Pro</span>
+                    <div class="table-thumb">✅</div>
+                    <span>ORD-2025-00110</span>
                   </div>
                 </td>
-                <td>Audio</td>
-                <td>3</td>
-                <td><span class="badge badge-warning">Low Stock</span></td>
-                <td>$249.00</td>
+                <td>Ramnik Volzkat</td>
+                <td><span class="badge badge-success">Delivered</span></td>
+                <td>28/01/2025</td>
+                <td>$1,200.00</td>
                 <td>1 day ago</td>
               </tr>
               <tr>
                 <td>
                   <div class="table-cell-product">
-                    <div class="table-thumb">⌚</div>
-                    <span>Apple Watch Series 8</span>
+                    <div class="table-thumb">⛔</div>
+                    <span>ORD-2025-00109</span>
                   </div>
                 </td>
-                <td>Wearables</td>
-                <td>0</td>
-                <td><span class="badge badge-error">Out of Stock</span></td>
-                <td>$399.00</td>
+                <td>Jennifer Kline</td>
+                <td><span class="badge badge-error">Cancelled</span></td>
+                <td>19/01/2025</td>
+                <td>$311.00</td>
                 <td>3 days ago</td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="table-cell-product">
-                    <div class="table-thumb">📷</div>
-                    <span>Canon EOS R6</span>
-                  </div>
-                </td>
-                <td>Cameras</td>
-                <td>8</td>
-                <td><span class="badge badge-success">Active</span></td>
-                <td>$2,499.00</td>
-                <td>1 week ago</td>
               </tr>
             </tbody>
           </table>
