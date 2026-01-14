@@ -1115,6 +1115,18 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
   width: 100%;
   height: 100%;
   object-fit: cover;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .carousel-gradient {
@@ -1140,11 +1152,19 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
   height: 6px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.4);
-  transition: background 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.indicator:hover {
+  transform: scale(1.3);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .indicator.active {
   background: #4F46E5;
+  transform: scale(1.5);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
 }
 
 .carousel-fullscreen-btn {
@@ -1154,11 +1174,13 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  color: white;
-  background: rgba(0, 0, 0, 0.6);
+  padding: 6pxall 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.85);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3;
   border: none;
   border-radius: 16px;
   cursor: pointer;
@@ -1220,22 +1242,30 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
   padding-bottom: 8px;
 }
 
-.thumbnail {
-  position: relative;
-  flex-shrink: 0;
-  width: 80px;
-  height: 120px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #F1F5F9;
-  border: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.2s;
+.thumbnail {3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .thumbnail:hover {
   border-color: #CBD5E1;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+
+.thumbnail.active {
+  border-color: #4F46E5;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.15);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.thumbnail:hover img {
+  transform: scale(1.1)
 
 .thumbnail.active {
   border-color: #4F46E5;
@@ -1251,6 +1281,11 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
 /* Hero thumbnail (larger) */
 .thumbnail-hero {
   width: 180px;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail:hover .thumbnail-overlay {
+  opacity: 0.85;
   height: 120px;
 }
 
@@ -1285,6 +1320,21 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
 
 .thumbnail-add {
   display: flex;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(79, 70, 229, 0.15);
+}
+
+.thumbnail-add:hover .add-icon {
+  animation: pulse 0.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -1421,6 +1471,16 @@ For viewing all photos in a grid layout:
 - Tiles: 1:1 aspect ratio, 12px radius
 - Hover: 1.02 scale + shadow
 - Gap: 12px between tiles
+
+**Animations:**
+- **Carousel image:** Fade in with subtle scale (0.5s) on photo change
+- **Indicators:** Scale to 1.5× when active, 1.3× on hover with smooth cubic-bezier easing
+- **Thumbnails:** Lift up 4px + scale 1.03× on hover, 1.05× when active
+- **Thumbnail images:** Zoom 1.1× on parent hover for parallax effect
+- **Add button:** Pulse animation on hover (+ icon scales 1.2×)
+- **Fullscreen button:** Scale 1.05× + shadow on hover
+- Use `cubic-bezier(0.4, 0, 0.2, 1)` for natural feel
+- All transitions: 0.3-0.4s duration for smoothness
 
 **Loading States:**
 - Empty state: Dashed border, centered icon
