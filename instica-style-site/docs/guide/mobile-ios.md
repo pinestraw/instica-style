@@ -7,6 +7,12 @@ description: Native iOS/SwiftUI component library and conventions for Instica In
 
 This guide documents the native iOS components, patterns, and conventions used in the Instica Inventory app. All examples use SwiftUI and follow iOS Human Interface Guidelines while maintaining brand consistency.
 
+## Live Examples
+
+<MobileIOSDemo />
+
+---
+
 ## Design Tokens
 
 ### Colors

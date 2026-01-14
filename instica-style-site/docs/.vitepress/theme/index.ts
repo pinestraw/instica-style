@@ -6,6 +6,7 @@ import ButtonsDemo from './components/ButtonsDemo.vue'
 import FormsDemo from './components/FormsDemo.vue'
 import DataDisplayDemo from './components/DataDisplayDemo.vue'
 import LayoutDemo from './components/LayoutDemo.vue'
+import MobileIOSDemo from './components/MobileIOSDemo.vue'
 
 export default {
   ...DefaultTheme,
@@ -16,5 +17,6 @@ export default {
     app.component('FormsDemo', FormsDemo)
     app.component('DataDisplayDemo', DataDisplayDemo)
     app.component('LayoutDemo', LayoutDemo)
+    app.component('MobileIOSDemo', MobileIOSDemo)
   }
 }
