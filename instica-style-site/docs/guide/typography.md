@@ -46,6 +46,8 @@ Text(value)
 ## Compact scale (web)
 These roles come directly from `tokens/typography.json` and are reflected in CSS variables.
 
+<TypographyDemo />
+
 | Role | Size / Line | Letter | Weight | Usage |
 | --- | --- | --- | --- | --- |
 | Display | 32 / 40 | -0.03em | 700 | Hero headlines, top of page |

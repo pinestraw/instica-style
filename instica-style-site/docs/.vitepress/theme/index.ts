@@ -7,6 +7,7 @@ import FormsDemo from './components/FormsDemo.vue'
 import DataDisplayDemo from './components/DataDisplayDemo.vue'
 import LayoutDemo from './components/LayoutDemo.vue'
 import MobileIOSDemo from './components/MobileIOSDemo.vue'
+import TypographyDemo from './components/TypographyDemo.vue'
 
 export default {
   ...DefaultTheme,
@@ -18,5 +19,6 @@ export default {
     app.component('DataDisplayDemo', DataDisplayDemo)
     app.component('LayoutDemo', LayoutDemo)
     app.component('MobileIOSDemo', MobileIOSDemo)
+    app.component('TypographyDemo', TypographyDemo)
   }
 }
