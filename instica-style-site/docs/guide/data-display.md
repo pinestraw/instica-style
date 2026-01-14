@@ -387,8 +387,8 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 }
 
 .dark-theme .table th {
-  color: #8B95A7;
-  border-bottom-color: rgba(148, 163, 184, 0.12);
+  color: #EDE3D4;
+  border-bottom-color: rgba(148, 163, 184, 0.18);
 }
 
 .dark-theme .table td {
@@ -403,7 +403,7 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 ```
 
 **Key Dark Mode Guidelines:**
-- Header text: `#8B95A7` for subtle column labels
+- Header text: `#EDE3D4` for high-contrast column labels
 - Body text: `#E5E7EB` for high contrast on dark backgrounds
 - **Minimal borders**: light horizontal separators only (`#1F2937`)
 - **No vertical borders** between columns - cleaner appearance

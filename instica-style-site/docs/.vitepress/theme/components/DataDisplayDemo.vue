@@ -308,7 +308,7 @@ const toggleTheme = () => {
 }
 
 .dark-theme .demo-section h4 {
-  color: #F8FAFC;
+  color: #F6EFE3;
 }
 
 .table-wrapper {
@@ -352,8 +352,8 @@ const toggleTheme = () => {
 }
 
 .dark-theme .data-table th {
-  color: #8B95A7;
-  border-bottom-color: rgba(148, 163, 184, 0.12);
+  color: #EDE3D4;
+  border-bottom-color: rgba(148, 163, 184, 0.18);
 }
 
 .data-table td {
