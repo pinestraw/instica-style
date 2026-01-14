@@ -376,6 +376,103 @@ Data display components present information clearly and enable users to scan, un
 </style>
 ```
 
+### Dark Mode Tables
+
+Tables must have excellent contrast in dark mode with proper alternating row styling:
+
+```html
+<style>
+/* Light mode - default */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #E2E8F0;
+  background: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  background: white;
+}
+
+.table th {
+  text-align: left;
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+  background: #F8FAFC;
+  border-bottom: 2px solid #E2E8F0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.table td {
+  padding: 16px 20px;
+  font-size: 15px;
+  color: #1E293B;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Alternating row backgrounds */
+.table tbody tr:nth-child(odd) {
+  background: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #F8FAFC;
+}
+
+.table tbody tr:hover {
+  background: #EEF2FF !important;
+}
+
+/* Dark mode */
+.dark-theme .table-wrapper {
+  border-color: #334155;
+  background: #0F172A;
+}
+
+.dark-theme .table {
+  background: #0F172A;
+}
+
+.dark-theme .table th {
+  background: #1E293B;
+  border-bottom-color: #334155;
+  color: #64748B;
+}
+
+.dark-theme .table td {
+  color: #F1F5F9;
+  border-bottom-color: #1E293B;
+}
+
+/* Dark mode alternating rows - critical for readability */
+.dark-theme .table tbody tr:nth-child(odd) {
+  background: #1E293B;
+}
+
+.dark-theme .table tbody tr:nth-child(even) {
+  background: #0F172A;
+}
+
+.dark-theme .table tbody tr:hover {
+  background: #312E81 !important; /* Brand primary night */
+}
+</style>
+```
+
+**Key Dark Mode Guidelines:**
+- Use `#1E293B` and `#0F172A` for alternating row backgrounds
+- Text color: `#F1F5F9` for excellent contrast (WCAG AAA)
+- Header background: `#1E293B` with `#64748B` text
+- Border color: `#1E293B` between rows, `#334155` for wrapper
+- Hover: `#312E81` (brand primary night) for clear interaction feedback
+- Always test with real data - empty cells should remain readable
+
 ## Cards
 
 ### Info Card
