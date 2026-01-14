@@ -119,6 +119,186 @@ Our workflow icons represent key user actions in the Instica inventory managemen
   </div>
 </div>
 
+## Navigation Icons
+
+Primary navigation and wayfinding icons for the web application.
+
+<div class="icon-grid">
+  <div class="icon-card">
+    <img src="/icons/navigation/products-catalog.png" alt="Products Catalog icon" />
+    <h4>Products Catalog</h4>
+    <p class="icon-meta">3D cube · Blue-purple</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/navigation/inventory-list.png" alt="Inventory List icon" />
+    <h4>Inventory List</h4>
+    <p class="icon-meta">Checklist · Teal-turquoise</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/navigation/marketplaces.png" alt="Marketplaces icon" />
+    <h4>Marketplaces</h4>
+    <p class="icon-meta">Storefront · Orange-coral</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/navigation/analytics-reports.png" alt="Analytics & Reports icon" />
+    <h4>Analytics & Reports</h4>
+    <p class="icon-meta">Bar chart · Cyan-blue</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/navigation/settings.png" alt="Settings icon" />
+    <h4>Settings</h4>
+    <p class="icon-meta">Gear · Gray-slate</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/navigation/user-profile.png" alt="User Profile icon" />
+    <h4>User Profile</h4>
+    <p class="icon-meta">Avatar badge · Purple-magenta</p>
+  </div>
+</div>
+
+## Action Icons
+
+Common user actions and operations across the platform.
+
+<div class="icon-grid">
+  <div class="icon-card">
+    <img src="/icons/actions/edit-modify.png" alt="Edit/Modify icon" />
+    <h4>Edit/Modify</h4>
+    <p class="icon-meta">Fountain pen · Blue-cyan</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/actions/delete-remove.png" alt="Delete/Remove icon" />
+    <h4>Delete/Remove</h4>
+    <p class="icon-meta">Trash bin · Red-rose</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/actions/search-find.png" alt="Search/Find icon" />
+    <h4>Search/Find</h4>
+    <p class="icon-meta">Magnifying glass · Teal-emerald</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/actions/filter-sort.png" alt="Filter/Sort icon" />
+    <h4>Filter/Sort</h4>
+    <p class="icon-meta">Funnel · Purple-indigo</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/actions/refresh-sync.png" alt="Refresh/Sync icon" />
+    <h4>Refresh/Sync</h4>
+    <p class="icon-meta">Circular arrows · Blue-sky</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/actions/download-export.png" alt="Download/Export icon" />
+    <h4>Download/Export</h4>
+    <p class="icon-meta">Down arrow · Green-emerald</p>
+  </div>
+</div>
+
+## Status Icons
+
+System feedback and state indication.
+
+<div class="icon-grid">
+  <div class="icon-card">
+    <img src="/icons/status/success-complete.png" alt="Success/Complete icon" />
+    <h4>Success/Complete</h4>
+    <p class="icon-meta">Checkmark badge · Green-emerald</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/status/warning-caution.png" alt="Warning/Caution icon" />
+    <h4>Warning/Caution</h4>
+    <p class="icon-meta">Triangle · Yellow-amber</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/status/error-failed.png" alt="Error/Failed icon" />
+    <h4>Error/Failed</h4>
+    <p class="icon-meta">X badge · Red-rose</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/status/in-progress-pending.png" alt="In Progress/Pending icon" />
+    <h4>In Progress/Pending</h4>
+    <p class="icon-meta">Hourglass · Blue-indigo</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/status/information-help.png" alt="Information/Help icon" />
+    <h4>Information/Help</h4>
+    <p class="icon-meta">Info circle · Blue-sky</p>
+  </div>
+</div>
+
+## Feature Icons
+
+Specialized features and capabilities.
+
+<div class="icon-grid">
+  <div class="icon-card">
+    <img src="/icons/features/bulk-actions.png" alt="Bulk Actions icon" />
+    <h4>Bulk Actions</h4>
+    <p class="icon-meta">Card stack · Purple-violet</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/features/share-export-listing.png" alt="Share/Export Listing icon" />
+    <h4>Share/Export Listing</h4>
+    <p class="icon-meta">Connected nodes · Pink-purple</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/features/notifications-alerts.png" alt="Notifications/Alerts icon" />
+    <h4>Notifications/Alerts</h4>
+    <p class="icon-meta">Bell badge · Orange-amber</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/features/orders-fulfillment.png" alt="Orders/Fulfillment icon" />
+    <h4>Orders/Fulfillment</h4>
+    <p class="icon-meta">Package box · Blue-cyan</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/features/revenue-sales.png" alt="Revenue/Sales icon" />
+    <h4>Revenue/Sales</h4>
+    <p class="icon-meta">Money bag · Gold-yellow</p>
+  </div>
+</div>
+
+## Content Type Icons
+
+Visual representation of different content and media types.
+
+<div class="icon-grid">
+  <div class="icon-card">
+    <img src="/icons/content/image-photo.png" alt="Image/Photo icon" />
+    <h4>Image/Photo</h4>
+    <p class="icon-meta">Picture frame · Blue-purple</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/content/document-file.png" alt="Document/File icon" />
+    <h4>Document/File</h4>
+    <p class="icon-meta">Document sheet · Gray-slate</p>
+  </div>
+  
+  <div class="icon-card">
+    <img src="/icons/content/video.png" alt="Video icon" />
+    <h4>Video</h4>
+    <p class="icon-meta">Play button · Red-pink</p>
+  </div>
+</div>
+
 ## Usage Guidelines
 
 ### Sizing
