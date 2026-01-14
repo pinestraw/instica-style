@@ -13,8 +13,11 @@ outline: deep
 .table-container {
   width: 100%;
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: 14px;
   background: white;
+  padding: 10px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .table {
@@ -28,20 +31,20 @@ outline: deep
 }
 
 .table th {
-  padding: 14px 20px;
+  padding: 14px 18px;
   text-align: left;
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #9CA3AF;
-  border-bottom: 1px solid #F3F4F6;
+  color: #A1AAB6;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .table td {
-  padding: 16px 20px;
-  border-bottom: 1px solid #F3F4F6;
-  color: #111827;
+  padding: 16px 18px;
+  border-bottom: 1px solid #EEF2F7;
+  color: #1F2937;
 }
 
 .table tbody tr:last-child td {
@@ -49,7 +52,7 @@ outline: deep
 }
 
 .table tbody tr:hover {
-  background: #F9FAFB;
+  background: #F8FAFF;
 }
 
 .badge {
@@ -218,8 +221,11 @@ Data display components present information clearly and enable users to scan, un
 .table-container {
   width: 100%;
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: 14px;
   background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .table {
@@ -233,20 +239,20 @@ Data display components present information clearly and enable users to scan, un
 }
 
 .table th {
-  padding: 14px 20px;
+  padding: 14px 18px;
   text-align: left;
   font-size: 11px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #9CA3AF;
-  border-bottom: 1px solid #F3F4F6;
+  color: #A1AAB6;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .table td {
-  padding: 16px 20px;
-  color: #111827;
-  border-bottom: 1px solid #F3F4F6;
+  padding: 16px 18px;
+  color: #1F2937;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .table tbody tr:last-child td {
@@ -254,7 +260,7 @@ Data display components present information clearly and enable users to scan, un
 }
 
 .table tbody tr:hover {
-  background: #F9FAFB;
+  background: #F8FAFF;
 }
 
 .table-cell-content {
@@ -267,7 +273,7 @@ Data display components present information clearly and enable users to scan, un
   width: 36px;
   height: 36px;
   border-radius: 6px;
-  background: #F3F4F6;
+  background: #F3F6FB;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -327,8 +333,11 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 /* Light mode - default */
 .table-wrapper {
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: 14px;
   background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .table {
@@ -339,21 +348,21 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 
 .table th {
   text-align: left;
-  padding: 14px 20px;
+  padding: 14px 18px;
   font-size: 11px;
   font-weight: 500;
-  color: #9CA3AF;
+  color: #A1AAB6;
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid #F3F4F6;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .table td {
-  padding: 16px 20px;
+  padding: 16px 18px;
   font-size: 14px;
-  color: #111827;
-  border-bottom: 1px solid #F3F4F6;
+  color: #1F2937;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .table tbody tr:last-child td {
@@ -361,16 +370,18 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 }
 
 .table tbody tr:hover {
-  background: #F9FAFB;
+  background: #F8FAFF;
 }
 
 /* Dark mode */
 .dark-theme .table-wrapper {
-  background: #111827;
+  background: #0F172A;
+  border-color: #1E293B;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
 .dark-theme .table th {
-  color: #6B7280;
+  color: #8B95A7;
   border-bottom-color: #1F2937;
 }
 
@@ -380,17 +391,17 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 }
 
 .dark-theme .table tbody tr:hover {
-  background: #1F2937;
+  background: #162033;
 }
 </style>
 ```
 
 **Key Dark Mode Guidelines:**
-- Header text: `#6B7280` (gray-500) for subtle column labels
-- Body text: `#E5E7EB` (gray-200) - excellent contrast on dark backgrounds
+- Header text: `#8B95A7` for subtle column labels
+- Body text: `#E5E7EB` for high contrast on dark backgrounds
 - **Minimal borders**: light horizontal separators only (`#1F2937`)
 - **No vertical borders** between columns - cleaner appearance
-- Hover: `#1F2937` for subtle interaction feedback
+- Hover: `#162033` for subtle interaction feedback
 - Always test with real data - empty cells should remain readable
 
 ### Condensed Tables
@@ -398,22 +409,22 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 <div class="component-example">
   <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
     <thead>
-      <tr style="text-align: left; color: #9CA3AF; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;">
-        <th style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6;">SKU</th>
-        <th style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6;">Stock</th>
-        <th style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6;">Price</th>
+      <tr style="text-align: left; color: #A1AAB6; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;">
+        <th style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7;">SKU</th>
+        <th style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7;">Stock</th>
+        <th style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7;">Price</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6; color: #111827;">CAM-001</td>
-        <td style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6; color: #111827;">5</td>
-        <td style="padding: 10px 16px; border-bottom: 1px solid #F3F4F6; color: #111827;">$249.99</td>
+        <td style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">CAM-001</td>
+        <td style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">5</td>
+        <td style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">$249.99</td>
       </tr>
       <tr>
-        <td style="padding: 10px 16px; color: #111827;">BAG-045</td>
-        <td style="padding: 10px 16px; color: #111827;">0</td>
-        <td style="padding: 10px 16px; color: #111827;">$89.99</td>
+        <td style="padding: 10px 14px; color: #1F2937;">BAG-045</td>
+        <td style="padding: 10px 14px; color: #1F2937;">0</td>
+        <td style="padding: 10px 14px; color: #1F2937;">$89.99</td>
       </tr>
     </tbody>
   </table>
@@ -455,12 +466,12 @@ For dense data displays with more columns:
 
 <style>
 .table-condensed th {
-  padding: 10px 16px;
+  padding: 10px 14px;
   font-size: 11px;
 }
 
 .table-condensed td {
-  padding: 10px 16px;
+  padding: 10px 14px;
   font-size: 13px;
 }
 </style>
@@ -477,32 +488,32 @@ For dense data displays with more columns:
 <div class="component-example">
   <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
     <thead>
-      <tr style="text-align: left; color: #9CA3AF; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;">
-        <th style="padding: 14px 20px; border-bottom: 1px solid #F3F4F6;">Product</th>
-        <th style="padding: 14px 20px; border-bottom: 1px solid #F3F4F6;">Price</th>
-        <th style="padding: 14px 20px; border-bottom: 1px solid #F3F4F6;">Status</th>
+      <tr style="text-align: left; color: #A1AAB6; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;">
+        <th style="padding: 14px 18px; border-bottom: 1px solid #EEF2F7;">Product</th>
+        <th style="padding: 14px 18px; border-bottom: 1px solid #EEF2F7;">Price</th>
+        <th style="padding: 14px 18px; border-bottom: 1px solid #EEF2F7;">Status</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 16px 20px; border-bottom: 1px solid #F3F4F6;">
+        <td style="padding: 16px 18px; border-bottom: 1px solid #EEF2F7;">
           <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 36px; height: 36px; border-radius: 6px; background: #F3F4F6;"></div>
-            <span style="color: #111827;">Vintage Camera</span>
+            <div style="width: 36px; height: 36px; border-radius: 6px; background: #F3F6FB;"></div>
+            <span style="color: #1F2937;">Vintage Camera</span>
           </div>
         </td>
-        <td style="padding: 16px 20px; border-bottom: 1px solid #F3F4F6; color: #111827;">$249.99</td>
-        <td style="padding: 16px 20px; border-bottom: 1px solid #F3F4F6;"><span style="background: #DCFCE7; color: #166534; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">Active</span></td>
+        <td style="padding: 16px 18px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">$249.99</td>
+        <td style="padding: 16px 18px; border-bottom: 1px solid #EEF2F7;"><span style="background: #DCFCE7; color: #166534; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">Active</span></td>
       </tr>
       <tr>
-        <td style="padding: 16px 20px;">
+        <td style="padding: 16px 18px;">
           <div style="display: flex; align-items: center; gap: 12px;">
-            <div style="width: 36px; height: 36px; border-radius: 6px; background: #F3F4F6;"></div>
-            <span style="color: #111827;">Leather Bag</span>
+            <div style="width: 36px; height: 36px; border-radius: 6px; background: #F3F6FB;"></div>
+            <span style="color: #1F2937;">Leather Bag</span>
           </div>
         </td>
-        <td style="padding: 16px 20px; color: #111827;">$89.99</td>
-        <td style="padding: 16px 20px;"><span style="background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">Low Stock</span></td>
+        <td style="padding: 16px 18px; color: #1F2937;">$89.99</td>
+        <td style="padding: 16px 18px;"><span style="background: #FEF3C7; color: #92400E; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">Low Stock</span></td>
       </tr>
     </tbody>
   </table>
@@ -546,13 +557,13 @@ Display product thumbnails or user avatars:
   width: 36px;
   height: 36px;
   border-radius: 6px;
-  background: #F1F5F9;
+  background: #F3F6FB;
   object-fit: cover;
   flex-shrink: 0;
 }
 
 .dark-theme .table-thumb {
-  background: #334155;
+  background: #1E293B;
 }
 
 /* For condensed tables with images */

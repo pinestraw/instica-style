@@ -316,12 +316,17 @@ const toggleTheme = () => {
 
 .table-wrapper {
   overflow-x: auto;
-  border-radius: 8px;
+  border-radius: 14px;
   background: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #EEF2F7;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
 }
 
 .dark-theme .table-wrapper {
-  background: #111827;
+  background: #0F172A;
+  border-color: #1E293B;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
 .data-table {
@@ -338,32 +343,32 @@ const toggleTheme = () => {
 
 .data-table th {
   text-align: left;
-  padding: 14px 20px;
+  padding: 14px 18px;
   font-size: 11px;
   font-weight: 500;
-  color: #9CA3AF;
+  color: #A1AAB6;
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid #F3F4F6;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .dark-theme .data-table th {
-  color: #6B7280;
+  color: #8B95A7;
   border-bottom-color: #1F2937;
 }
 
 .data-table td {
-  padding: 16px 20px;
+  padding: 16px 18px;
   font-size: 14px;
-  color: #111827;
+  color: #1F2937;
   background: #FFFFFF;
-  border-bottom: 1px solid #F3F4F6;
+  border-bottom: 1px solid #EEF2F7;
 }
 
 .dark-theme .data-table td {
   color: #E5E7EB;
-  background: #111827;
+  background: #0F172A;
   border-bottom-color: #1F2937;
 }
 
@@ -372,11 +377,11 @@ const toggleTheme = () => {
 }
 
 .data-table tbody tr:hover td {
-  background: #F9FAFB;
+  background: #F8FAFF;
 }
 
 .dark-theme .data-table tbody tr:hover td {
-  background: #1F2937;
+  background: #162033;
 }
 
 .data-table tbody tr:last-child td {
@@ -389,12 +394,12 @@ const toggleTheme = () => {
 
 /* Condensed Table */
 .data-table-condensed th {
-  padding: 10px 16px;
+  padding: 10px 14px;
   font-size: 10px;
 }
 
 .data-table-condensed td {
-  padding: 10px 16px;
+  padding: 10px 14px;
   font-size: 13px;
 }
 
