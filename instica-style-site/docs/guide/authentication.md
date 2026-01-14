@@ -246,9 +246,173 @@ When building a new login page:
 - [ ] Button copy matches provider requirements exactly
 - [ ] Session persistence behavior communicated to user
 
+## Page layout & visual design
+
+### Overall structure
+The authentication page should create a calm, focused environment that minimizes distraction and builds trust. Follow these layout principles:
+
+#### Centered card pattern
+- Single card centered vertically and horizontally on the viewport
+- Dark card background (e.g., `rgba(20, 20, 30, 0.95)`) against a gradient background
+- Card width: 360-400px on desktop, full-width with padding on mobile
+- Internal padding: 32-40px
+- Subtle border or shadow for depth (optional)
+
+#### Background treatment
+Use a gradient background that:
+- Reinforces brand identity through color
+- Provides visual interest without competing with the form
+- Example: Navy to teal/green diagonal gradient (`linear-gradient(135deg, #1a2332 0%, #1e3e4e 100%)`)
+- Keep contrast low enough that white text on the card remains highly readable
+
+#### Vertical rhythm
+Establish consistent spacing between elements:
+```css
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Base rhythm */
+}
+
+.auth-card__header {
+  text-align: center;
+  margin-bottom: 8px; /* Tighter spacing after logo */
+}
+
+.auth-card__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Form fields */
+}
+
+.auth-card__divider {
+  margin: 8px 0; /* Compress around divider */
+}
+
+.auth-card__footer {
+  margin-top: 8px; /* Support links */
+}
+```
+
+### Component hierarchy (top to bottom)
+
+1. **Logo** (brand mark)
+   - Size: 48-64px
+   - Centered
+   - Single-color (white or brand color)
+   - Example: Elephant icon for Instica
+
+2. **Heading** ("Sign in")
+   - Font size: 24-28px
+   - Font weight: 600-700
+   - Color: White or near-white
+   - Centered
+
+3. **Subheading** (instructional copy)
+   - Font size: 14-15px
+   - Font weight: 400
+   - Color: Muted (e.g., `rgba(255,255,255,0.7)`)
+   - Centered
+   - Example: "Pick Apple or use your email to continue."
+
+4. **Form fields** (email, password)
+   - Dark input backgrounds (e.g., `rgba(255,255,255,0.05)`)
+   - Light borders: `1px solid rgba(255,255,255,0.1)`
+   - Placeholder text: `rgba(255,255,255,0.4)`
+   - Input text: White
+   - Focus state: Increase border opacity to `0.3` or add accent color
+
+5. **Primary action button** (Continue)
+   - Accent color: Bright blue (e.g., `#3B82F6`) for contrast against dark card
+   - Full width
+   - Height: 44-48px
+   - Border radius: 8px
+   - Font weight: 600
+
+6. **Session hint** (persistence message)
+   - Font size: 12-13px
+   - Color: Muted (e.g., `rgba(255,255,255,0.5)`)
+   - Centered
+   - Example: "Your session stays signed in on this device."
+
+7. **Divider** ("or sign in with Apple")
+   - Horizontal lines with centered text
+   - Line opacity: `0.1`
+   - Text: Muted, 12-13px
+   - Spacing: 8px gap between text and lines
+
+8. **Third-party button(s)** (Sign in with Apple)
+   - Black background with white text (Apple dark mode)
+   - Full width matching primary button
+   - Official brand styling (see previous section)
+
+9. **Footer link** ("Need help? Contact support.")
+   - Font size: 13px
+   - Color: Muted link color (e.g., `rgba(255,255,255,0.6)`)
+   - Centered
+   - Hover: Increase opacity or underline
+
+### Instica implementation example
+
+The Instica sign-in page (shown above) demonstrates these principles:
+- **Gradient background**: Navy to teal creating depth
+- **Centered card**: Dark surface with generous padding
+- **Clear hierarchy**: Logo → heading → instructional copy → form → buttons
+- **Accessible colors**: White text on dark backgrounds with sufficient contrast
+- **Proper spacing**: 24px gaps between major sections, 16px between form fields
+- **Brand consistency**: Elephant logo reinforces product identity
+- **Trust signals**: Session persistence message and support link
+
+This design is production-tested and serves as the reference implementation for future authentication surfaces.
+
+### Visual design tokens
+
+Define these variables for consistent theming:
+
+```css
+:root {
+  /* Backgrounds */
+  --auth-bg-gradient: linear-gradient(135deg, #1a2332 0%, #1e3e4e 100%);
+  --auth-card-bg: rgba(20, 20, 30, 0.95);
+  
+  /* Typography */
+  --auth-heading: 28px;
+  --auth-subheading: 15px;
+  --auth-body: 14px;
+  --auth-caption: 13px;
+  
+  /* Colors */
+  --auth-text-primary: #fff;
+  --auth-text-muted: rgba(255, 255, 255, 0.7);
+  --auth-text-caption: rgba(255, 255, 255, 0.5);
+  --auth-border: rgba(255, 255, 255, 0.1);
+  --auth-input-bg: rgba(255, 255, 255, 0.05);
+  
+  /* Accent */
+  --auth-primary: #3B82F6;
+  --auth-primary-hover: #2563EB;
+}
+```
+
+Adjust for light mode:
+```css
+@media (prefers-color-scheme: light) {
+  :root {
+    --auth-bg-gradient: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    --auth-card-bg: #ffffff;
+    --auth-text-primary: #1a202c;
+    --auth-text-muted: rgba(0, 0, 0, 0.7);
+    --auth-text-caption: rgba(0, 0, 0, 0.5);
+    --auth-border: rgba(0, 0, 0, 0.1);
+    --auth-input-bg: rgba(0, 0, 0, 0.02);
+  }
+}
+```
+
 ## Reference implementations
 
 - **Web login**: [jungle/templates/auth/login.html](https://github.com/instica/jungle/blob/main/jungle/templates/auth/login.html)
+- **Instica sign-in**: Production implementation at instica.com/login (pictured in this guide)
 - **Apple HIG**: [developer.apple.com/design/human-interface-guidelines/sign-in-with-apple](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple)
 - **Apple button generator**: [developer.apple.com/design/resources/](https://developer.apple.com/design/resources/)
 - **Google branding**: [developers.google.com/identity/branding-guidelines](https://developers.google.com/identity/branding-guidelines)
