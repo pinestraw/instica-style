@@ -42,7 +42,8 @@ export default defineConfig({
 					text: 'Components',
 					items: [
 						{ text: 'UI Library', link: '/guide/components' },
-						{ text: 'Authentication & Login', link: '/guide/authentication' }
+						{ text: 'Authentication & Login', link: '/guide/authentication' },
+						{ text: 'Error States & Feedback', link: '/guide/error-states' }
 					]
 				}
 			],
