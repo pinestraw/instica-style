@@ -262,56 +262,22 @@ Data display components present information clearly and enable users to scan, un
 
 .table-thumb {
   width: 40px;
-  height: 40px;
-  object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid #E2E8F0;
-}
-</style>
-```
-
-### Sortable Table
-
-```html
-<table class="table">
-  <thead>
-    <tr>
-      <th>
-        <button class="table-sort table-sort--asc">
-          Product
-          <span class="table-sort-icon">↑</span>
-        </button>
-      </th>
-      <th>
-        <button class="table-sort">
-          Price
-          <span class="table-sort-icon">↕</span>
-        </button>
-      </th>
-      <th>Status</th>
-    </tr>
-  </thead>
-</table>
-
-<style>
-.table-sort {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  width: 100%;
-  padding: 0;
-  background: transparent;
-  border: none;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #64748B;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.table-sort:hover {
+<div class="component-example">
+  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden;">
+    <div style="height: 160px; background: linear-gradient(135deg, #4F46E5, #818CF8); position: relative;">
+      <div style="position: absolute; bottom: 10px; left: 12px; display: flex; gap: 4px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #4F46E5;"></span>
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5);"></span>
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5);"></span>
+      </div>
+    </div>
+    <div style="padding: 12px; display: flex; gap: 8px; overflow-x: auto;">
+      <div style="width: 120px; height: 80px; border-radius: 10px; background: #E2E8F0; border: 2px solid #4F46E5;"></div>
+      <div style="width: 80px; height: 80px; border-radius: 10px; background: #E2E8F0;"></div>
+      <div style="width: 80px; height: 80px; border-radius: 10px; background: #E2E8F0;"></div>
+    </div>
+  </div>
+</div>
   color: #334155;
 }
 
@@ -477,6 +443,30 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 
 ### Condensed Tables
 
+<div class="component-example">
+  <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+    <thead>
+      <tr style="text-align: left; color: #64748B; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;">
+        <th style="padding: 8px 10px;">SKU</th>
+        <th style="padding: 8px 10px;">Stock</th>
+        <th style="padding: 8px 10px;">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-top: 1px solid #E2E8F0;">
+        <td style="padding: 8px 10px;">CAM-001</td>
+        <td style="padding: 8px 10px;">5</td>
+        <td style="padding: 8px 10px;">$249.99</td>
+      </tr>
+      <tr style="border-top: 1px solid #E2E8F0;">
+        <td style="padding: 8px 10px;">BAG-045</td>
+        <td style="padding: 8px 10px;">0</td>
+        <td style="padding: 8px 10px;">$89.99</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 For dense data displays with more columns:
 
 ```html
@@ -531,6 +521,40 @@ For dense data displays with more columns:
 - Not recommended for mobile - use standard tables
 
 ### Tables with Images
+
+<div class="component-example">
+  <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
+    <thead>
+      <tr style="text-align: left; color: #64748B; font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;">
+        <th style="padding: 10px 12px;">Product</th>
+        <th style="padding: 10px 12px;">Price</th>
+        <th style="padding: 10px 12px;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-top: 1px solid #E2E8F0;">
+        <td style="padding: 12px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: #E2E8F0;"></div>
+            <span>Vintage Camera</span>
+          </div>
+        </td>
+        <td style="padding: 12px;">$249.99</td>
+        <td style="padding: 12px; color: #059669;">Active</td>
+      </tr>
+      <tr style="border-top: 1px solid #E2E8F0;">
+        <td style="padding: 12px;">
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <div style="width: 36px; height: 36px; border-radius: 8px; background: #E2E8F0;"></div>
+            <span>Leather Bag</span>
+          </div>
+        </td>
+        <td style="padding: 12px;">$89.99</td>
+        <td style="padding: 12px; color: #D97706;">Low Stock</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 Display product thumbnails or user avatars:
 
@@ -599,6 +623,18 @@ Display product thumbnails or user avatars:
 ## Cards
 
 ### Info Card
+
+<div class="component-example">
+  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 16px; max-width: 320px;">
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+      <div style="font-weight: 600; color: #0F172A;">Recent Sales</div>
+      <div style="width: 28px; height: 28px; border-radius: 8px; background: #F1F5F9;"></div>
+    </div>
+    <div style="font-size: 24px; font-weight: 700; color: #0F172A;">$12,450</div>
+    <div style="font-size: 12px; color: #94A3B8;">Last 30 days</div>
+    <div style="font-size: 13px; color: #059669; margin-top: 6px;">↑ 12.5%</div>
+  </div>
+</div>
 
 ```html
 <div class="card">
@@ -684,6 +720,20 @@ Display product thumbnails or user avatars:
 ```
 
 ### Product Card
+
+<div class="component-example">
+  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; max-width: 320px;">
+    <div style="height: 140px; background: #F1F5F9;"></div>
+    <div style="padding: 14px;">
+      <div style="font-weight: 600; color: #0F172A;">Vintage Camera</div>
+      <div style="font-size: 13px; color: #64748B; margin-top: 4px;">SKU CAM-001</div>
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px;">
+        <div style="font-weight: 700; color: #0F172A;">$249.99</div>
+        <div style="font-size: 12px; color: #059669;">Active</div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="product-card">
@@ -795,6 +845,14 @@ Display product thumbnails or user avatars:
 
 ### Simple List
 
+<div class="component-example">
+  <div style="display: grid; gap: 8px; max-width: 360px;">
+    <div style="padding: 12px; border: 1px solid #E2E8F0; border-radius: 10px; background: #FFFFFF;">Basic inventory tracking</div>
+    <div style="padding: 12px; border: 1px solid #E2E8F0; border-radius: 10px; background: #FFFFFF;">Up to 100 items</div>
+    <div style="padding: 12px; border: 1px solid #E2E8F0; border-radius: 10px; background: #FFFFFF;">Email support</div>
+  </div>
+</div>
+
 ```html
 <ul class="list">
   <li class="list-item">
@@ -849,6 +907,14 @@ Display product thumbnails or user avatars:
 ```
 
 ### Action List
+
+<div class="component-example">
+  <div style="display: grid; gap: 6px; max-width: 360px;">
+    <button style="text-align: left; padding: 12px; border-radius: 10px; border: 1px solid #E2E8F0; background: #FFFFFF;">Edit Details</button>
+    <button style="text-align: left; padding: 12px; border-radius: 10px; border: 1px solid #E2E8F0; background: #FFFFFF;">Export Data</button>
+    <button style="text-align: left; padding: 12px; border-radius: 10px; border: 1px solid #FECACA; background: #FEF2F2; color: #DC2626;">Delete Item</button>
+  </div>
+</div>
 
 ```html
 <div class="action-list">
@@ -973,6 +1039,13 @@ Display product thumbnails or user avatars:
 
 ### Badge with Dot
 
+<div class="component-example">
+  <span style="display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: 999px; font-size: 13px; font-weight: 600; background: #DCFCE7; color: #166534;">
+    <span style="width: 6px; height: 6px; border-radius: 50%; background: #059669;"></span>
+    Online
+  </span>
+</div>
+
 ```html
 <span class="badge badge-dot badge-success">
   <span class="badge-dot-indicator"></span>
@@ -1011,6 +1084,23 @@ Display product thumbnails or user avatars:
 ### Photo Carousel with Thumbnails
 
 A primary image viewer with thumbnail navigation strip, based on the iOS inventory app pattern:
+
+<div class="component-example">
+  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden;">
+    <div style="height: 160px; background: linear-gradient(135deg, #4F46E5, #818CF8); position: relative;">
+      <div style="position: absolute; bottom: 10px; left: 12px; display: flex; gap: 4px;">
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: #4F46E5;"></span>
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5);"></span>
+        <span style="width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.5);"></span>
+      </div>
+    </div>
+    <div style="padding: 12px; display: flex; gap: 8px; overflow-x: auto;">
+      <div style="width: 120px; height: 80px; border-radius: 10px; background: #E2E8F0; border: 2px solid #4F46E5;"></div>
+      <div style="width: 80px; height: 80px; border-radius: 10px; background: #E2E8F0;"></div>
+      <div style="width: 80px; height: 80px; border-radius: 10px; background: #E2E8F0;"></div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="gallery-section">
@@ -1375,6 +1465,17 @@ A primary image viewer with thumbnail navigation strip, based on the iOS invento
 
 For viewing all photos in a grid layout:
 
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+    <div style="aspect-ratio: 1; border-radius: 12px; background: #E2E8F0;"></div>
+    <div style="aspect-ratio: 1; border-radius: 12px; background: #E2E8F0;"></div>
+    <div style="aspect-ratio: 1; border-radius: 12px; background: #E2E8F0;"></div>
+    <div style="aspect-ratio: 1; border-radius: 12px; background: #E2E8F0;"></div>
+    <div style="aspect-ratio: 1; border-radius: 12px; background: #E2E8F0;"></div>
+    <div style="aspect-ratio: 1; border-radius: 12px; background: #E2E8F0;"></div>
+  </div>
+</div>
+
 ```html
 <div class="grid-gallery">
   <div class="gallery-grid">
@@ -1495,6 +1596,14 @@ For viewing all photos in a grid layout:
 
 ## Tags
 
+<div class="component-example">
+  <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #F1F5F9; color: #334155; font-size: 13px;">Electronics ×</span>
+    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #F1F5F9; color: #334155; font-size: 13px;">Vintage ×</span>
+    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px; background: #F1F5F9; color: #334155; font-size: 13px;">Camera ×</span>
+  </div>
+</div>
+
 ```html
 <div class="tag-list">
   <span class="tag">
@@ -1554,6 +1663,15 @@ For viewing all photos in a grid layout:
 ```
 
 ## Empty States
+
+<div class="component-example">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 24px; text-align: center;">
+    <div style="width: 64px; height: 64px; border-radius: 16px; background: #EEF2FF; display: flex; align-items: center; justify-content: center; font-size: 24px;">📦</div>
+    <div style="font-weight: 600; color: #0F172A;">No items yet</div>
+    <div style="font-size: 14px; color: #64748B;">Get started by adding your first inventory item.</div>
+    <button style="margin-top: 6px; padding: 8px 16px; border-radius: 8px; border: none; background: #4F46E5; color: #FFFFFF; font-weight: 600;">Add Item</button>
+  </div>
+</div>
 
 ```html
 <div class="empty-state">

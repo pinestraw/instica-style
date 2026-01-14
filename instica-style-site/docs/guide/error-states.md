@@ -7,6 +7,16 @@ outline: deep
 
 This guide defines patterns for communicating errors, failures, and system feedback across Instica surfaces. Thoughtful error states help users understand what went wrong and guide them toward resolution.
 
+<style scoped>
+.component-example {
+    padding: 24px;
+    background: #F8FAFC;
+    border-radius: 12px;
+    margin: 24px 0;
+    border: 1px solid #E2E8F0;
+}
+</style>
+
 ## Core principles
 
 ### Hierarchy of communication
@@ -74,6 +84,16 @@ Handle common network failures with specific guidance:
 
 Use when an entire view fails to load critical data:
 
+<div class="component-example">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 28px; text-align: center;">
+        <div style="width: 56px; height: 56px; border-radius: 16px; background: #FEF3C7; display: flex; align-items: center; justify-content: center; font-size: 24px;">⚠️</div>
+        <div style="font-size: 18px; font-weight: 600; color: #0F172A;">Loading Failed</div>
+        <div style="font-size: 14px; color: #64748B; max-width: 320px;">We couldn't load this item. Check your connection and try again.</div>
+        <div style="font-size: 12px; color: #94A3B8;">Pull down to retry</div>
+        <button style="margin-top: 6px; padding: 8px 16px; border-radius: 8px; border: none; background: #4F46E5; color: #FFFFFF; font-weight: 600;">Retry</button>
+    </div>
+</div>
+
 #### Layout structure
 ```
 ┌─────────────────────────────┐
@@ -128,6 +148,14 @@ VStack(spacing: InsticaSpacing.lg) {
 
 Use for errors that don't block the entire page (e.g., failed save, upload error):
 
+<div class="component-example">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: #DC2626; color: #FFFFFF; border-radius: 10px;">
+        <span>⚠️</span>
+        <div style="font-size: 14px; font-weight: 600;">Upload failed. Try again in a moment.</div>
+        <button style="margin-left: auto; border: none; background: transparent; color: #FFFFFF; font-weight: 700;">×</button>
+    </div>
+</div>
+
 #### iOS implementation (from InventoryDetailView)
 ```swift
 HStack {
@@ -169,6 +197,17 @@ HStack {
 ### Callout/Card error (contextual)
 
 Use for inline warnings within a specific section (e.g., listing unavailable, missing requirements):
+
+<div class="component-example">
+    <div style="display: flex; gap: 12px; padding: 16px; border-radius: 12px; border: 1px solid #FECACA; background: #FEF2F2;">
+        <div style="width: 28px; height: 28px; border-radius: 8px; background: #FCA5A5; display: flex; align-items: center; justify-content: center;">⚠️</div>
+        <div>
+            <div style="font-size: 13px; font-weight: 700; color: #B91C1C; margin-bottom: 4px;">Listing Error</div>
+            <div style="font-size: 13px; color: #0F172A;">This item is missing required photos.</div>
+            <div style="font-size: 12px; color: #64748B; margin-top: 4px;">Add at least 3 photos to publish.</div>
+        </div>
+    </div>
+</div>
 
 #### iOS implementation (from MarketplaceListingCard)
 ```swift

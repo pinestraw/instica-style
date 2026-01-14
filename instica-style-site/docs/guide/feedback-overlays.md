@@ -9,6 +9,16 @@ outline: deep
 
 ---
 
+<style scoped>
+.component-example {
+  padding: 24px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 # Feedback & Overlays
 
 Feedback components communicate system status and guide users through interactions. Overlays focus attention on important content or actions.
@@ -16,6 +26,17 @@ Feedback components communicate system status and guide users through interactio
 ## Toast Notifications
 
 ### Success Toast
+
+<div class="component-example">
+  <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #FFFFFF; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-width: 420px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #DCFCE7; display: flex; align-items: center; justify-content: center;">✅</div>
+    <div style="flex: 1;">
+      <div style="font-size: 15px; font-weight: 600; color: #0F172A;">Item saved successfully</div>
+      <div style="font-size: 14px; color: #64748B; margin-top: 4px;">Your changes have been saved to inventory</div>
+    </div>
+    <button style="border: none; background: transparent; color: #94A3B8; font-size: 18px;">×</button>
+  </div>
+</div>
 
 ```html
 <div class="toast toast-success">
@@ -118,6 +139,19 @@ Feedback components communicate system status and guide users through interactio
 
 ### Toast Container
 
+<div class="component-example">
+  <div style="display: flex; flex-direction: column; gap: 12px; max-width: 420px;">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px; background: #FFFFFF; border-radius: 10px; border-left: 4px solid #059669; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+      <span>✅</span>
+      <div style="flex: 1; font-size: 14px; color: #0F172A;">Listing published</div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 12px; padding: 14px; background: #FFFFFF; border-radius: 10px; border-left: 4px solid #D97706; box-shadow: 0 6px 16px rgba(0,0,0,0.08);">
+      <span>⚠️</span>
+      <div style="flex: 1; font-size: 14px; color: #0F172A;">Photo upload taking longer than usual</div>
+    </div>
+  </div>
+</div>
+
 ```html
 <div class="toast-container">
   <!-- Toasts appear here -->
@@ -158,6 +192,22 @@ Feedback components communicate system status and guide users through interactio
 ## Modal Dialogs
 
 ### Standard Modal
+
+<div class="component-example">
+  <div style="position: relative; height: 220px; background: rgba(15, 23, 42, 0.45); border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+    <div style="width: 360px; background: #FFFFFF; border-radius: 12px; padding: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.2);">
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div style="font-size: 16px; font-weight: 600; color: #0F172A;">Delete Item</div>
+        <button style="border: none; background: transparent; font-size: 18px; color: #94A3B8;">×</button>
+      </div>
+      <p style="margin: 16px 0; color: #64748B; font-size: 14px;">Are you sure you want to delete this item? This action cannot be undone.</p>
+      <div style="display: flex; justify-content: flex-end; gap: 8px;">
+        <button style="padding: 8px 14px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #64748B;">Cancel</button>
+        <button style="padding: 8px 14px; border-radius: 8px; border: none; background: #EF4444; color: #FFFFFF; font-weight: 600;">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="modal-overlay">
@@ -285,6 +335,22 @@ Feedback components communicate system status and guide users through interactio
 
 ### Full-Screen Modal (Drawer)
 
+<div class="component-example">
+  <div style="position: relative; height: 240px; background: rgba(15, 23, 42, 0.35); border-radius: 12px; overflow: hidden;">
+    <div style="position: absolute; inset: 0 auto 0 0; width: 260px; background: #FFFFFF; padding: 16px; box-shadow: 4px 0 16px rgba(0,0,0,0.12);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+        <div style="font-size: 16px; font-weight: 600; color: #0F172A;">Filter Options</div>
+        <button style="border: none; background: transparent; font-size: 18px; color: #94A3B8;">×</button>
+      </div>
+      <div style="height: 120px; background: #F8FAFC; border-radius: 8px; border: 1px dashed #CBD5E1; margin-bottom: 12px;"></div>
+      <div style="display: flex; gap: 8px;">
+        <button style="flex: 1; padding: 8px 12px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #64748B;">Reset</button>
+        <button style="flex: 1; padding: 8px 12px; border-radius: 8px; border: none; background: #4F46E5; color: #FFFFFF; font-weight: 600;">Apply</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 ```html
 <div class="drawer drawer-right">
   <div class="drawer-overlay"></div>
@@ -392,6 +458,13 @@ Feedback components communicate system status and guide users through interactio
 
 ## Tooltips
 
+<div class="component-example">
+  <div style="position: relative; display: inline-flex; align-items: center; gap: 8px;">
+    <button style="padding: 8px 12px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF;">Hover me</button>
+    <div style="position: absolute; top: -44px; left: 0; background: #0F172A; color: #FFFFFF; padding: 6px 10px; border-radius: 6px; font-size: 12px; white-space: nowrap;">More details here</div>
+  </div>
+</div>
+
 ```html
 <button class="btn-icon tooltip-trigger" aria-describedby="tooltip-1">
   <img src="/icons/status/information-help.png" alt="" width="20" height="20" />
@@ -442,6 +515,20 @@ Feedback components communicate system status and guide users through interactio
 ```
 
 ## Popovers
+
+<div class="component-example">
+  <div style="position: relative; display: inline-flex;">
+    <button style="padding: 8px 14px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF;">Options</button>
+    <div style="position: absolute; top: 44px; left: 0; width: 220px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; box-shadow: 0 12px 24px rgba(0,0,0,0.12); padding: 12px;">
+      <div style="font-weight: 600; margin-bottom: 8px; color: #0F172A;">Quick Actions</div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <button style="text-align: left; border: none; background: transparent; color: #64748B; padding: 6px 4px;">Duplicate listing</button>
+        <button style="text-align: left; border: none; background: transparent; color: #64748B; padding: 6px 4px;">Share link</button>
+        <button style="text-align: left; border: none; background: transparent; color: #DC2626; padding: 6px 4px;">Archive</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="popover-trigger">
@@ -548,6 +635,10 @@ Feedback components communicate system status and guide users through interactio
 
 ### Spinner
 
+<div class="component-example">
+  <div style="width: 40px; height: 40px; border-radius: 50%; border: 4px solid #E2E8F0; border-top-color: #4F46E5; animation: spin 0.8s linear infinite;"></div>
+</div>
+
 ```html
 <div class="spinner"></div>
 
@@ -580,6 +671,17 @@ Feedback components communicate system status and guide users through interactio
 ```
 
 ### Skeleton Loaders
+
+<div class="component-example">
+  <div style="width: 320px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden;">
+    <div style="height: 140px; background: linear-gradient(90deg,#F1F5F9 0%,#E2E8F0 50%,#F1F5F9 100%); background-size: 200% 100%; animation: shimmer 1.5s infinite;"></div>
+    <div style="padding: 16px; display: grid; gap: 8px;">
+      <div style="height: 16px; width: 80%; background: linear-gradient(90deg,#F1F5F9 0%,#E2E8F0 50%,#F1F5F9 100%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px;"></div>
+      <div style="height: 16px; width: 60%; background: linear-gradient(90deg,#F1F5F9 0%,#E2E8F0 50%,#F1F5F9 100%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px;"></div>
+      <div style="height: 16px; width: 40%; background: linear-gradient(90deg,#F1F5F9 0%,#E2E8F0 50%,#F1F5F9 100%); background-size: 200% 100%; animation: shimmer 1.5s infinite; border-radius: 6px;"></div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="skeleton-card">
@@ -626,6 +728,25 @@ Feedback components communicate system status and guide users through interactio
 ```
 
 ### Progress Indicators
+
+<div class="component-example">
+  <div style="display: flex; align-items: center; gap: 12px;">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 999px; background: #4F46E5; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-size: 12px;">✓</div>
+      <div style="font-size: 13px; color: #0F172A;">Details</div>
+    </div>
+    <div style="width: 24px; height: 2px; background: #CBD5E1;"></div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 999px; border: 2px solid #4F46E5; color: #4F46E5; display: flex; align-items: center; justify-content: center; font-size: 12px;">2</div>
+      <div style="font-size: 13px; color: #64748B;">Photos</div>
+    </div>
+    <div style="width: 24px; height: 2px; background: #E2E8F0;"></div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <div style="width: 24px; height: 24px; border-radius: 999px; border: 2px solid #E2E8F0; color: #94A3B8; display: flex; align-items: center; justify-content: center; font-size: 12px;">3</div>
+      <div style="font-size: 13px; color: #94A3B8;">Publish</div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="progress-steps">
@@ -715,6 +836,17 @@ Feedback components communicate system status and guide users through interactio
 ```
 
 ## Alerts
+
+<div class="component-example">
+  <div style="display: flex; align-items: flex-start; gap: 12px; padding: 16px; border-radius: 10px; background: #EEF2FF; border: 1px solid #C7D2FE; max-width: 520px;">
+    <div style="width: 28px; height: 28px; border-radius: 8px; background: #4F46E5; color: #FFFFFF; display: flex; align-items: center; justify-content: center;">i</div>
+    <div style="flex: 1;">
+      <div style="font-weight: 600; color: #1E293B;">Inventory sync paused</div>
+      <div style="font-size: 14px; color: #475569; margin-top: 4px;">Reconnect your marketplace account to resume sync.</div>
+    </div>
+    <button style="border: none; background: transparent; color: #4F46E5; font-weight: 600;">Reconnect</button>
+  </div>
+</div>
 
 ```html
 <div class="alert alert-info">

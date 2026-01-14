@@ -7,6 +7,16 @@ outline: deep
 
 This guide defines conventions for authentication interfaces across Instica surfaces. Consistency in login flows builds trust and reduces friction for users accessing their inventory data.
 
+<style scoped>
+.component-example {
+  padding: 24px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 ## Login page structure
 
 All login pages must follow this hierarchy:
@@ -15,10 +25,45 @@ All login pages must follow this hierarchy:
 2. **Divider** with "or" language
 3. **Third-party sign-in options** (Apple, Google, etc.)
 
+<div class="component-example">
+  <div style="max-width: 360px; margin: 0 auto; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; padding: 20px; display: grid; gap: 16px;">
+    <div style="font-weight: 700; font-size: 18px; color: #0F172A;">Sign in</div>
+    <div style="display: grid; gap: 10px;">
+      <div style="height: 40px; border-radius: 8px; border: 1px solid #E2E8F0; background: #F8FAFC;"></div>
+      <div style="height: 40px; border-radius: 8px; border: 1px solid #E2E8F0; background: #F8FAFC;"></div>
+      <div style="height: 40px; border-radius: 8px; background: #4F46E5;"></div>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; color: #94A3B8; font-size: 12px;">
+      <div style="flex: 1; height: 1px; background: #E2E8F0;"></div>
+      or
+      <div style="flex: 1; height: 1px; background: #E2E8F0;"></div>
+    </div>
+    <div style="display: grid; gap: 10px;">
+      <div style="height: 40px; border-radius: 8px; background: #000000;"></div>
+      <div style="height: 40px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF;"></div>
+    </div>
+  </div>
+</div>
+
 ### Rationale
 Email/password appears first because it's the universal fallback and sets user expectations. Third-party options follow as convenient alternatives for users who prefer OAuth flows.
 
 ## Email/password form
+
+<div class="component-example">
+  <form style="display: grid; gap: 12px; max-width: 360px;">
+    <label style="display: grid; gap: 6px; font-size: 13px; color: #64748B;">
+      Email
+      <input type="email" placeholder="name@instica.com" style="height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid #E2E8F0;" />
+    </label>
+    <label style="display: grid; gap: 6px; font-size: 13px; color: #64748B;">
+      Password
+      <input type="password" placeholder="••••••••" style="height: 40px; padding: 0 12px; border-radius: 8px; border: 1px solid #E2E8F0;" />
+    </label>
+    <button type="button" style="height: 40px; border-radius: 8px; border: none; background: #4F46E5; color: #FFFFFF; font-weight: 600;">Continue</button>
+    <div style="font-size: 12px; color: #94A3B8;">Your session stays signed in on this device.</div>
+  </form>
+</div>
 
 ### Required fields
 - Email input with `type="email"` and `autocomplete="username"`
@@ -39,6 +84,16 @@ Email/password appears first because it's the universal fallback and sets user e
 ## Third-party login buttons
 
 **Critical requirement: Follow official brand guidelines exactly.** Every OAuth provider publishes strict requirements for button styling, placement, and copy. 
+
+<div class="component-example">
+  <div style="display: grid; gap: 10px; max-width: 360px;">
+    <button style="height: 40px; border-radius: 8px; border: none; background: #000000; color: #FFFFFF; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;"> Sign in with Apple</button>
+    <button style="height: 40px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #0F172A; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px;">
+      <span style="width: 18px; height: 18px; border-radius: 50%; background: conic-gradient(#4285F4 0 25%, #34A853 25% 50%, #FBBC05 50% 75%, #EA4335 75% 100%);"></span>
+      Sign in with Google
+    </button>
+  </div>
+</div>
 
 ### Why strict compliance matters
 
@@ -184,6 +239,14 @@ Copy options:
 - Use secure, HttpOnly cookies for session tokens
 
 ### Error messages
+
+<div class="component-example">
+  <div style="max-width: 360px; display: grid; gap: 8px;">
+    <div style="font-size: 13px; color: #64748B;">Password</div>
+    <div style="height: 40px; border-radius: 8px; border: 1px solid #FCA5A5; background: #FEF2F2;"></div>
+    <div style="font-size: 12px; color: #DC2626;">Invalid email or password</div>
+  </div>
+</div>
 - Generic errors for failed login attempts: "Invalid email or password"
 - Specific errors only for client-side validation: "Please enter a valid email address"
 - Never reveal account existence: "If an account exists, you'll receive a reset email"

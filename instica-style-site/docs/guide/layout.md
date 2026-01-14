@@ -9,6 +9,16 @@ outline: deep
 
 ---
 
+<style scoped>
+.component-example {
+  padding: 24px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 # Layout Patterns
 
 Layout patterns define the structure and organization of content across the application. Consistent layouts improve usability and create a cohesive experience.
@@ -16,6 +26,13 @@ Layout patterns define the structure and organization of content across the appl
 ## Container System
 
 ### Base Container
+
+<div class="component-example">
+  <div style="border: 1px dashed #CBD5E1; border-radius: 10px; padding: 20px; background: #FFFFFF;">
+    <div style="height: 16px; width: 140px; background: #E2E8F0; border-radius: 6px; margin-bottom: 10px;"></div>
+    <div style="height: 12px; width: 220px; background: #F1F5F9; border-radius: 6px;"></div>
+  </div>
+</div>
 
 ```html
 <div class="container">
@@ -61,6 +78,30 @@ Layout patterns define the structure and organization of content across the appl
 ## Page Layouts
 
 ### Dashboard Layout
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: 180px 1fr; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background: #FFFFFF; min-height: 180px;">
+    <aside style="background: #F8FAFC; border-right: 1px solid #E2E8F0; padding: 12px;">
+      <div style="height: 10px; width: 80px; background: #CBD5E1; border-radius: 6px; margin-bottom: 12px;"></div>
+      <div style="display: grid; gap: 8px;">
+        <div style="height: 10px; width: 120px; background: #E2E8F0; border-radius: 6px;"></div>
+        <div style="height: 10px; width: 110px; background: #E2E8F0; border-radius: 6px;"></div>
+        <div style="height: 10px; width: 100px; background: #E2E8F0; border-radius: 6px;"></div>
+      </div>
+    </aside>
+    <div style="padding: 16px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+        <div style="height: 14px; width: 120px; background: #CBD5E1; border-radius: 6px;"></div>
+        <div style="height: 28px; width: 90px; background: #4F46E5; border-radius: 8px;"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+        <div style="height: 60px; background: #F1F5F9; border-radius: 10px; border: 1px solid #E2E8F0;"></div>
+        <div style="height: 60px; background: #F1F5F9; border-radius: 10px; border: 1px solid #E2E8F0;"></div>
+        <div style="height: 60px; background: #F1F5F9; border-radius: 10px; border: 1px solid #E2E8F0;"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="layout-dashboard">
@@ -138,6 +179,29 @@ Layout patterns define the structure and organization of content across the appl
 ```
 
 ### List + Detail Layout
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: 1fr 1.4fr; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background: #FFFFFF; min-height: 180px;">
+    <div style="border-right: 1px solid #E2E8F0; padding: 16px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+        <div style="height: 12px; width: 120px; background: #CBD5E1; border-radius: 6px;"></div>
+        <div style="width: 28px; height: 28px; border-radius: 8px; background: #E2E8F0;"></div>
+      </div>
+      <div style="display: grid; gap: 8px;">
+        <div style="height: 36px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;"></div>
+        <div style="height: 36px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;"></div>
+        <div style="height: 36px; border-radius: 8px; background: #F8FAFC; border: 1px solid #E2E8F0;"></div>
+      </div>
+    </div>
+    <div style="padding: 16px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+        <div style="height: 12px; width: 120px; background: #CBD5E1; border-radius: 6px;"></div>
+        <div style="height: 28px; width: 60px; border-radius: 8px; background: #4F46E5;"></div>
+      </div>
+      <div style="height: 100px; border-radius: 10px; background: #F1F5F9; border: 1px dashed #CBD5E1;"></div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="layout-split">
@@ -238,6 +302,25 @@ Layout patterns define the structure and organization of content across the appl
 ```
 
 ### Settings Layout
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: 180px 1fr; gap: 16px; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background: #FFFFFF; padding: 16px;">
+    <nav style="display: flex; flex-direction: column; gap: 6px;">
+      <div style="font-weight: 700; color: #0F172A; margin-bottom: 8px;">Settings</div>
+      <a href="#" style="padding: 8px 10px; border-radius: 8px; background: #EEF2FF; color: #4F46E5; font-weight: 600; text-decoration: none;">Profile</a>
+      <a href="#" style="padding: 8px 10px; border-radius: 8px; color: #64748B; text-decoration: none;">Account</a>
+      <a href="#" style="padding: 8px 10px; border-radius: 8px; color: #64748B; text-decoration: none;">Notifications</a>
+      <a href="#" style="padding: 8px 10px; border-radius: 8px; color: #64748B; text-decoration: none;">Billing</a>
+    </nav>
+    <div style="display: grid; gap: 12px;">
+      <div>
+        <div style="height: 14px; width: 160px; background: #CBD5E1; border-radius: 6px; margin-bottom: 6px;"></div>
+        <div style="height: 10px; width: 220px; background: #E2E8F0; border-radius: 6px;"></div>
+      </div>
+      <div style="height: 120px; border-radius: 12px; border: 1px dashed #CBD5E1; background: #F8FAFC;"></div>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="layout-settings">
@@ -358,6 +441,14 @@ Layout patterns define the structure and organization of content across the appl
 
 ### 12-Column Grid
 
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px;">
+    <div style="grid-column: span 4; height: 40px; background: #E2E8F0; border-radius: 8px;"></div>
+    <div style="grid-column: span 4; height: 40px; background: #E2E8F0; border-radius: 8px;"></div>
+    <div style="grid-column: span 4; height: 40px; background: #E2E8F0; border-radius: 8px;"></div>
+  </div>
+</div>
+
 ```html
 <div class="grid">
   <div class="col-4">Column 4</div>
@@ -397,6 +488,14 @@ Layout patterns define the structure and organization of content across the appl
 ```
 
 ### Auto-Fit Grid
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 12px;">
+    <div style="height: 60px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px;"></div>
+    <div style="height: 60px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px;"></div>
+    <div style="height: 60px; background: #F1F5F9; border: 1px solid #E2E8F0; border-radius: 10px;"></div>
+  </div>
+</div>
 
 ```html
 <div class="grid-auto">
@@ -448,6 +547,20 @@ Layout patterns define the structure and organization of content across the appl
 ## Content Sections
 
 ### Hero Section
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 16px; align-items: center; background: linear-gradient(135deg, #EEF2FF 0%, #FFFFFF 100%); border-radius: 12px; padding: 24px;">
+    <div>
+      <div style="height: 20px; width: 220px; background: #CBD5E1; border-radius: 6px; margin-bottom: 10px;"></div>
+      <div style="height: 12px; width: 280px; background: #E2E8F0; border-radius: 6px; margin-bottom: 16px;"></div>
+      <div style="display: flex; gap: 10px;">
+        <div style="height: 32px; width: 100px; background: #4F46E5; border-radius: 8px;"></div>
+        <div style="height: 32px; width: 100px; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 8px;"></div>
+      </div>
+    </div>
+    <div style="height: 140px; border-radius: 12px; background: #F1F5F9; border: 1px solid #E2E8F0;"></div>
+  </div>
+</div>
 
 ```html
 <section class="hero">
@@ -536,6 +649,26 @@ Layout patterns define the structure and organization of content across the appl
 ```
 
 ### Feature Grid
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+    <div style="padding: 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E2E8F0;">
+      <div style="width: 36px; height: 36px; border-radius: 10px; background: #EEF2FF; margin-bottom: 8px;"></div>
+      <div style="height: 12px; width: 80px; background: #CBD5E1; border-radius: 6px; margin-bottom: 6px;"></div>
+      <div style="height: 10px; width: 120px; background: #E2E8F0; border-radius: 6px;"></div>
+    </div>
+    <div style="padding: 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E2E8F0;">
+      <div style="width: 36px; height: 36px; border-radius: 10px; background: #EEF2FF; margin-bottom: 8px;"></div>
+      <div style="height: 12px; width: 90px; background: #CBD5E1; border-radius: 6px; margin-bottom: 6px;"></div>
+      <div style="height: 10px; width: 110px; background: #E2E8F0; border-radius: 6px;"></div>
+    </div>
+    <div style="padding: 16px; border-radius: 12px; background: #FFFFFF; border: 1px solid #E2E8F0;">
+      <div style="width: 36px; height: 36px; border-radius: 10px; background: #EEF2FF; margin-bottom: 8px;"></div>
+      <div style="height: 12px; width: 100px; background: #CBD5E1; border-radius: 6px; margin-bottom: 6px;"></div>
+      <div style="height: 10px; width: 120px; background: #E2E8F0; border-radius: 6px;"></div>
+    </div>
+  </div>
+</div>
 
 ```html
 <section class="features">

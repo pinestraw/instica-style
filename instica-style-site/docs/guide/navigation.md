@@ -9,6 +9,16 @@ outline: deep
 
 ---
 
+<style scoped>
+.component-example {
+  padding: 24px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 # Navigation
 
 Navigation components help users move through the application. They must be consistent, predictable, and accessible.
@@ -16,6 +26,27 @@ Navigation components help users move through the application. They must be cons
 ## Top Navigation Bar
 
 ### Desktop Header
+
+<div class="component-example">
+  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 24px; padding: 16px 20px;">
+      <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: #0F172A;">
+        <div style="width: 28px; height: 28px; border-radius: 8px; background: #4F46E5;"></div>
+        Instica
+      </div>
+      <nav style="display: flex; gap: 8px; flex: 1;">
+        <a href="#" style="padding: 8px 14px; border-radius: 8px; background: #EEF2FF; color: #4F46E5; font-weight: 600; text-decoration: none;">Inventory</a>
+        <a href="#" style="padding: 8px 14px; border-radius: 8px; color: #64748B; text-decoration: none;">Marketplaces</a>
+        <a href="#" style="padding: 8px 14px; border-radius: 8px; color: #64748B; text-decoration: none;">Analytics</a>
+        <a href="#" style="padding: 8px 14px; border-radius: 8px; color: #64748B; text-decoration: none;">Settings</a>
+      </nav>
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <button style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #E2E8F0; background: #FFFFFF;">🔔</button>
+        <button style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #E2E8F0; background: #FFFFFF;">👤</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 ```html
 <header class="top-nav">
@@ -113,6 +144,16 @@ Navigation components help users move through the application. They must be cons
 
 ### Mobile Header
 
+<div class="component-example">
+  <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden;">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px;">
+      <button style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #E2E8F0; background: #FFFFFF;">☰</button>
+      <div style="flex: 1; text-align: center; font-weight: 700; color: #0F172A;">Instica</div>
+      <button style="width: 36px; height: 36px; border-radius: 10px; border: 1px solid #E2E8F0; background: #FFFFFF;">🔔</button>
+    </div>
+  </div>
+</div>
+
 ```html
 <header class="mobile-nav">
   <button class="mobile-nav-toggle" aria-label="Toggle menu">
@@ -205,6 +246,21 @@ Navigation components help users move through the application. They must be cons
 ```
 
 ## Sidebar Navigation
+
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: 220px 1fr; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background: #FFFFFF;">
+    <aside style="padding: 16px; border-right: 1px solid #E2E8F0;">
+      <div style="font-weight: 700; margin-bottom: 16px; color: #0F172A;">Instica</div>
+      <nav style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 8px; background: #EEF2FF; color: #4F46E5; font-weight: 600; text-decoration: none;">📦 Inventory</a>
+        <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">🏪 Marketplaces</a>
+        <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">📈 Analytics</a>
+        <a href="#" style="display: flex; align-items: center; gap: 8px; padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">⚙️ Settings</a>
+      </nav>
+    </aside>
+    <div style="padding: 24px; color: #64748B;">Content area</div>
+  </div>
+</div>
 
 ```html
 <aside class="sidebar">
@@ -303,6 +359,16 @@ Navigation components help users move through the application. They must be cons
 
 ## Breadcrumbs
 
+<div class="component-example">
+  <nav aria-label="Breadcrumb" style="display: flex; align-items: center; gap: 8px; font-size: 14px; color: #64748B;">
+    <a href="#" style="color: #4F46E5; text-decoration: none;">Home</a>
+    <span style="color: #CBD5E1;">/</span>
+    <a href="#" style="color: #4F46E5; text-decoration: none;">Inventory</a>
+    <span style="color: #CBD5E1;">/</span>
+    <span style="color: #0F172A; font-weight: 600;">Item Details</span>
+  </nav>
+</div>
+
 ```html
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol class="breadcrumb-list">
@@ -365,6 +431,14 @@ Navigation components help users move through the application. They must be cons
 ```
 
 ## Tabs
+
+<div class="component-example">
+  <div style="display: inline-flex; gap: 8px; padding: 6px; background: #F1F5F9; border-radius: 10px;">
+    <button style="padding: 8px 14px; border-radius: 8px; background: #FFFFFF; border: 1px solid #E2E8F0; color: #0F172A; font-weight: 600;">Details</button>
+    <button style="padding: 8px 14px; border-radius: 8px; background: transparent; border: 1px solid transparent; color: #64748B;">Photos</button>
+    <button style="padding: 8px 14px; border-radius: 8px; background: transparent; border: 1px solid transparent; color: #64748B;">History</button>
+  </div>
+</div>
 
 ```html
 <div class="tabs">
@@ -461,6 +535,18 @@ Navigation components help users move through the application. They must be cons
 
 ## Pagination
 
+<div class="component-example">
+  <nav aria-label="Pagination" style="display: flex; align-items: center; gap: 6px;">
+    <button style="width: 36px; height: 36px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #94A3B8;" disabled>‹</button>
+    <button style="min-width: 36px; height: 36px; padding: 0 10px; border-radius: 8px; border: 1px solid #4F46E5; background: #EEF2FF; color: #4F46E5; font-weight: 600;">1</button>
+    <button style="min-width: 36px; height: 36px; padding: 0 10px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #64748B;">2</button>
+    <button style="min-width: 36px; height: 36px; padding: 0 10px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #64748B;">3</button>
+    <span style="color: #94A3B8; padding: 0 6px;">…</span>
+    <button style="min-width: 36px; height: 36px; padding: 0 10px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #64748B;">10</button>
+    <button style="width: 36px; height: 36px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF; color: #64748B;">›</button>
+  </nav>
+</div>
+
 ```html
 <nav aria-label="Pagination" class="pagination">
   <button class="pagination-btn" disabled aria-label="Previous page">
@@ -554,6 +640,27 @@ Navigation components help users move through the application. They must be cons
 
 ## Vertical Navigation Menu
 
+<div class="component-example">
+  <div style="display: grid; grid-template-columns: 1fr; gap: 16px;">
+    <div>
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; padding: 6px 12px;">Account</div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; background: #EEF2FF; color: #4F46E5; font-weight: 600; text-decoration: none;">Profile Settings</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Notifications</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Security</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #94A3B8; padding: 6px 12px;">Billing</div>
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Subscription</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Payment Methods</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Invoices</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 ```html
 <nav class="vertical-menu">
   <div class="vertical-menu-section">
@@ -631,6 +738,24 @@ Navigation components help users move through the application. They must be cons
 ```
 
 ## Mobile Navigation Drawer
+
+<div class="component-example">
+  <div style="position: relative; border: 1px solid #E2E8F0; border-radius: 12px; overflow: hidden; background: #F8FAFC; height: 260px;">
+    <div style="position: absolute; inset: 0; background: rgba(15, 23, 42, 0.35);"></div>
+    <div style="position: absolute; inset: 0 auto 0 0; width: 220px; background: #FFFFFF; padding: 16px; box-shadow: 4px 0 16px rgba(0,0,0,0.12);">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+        <div style="font-weight: 700; color: #0F172A;">Instica</div>
+        <button style="width: 28px; height: 28px; border-radius: 8px; border: 1px solid #E2E8F0; background: #FFFFFF;">×</button>
+      </div>
+      <nav style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; background: #EEF2FF; color: #4F46E5; font-weight: 600; text-decoration: none;">Inventory</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Marketplaces</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Analytics</a>
+        <a href="#" style="padding: 10px 12px; border-radius: 8px; color: #64748B; text-decoration: none;">Settings</a>
+      </nav>
+    </div>
+  </div>
+</div>
 
 ```html
 <div class="nav-drawer" id="nav-drawer">
