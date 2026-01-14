@@ -3,6 +3,12 @@ title: Data Display
 outline: deep
 ---
 
+## Live Examples
+
+<DataDisplayDemo />
+
+---
+
 <style scoped>
 .table-container {
   width: 100%;

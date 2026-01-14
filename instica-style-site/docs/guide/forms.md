@@ -3,6 +3,12 @@ title: Forms & Inputs
 outline: deep
 ---
 
+## Live Examples
+
+<FormsDemo />
+
+---
+
 <style scoped>
 .form-field {
   display: flex;

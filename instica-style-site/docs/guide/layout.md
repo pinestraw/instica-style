@@ -3,6 +3,12 @@ title: Layout Patterns
 outline: deep
 ---
 
+## Live Examples
+
+<LayoutDemo />
+
+---
+
 # Layout Patterns
 
 Layout patterns define the structure and organization of content across the application. Consistent layouts improve usability and create a cohesive experience.

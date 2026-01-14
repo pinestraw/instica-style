@@ -3,6 +3,12 @@ title: Buttons & Actions
 outline: deep
 ---
 
+## Live Examples
+
+<ButtonsDemo />
+
+---
+
 <style scoped>
 .btn {
   display: inline-flex;
