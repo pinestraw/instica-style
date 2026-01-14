@@ -215,8 +215,9 @@ Data display components present information clearly and enable users to scan, un
 .table-container {
   width: 100%;
   overflow-x: auto;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.04);
 }
 
 .table {
@@ -227,7 +228,6 @@ Data display components present information clearly and enable users to scan, un
 
 .table thead {
   background: #F8FAFC;
-  border-bottom: 1px solid #E2E8F0;
 }
 
 .table th {
@@ -242,16 +242,19 @@ Data display components present information clearly and enable users to scan, un
 
 .table td {
   padding: 12px 16px;
-  border-bottom: 1px solid #F1F5F9;
-  color: #334155;
-}
-
-.table tbody tr:last-child td {
-  border-bottom: none;
+  color: #0F172A;
 }
 
 .table tbody tr:hover {
-  background: #FAFBFC;
+  background: #EEF2FF;
+}
+
+.table tbody tr:nth-child(odd) {
+  background: #FFFFFF;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #F8FAFC;
 }
 
 .table-cell-content {
@@ -352,8 +355,8 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 .table-wrapper {
   overflow-x: auto;
   border-radius: 12px;
-  border: 1px solid #E2E8F0;
-  background: white;
+  background: #FFFFFF;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 8px 24px rgba(15, 23, 42, 0.06);
 }
 
 .table {
@@ -370,7 +373,6 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   font-weight: 600;
   color: #475569;
   background: #F8FAFC;
-  border-bottom: 2px solid #E2E8F0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -379,7 +381,6 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   padding: 16px 20px;
   font-size: 15px;
   color: #1E293B;
-  border-bottom: 1px solid #E2E8F0;
   /* No border-left or border-right - clean columns */
 }
 
@@ -398,47 +399,45 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 
 /* Dark mode */
 .dark-theme .table-wrapper {
-  border-color: #334155;
-  background: #0F172A;
+  background: #0B1220;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .dark-theme .table {
-  background: #0F172A;
+  background: #0B1220;
 }
 
 .dark-theme .table th {
-  background: #1E293B;
-  border-bottom-color: #334155;
+  background: #111827;
   color: #94A3B8; /* Lighter for better contrast */
 }
 
 .dark-theme .table td {
   color: #F1F5F9;
-  border-bottom-color: #1E293B;
 }
 
 /* Dark mode alternating rows - critical for readability */
 .dark-theme .table tbody tr:nth-child(odd) {
-  background: #1E293B;
+  background: #111827;
 }
 
 .dark-theme .table tbody tr:nth-child(even) {
-  background: #0F172A;
+  background: #0B1220;
 }
 
 .dark-theme .table tbody tr:hover {
-  background: #312E81 !important; /* Brand primary night */
+  background: #1E293B !important; /* Subtle hover */
 }
 </style>
 ```
 
 **Key Dark Mode Guidelines:**
 - Header text: `#94A3B8` (not `#64748B`) for excellent contrast on dark backgrounds
-- Use `#1E293B` and `#0F172A` for alternating row backgrounds
+- Use `#111827` and `#0B1220` for alternating row backgrounds
 - Body text: `#F1F5F9` (slate-100) - WCAG AAA compliant
-- Border color: `#1E293B` between rows, `#334155` for wrapper
+- **Minimize borders**: rely on zebra striping and soft shadows instead of row lines
 - **No vertical borders** between columns - cleaner appearance
-- Hover: `#312E81` (brand primary night) for clear interaction feedback
+- Hover: `#1E293B` for subtle interaction feedback
 - Always test with real data - empty cells should remain readable
 
 ### Condensed Tables

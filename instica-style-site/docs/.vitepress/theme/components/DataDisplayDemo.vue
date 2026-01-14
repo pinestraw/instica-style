@@ -317,13 +317,13 @@ const toggleTheme = () => {
 .table-wrapper {
   overflow-x: auto;
   border-radius: 12px;
-  border: 1px solid #E2E8F0;
   background: white;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.04);
 }
 
 .dark-theme .table-wrapper {
-  border-color: #334155;
-  background: #0F172A;
+  background: #0B1220;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
 .data-table {
@@ -334,7 +334,7 @@ const toggleTheme = () => {
 }
 
 .dark-theme .data-table {
-  background: #0F172A;
+  background: #0B1220;
 }
 
 .data-table th {
@@ -342,29 +342,25 @@ const toggleTheme = () => {
   padding: 16px 20px;
   font-size: 13px;
   font-weight: 600;
-  color: #475569;
+  color: #64748B;
   background: #F8FAFC;
-  border-bottom: 2px solid #E2E8F0;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .dark-theme .data-table th {
-  background: #1E293B;
-  border-bottom-color: #334155;
+  background: #111827;
   color: #94A3B8;
 }
 
 .data-table td {
   padding: 16px 20px;
   font-size: 15px;
-  color: #1E293B;
-  border-bottom: 1px solid #E2E8F0;
+  color: #0F172A;
 }
 
 .dark-theme .data-table td {
   color: #F1F5F9;
-  border-bottom-color: #1E293B;
 }
 
 .data-table tbody tr {
@@ -376,7 +372,7 @@ const toggleTheme = () => {
 }
 
 .dark-theme .data-table tbody tr:nth-child(even) {
-  background: #0F172A;
+  background: #0B1220;
 }
 
 .data-table tbody tr:nth-child(odd) {
@@ -384,7 +380,7 @@ const toggleTheme = () => {
 }
 
 .dark-theme .data-table tbody tr:nth-child(odd) {
-  background: #1E293B;
+  background: #111827;
 }
 
 .data-table tbody tr:hover {
@@ -392,7 +388,7 @@ const toggleTheme = () => {
 }
 
 .dark-theme .data-table tbody tr:hover {
-  background: #312E81 !important;
+  background: #1E293B !important;
 }
 
 /* Condensed Table */
