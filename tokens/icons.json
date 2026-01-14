@@ -49,7 +49,10 @@
         "name": "Scan & Search",
         "concept": "Smartphone with scan interface",
         "gradient": "blue-purple",
-        "colors": ["#4F46E5", "#7C3AED"],
+        "colors": [
+          "#4F46E5",
+          "#7C3AED"
+        ],
         "useCase": "Product scanning and search functionality",
         "file": "scan-search.png"
       },
@@ -57,7 +60,10 @@
         "name": "Add Photos",
         "concept": "Camera",
         "gradient": "orange-coral",
-        "colors": ["#F97316", "#FB923C"],
+        "colors": [
+          "#F97316",
+          "#FB923C"
+        ],
         "useCase": "Photo capture and upload features",
         "file": "add-photos.png"
       },
@@ -65,7 +71,10 @@
         "name": "Enter Details",
         "concept": "Fountain pen",
         "gradient": "teal-turquoise",
-        "colors": ["#14B8A6", "#2DD4BF"],
+        "colors": [
+          "#14B8A6",
+          "#2DD4BF"
+        ],
         "useCase": "Manual data entry and editing",
         "file": "enter-details.png"
       },
@@ -73,7 +82,10 @@
         "name": "Save to List",
         "concept": "Badge with checkmark",
         "gradient": "green-emerald",
-        "colors": ["#10B981", "#34D399"],
+        "colors": [
+          "#10B981",
+          "#34D399"
+        ],
         "useCase": "Saving items and creating lists",
         "file": "save-list.png"
       },
@@ -81,7 +93,10 @@
         "name": "Organize Items",
         "concept": "Storage box",
         "gradient": "purple-magenta",
-        "colors": ["#A855F7", "#C084FC"],
+        "colors": [
+          "#A855F7",
+          "#C084FC"
+        ],
         "useCase": "Categorization and organization features",
         "file": "organize-items.png"
       },
@@ -89,7 +104,10 @@
         "name": "Track Status",
         "concept": "Location pin",
         "gradient": "cyan-blue",
-        "colors": ["#06B6D4", "#0EA5E9"],
+        "colors": [
+          "#06B6D4",
+          "#0EA5E9"
+        ],
         "useCase": "Status tracking and location features",
         "file": "track-status.png"
       },
@@ -97,7 +115,10 @@
         "name": "Price Optimization",
         "concept": "Gold coin",
         "gradient": "gold-amber",
-        "colors": ["#F59E0B", "#FBBF24"],
+        "colors": [
+          "#F59E0B",
+          "#FBBF24"
+        ],
         "useCase": "Pricing tools and optimization",
         "file": "price-optimization.png"
       },
@@ -105,7 +126,10 @@
         "name": "Quick Actions",
         "concept": "Lightning bolt",
         "gradient": "yellow-orange",
-        "colors": ["#EAB308", "#F59E0B"],
+        "colors": [
+          "#EAB308",
+          "#F59E0B"
+        ],
         "useCase": "Fast actions and shortcuts",
         "file": "quick-actions.png"
       },
@@ -113,7 +137,10 @@
         "name": "Take Photos",
         "concept": "Camera lens",
         "gradient": "blue-cyan",
-        "colors": ["#3B82F6", "#06B6D4"],
+        "colors": [
+          "#3B82F6",
+          "#06B6D4"
+        ],
         "useCase": "Photography and image capture",
         "file": "take-photos.png"
       },
@@ -121,7 +148,10 @@
         "name": "Upload Multiple",
         "concept": "Upward arrow",
         "gradient": "pink-purple",
-        "colors": ["#EC4899", "#A855F7"],
+        "colors": [
+          "#EC4899",
+          "#A855F7"
+        ],
         "useCase": "Batch upload functionality",
         "file": "upload-multiple.png"
       },
@@ -129,7 +159,12 @@
         "name": "Customize Listing",
         "concept": "Paintbrush",
         "gradient": "rainbow",
-        "colors": ["#F59E0B", "#EC4899", "#8B5CF6", "#3B82F6"],
+        "colors": [
+          "#F59E0B",
+          "#EC4899",
+          "#8B5CF6",
+          "#3B82F6"
+        ],
         "useCase": "Customization and styling tools",
         "file": "customize-listing.png"
       },
@@ -137,7 +172,10 @@
         "name": "Publish & Track",
         "concept": "Star",
         "gradient": "gold-yellow",
-        "colors": ["#FBBF24", "#FCD34D"],
+        "colors": [
+          "#FBBF24",
+          "#FCD34D"
+        ],
         "useCase": "Publishing and tracking published items",
         "file": "publish-track.png"
       }
@@ -155,6 +193,291 @@
       "altTextRequired": true,
       "minContrast": "WCAG AA compliant",
       "textLabelsRecommended": "Provide text labels alongside icons when context isn't immediately clear"
+    },
+    "navigation": {
+      "products-catalog": {
+        "name": "Products Catalog",
+        "concept": "3D cube box with subtle shine and dimension",
+        "gradient": "vibrant blue-to-purple gradient",
+        "colors": [
+          "#4F46E5",
+          "#7C3AED"
+        ],
+        "useCase": "Products list navigation",
+        "file": "products-catalog.png"
+      },
+      "inventory-list": {
+        "name": "Inventory List",
+        "concept": "checklist document with items and checkmarks",
+        "gradient": "bright teal-to-turquoise gradient",
+        "colors": [
+          "#14B8A6",
+          "#2DD4BF"
+        ],
+        "useCase": "Inventory section navigation",
+        "file": "inventory-list.png"
+      },
+      "marketplaces": {
+        "name": "Marketplaces",
+        "concept": "storefront building with awning",
+        "gradient": "warm orange-to-coral gradient",
+        "colors": [
+          "#F97316",
+          "#FB923C"
+        ],
+        "useCase": "Marketplace connections hub",
+        "file": "marketplaces.png"
+      },
+      "analytics-reports": {
+        "name": "Analytics Reports",
+        "concept": "bar chart with ascending trend arrows",
+        "gradient": "bright cyan-to-blue gradient",
+        "colors": [
+          "#06B6D4",
+          "#0EA5E9"
+        ],
+        "useCase": "Analytics dashboard navigation",
+        "file": "analytics-reports.png"
+      },
+      "settings": {
+        "name": "Settings",
+        "concept": "gear mechanism with depth and dimension",
+        "gradient": "cool gray-to-slate gradient",
+        "colors": [
+          "#64748B",
+          "#94A3B8"
+        ],
+        "useCase": "Settings navigation",
+        "file": "settings.png"
+      },
+      "user-profile": {
+        "name": "User Profile",
+        "concept": "circular avatar badge with person silhouette",
+        "gradient": "vibrant purple-to-magenta gradient",
+        "colors": [
+          "#A855F7",
+          "#C084FC"
+        ],
+        "useCase": "Profile section",
+        "file": "user-profile.png"
+      }
+    },
+    "actions": {
+      "edit-modify": {
+        "name": "Edit Modify",
+        "concept": "fountain pen with elegant tip",
+        "gradient": "bright blue-to-cyan gradient",
+        "colors": [
+          "#3B82F6",
+          "#06B6D4"
+        ],
+        "useCase": "Edit buttons, modify actions",
+        "file": "edit-modify.png"
+      },
+      "delete-remove": {
+        "name": "Delete Remove",
+        "concept": "trash bin with lid",
+        "gradient": "vibrant red-to-rose gradient",
+        "colors": [
+          "#DC2626",
+          "#F43F5E"
+        ],
+        "useCase": "Delete/remove actions",
+        "file": "delete-remove.png"
+      },
+      "search-find": {
+        "name": "Search Find",
+        "concept": "magnifying glass with handle",
+        "gradient": "bright teal-to-emerald gradient",
+        "colors": [
+          "#14B8A6",
+          "#10B981"
+        ],
+        "useCase": "Search functionality",
+        "file": "search-find.png"
+      },
+      "filter-sort": {
+        "name": "Filter Sort",
+        "concept": "funnel with gradient flow",
+        "gradient": "vibrant purple-to-indigo gradient",
+        "colors": [
+          "#8B5CF6",
+          "#6366F1"
+        ],
+        "useCase": "Filtering and sorting controls",
+        "file": "filter-sort.png"
+      },
+      "refresh-sync": {
+        "name": "Refresh Sync",
+        "concept": "circular arrows forming continuous loop",
+        "gradient": "bright blue-to-sky gradient",
+        "colors": [
+          "#0EA5E9",
+          "#38BDF8"
+        ],
+        "useCase": "Refresh data, sync operations",
+        "file": "refresh-sync.png"
+      },
+      "download-export": {
+        "name": "Download Export",
+        "concept": "downward arrow into open folder",
+        "gradient": "vibrant green-to-emerald gradient",
+        "colors": [
+          "#10B981",
+          "#34D399"
+        ],
+        "useCase": "Export data, download reports",
+        "file": "download-export.png"
+      }
+    },
+    "status": {
+      "success-complete": {
+        "name": "Success Complete",
+        "concept": "checkmark badge with shine",
+        "gradient": "vibrant green-to-emerald gradient",
+        "colors": [
+          "#10B981",
+          "#34D399"
+        ],
+        "useCase": "Success messages, completed states",
+        "file": "success-complete.png"
+      },
+      "warning-caution": {
+        "name": "Warning Caution",
+        "concept": "triangle with exclamation mark",
+        "gradient": "bright yellow-to-amber gradient",
+        "colors": [
+          "#EAB308",
+          "#F59E0B"
+        ],
+        "useCase": "Warning states",
+        "file": "warning-caution.png"
+      },
+      "error-failed": {
+        "name": "Error Failed",
+        "concept": "X symbol in circle badge",
+        "gradient": "vibrant red-to-rose gradient",
+        "colors": [
+          "#DC2626",
+          "#F43F5E"
+        ],
+        "useCase": "Error messages, failed operations",
+        "file": "error-failed.png"
+      },
+      "in-progress-pending": {
+        "name": "In Progress Pending",
+        "concept": "hourglass with flowing sand",
+        "gradient": "bright blue-to-indigo gradient",
+        "colors": [
+          "#3B82F6",
+          "#6366F1"
+        ],
+        "useCase": "Loading states, pending operations",
+        "file": "in-progress-pending.png"
+      },
+      "information-help": {
+        "name": "Information Help",
+        "concept": "information i symbol in circle",
+        "gradient": "bright blue-to-sky gradient",
+        "colors": [
+          "#0EA5E9",
+          "#38BDF8"
+        ],
+        "useCase": "Help tooltips, info callouts",
+        "file": "information-help.png"
+      }
+    },
+    "features": {
+      "bulk-actions": {
+        "name": "Bulk Actions",
+        "concept": "stack of cards or documents layered",
+        "gradient": "vibrant purple-to-violet gradient",
+        "colors": [
+          "#8B5CF6",
+          "#A855F7"
+        ],
+        "useCase": "Bulk edit, batch operations",
+        "file": "bulk-actions.png"
+      },
+      "share-export-listing": {
+        "name": "Share Export Listing",
+        "concept": "connected nodes with share arrow",
+        "gradient": "vibrant pink-to-purple gradient",
+        "colors": [
+          "#EC4899",
+          "#A855F7"
+        ],
+        "useCase": "Share listings, export to platforms",
+        "file": "share-export-listing.png"
+      },
+      "notifications-alerts": {
+        "name": "Notifications Alerts",
+        "concept": "bell with notification dot badge",
+        "gradient": "warm orange-to-amber gradient",
+        "colors": [
+          "#F97316",
+          "#FBBF24"
+        ],
+        "useCase": "Notification center, alerts",
+        "file": "notifications-alerts.png"
+      },
+      "orders-fulfillment": {
+        "name": "Orders Fulfillment",
+        "concept": "package box with shipping label",
+        "gradient": "bright blue-to-cyan gradient",
+        "colors": [
+          "#3B82F6",
+          "#06B6D4"
+        ],
+        "useCase": "Orders section, fulfillment tracking",
+        "file": "orders-fulfillment.png"
+      },
+      "revenue-sales": {
+        "name": "Revenue Sales",
+        "concept": "money bag with dollar symbol",
+        "gradient": "bright gold-to-yellow gradient",
+        "colors": [
+          "#FBBF24",
+          "#FCD34D"
+        ],
+        "useCase": "Revenue metrics, sales analytics",
+        "file": "revenue-sales.png"
+      }
+    },
+    "content": {
+      "image-photo": {
+        "name": "Image Photo",
+        "concept": "picture frame with landscape scene",
+        "gradient": "vibrant blue-to-purple gradient",
+        "colors": [
+          "#4F46E5",
+          "#A855F7"
+        ],
+        "useCase": "Image galleries, photo management",
+        "file": "image-photo.png"
+      },
+      "document-file": {
+        "name": "Document File",
+        "concept": "document sheet with text lines",
+        "gradient": "cool gray-to-slate gradient",
+        "colors": [
+          "#64748B",
+          "#94A3B8"
+        ],
+        "useCase": "File attachments, documents",
+        "file": "document-file.png"
+      },
+      "video": {
+        "name": "Video",
+        "concept": "play button on video screen",
+        "gradient": "vibrant red-to-pink gradient",
+        "colors": [
+          "#DC2626",
+          "#EC4899"
+        ],
+        "useCase": "Video content, tutorials",
+        "file": "video.png"
+      }
     }
   }
 }
