@@ -3,155 +3,11 @@ title: Navigation
 outline: deep
 ---
 
-<style scoped>
-.top-nav {
-  background: #FFFFFF;
-  border-bottom: 1px solid #E2E8F0;
-  border-radius: 8px;
-}
+## Live Examples
 
-.top-nav-container {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding: 0 24px;
-  height: 64px;
-}
+<NavigationDemo />
 
-.top-nav-brand {
-  font-weight: 700;
-  font-size: 18px;
-  color: #4F46E5;
-}
-
-.top-nav-menu {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  flex: 1;
-}
-
-.top-nav-link {
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #64748B;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.top-nav-link:hover {
-  color: #334155;
-  background: #F8FAFC;
-}
-
-.top-nav-link--active {
-  color: #4F46E5;
-  background: #EEF2FF;
-}
-
-.breadcrumb {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-}
-
-.breadcrumb-link {
-  color: #64748B;
-  text-decoration: none;
-}
-
-.breadcrumb-link:hover {
-  color: #334155;
-}
-
-.breadcrumb-separator {
-  color: #CBD5E1;
-}
-
-.breadcrumb-current {
-  color: #0F172A;
-  font-weight: 500;
-}
-
-.tabs {
-  display: flex;
-  gap: 4px;
-  border-bottom: 2px solid #F1F5F9;
-}
-
-.tab {
-  padding: 12px 20px;
-  font-size: 15px;
-  font-weight: 500;
-  color: #64748B;
-  background: none;
-  border: none;
-  border-bottom: 2px solid transparent;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  margin-bottom: -2px;
-}
-
-.tab:hover {
-  color: #334155;
-  background: #F8FAFC;
-}
-
-.tab--active {
-  color: #4F46E5;
-  border-bottom-color: #4F46E5;
-}
-
-.pagination {
-  display: flex;
-  gap: 4px;
-  align-items: center;
-}
-
-.pagination-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1px solid #E2E8F0;
-  border-radius: 6px;
-  background: white;
-  color: #334155;
-  font-size: 14px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.pagination-btn:hover:not(:disabled) {
-  background: #F8FAFC;
-  border-color: #CBD5E1;
-}
-
-.pagination-btn--active {
-  background: #4F46E5;
-  border-color: #4F46E5;
-  color: white;
-}
-
-.pagination-btn:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-.component-example {
-  padding: 32px;
-  background: #F8FAFC;
-  border-radius: 12px;
-  margin: 24px 0;
-  border: 1px solid #E2E8F0;
-}
-</style>
+---
 
 # Navigation
 
@@ -160,29 +16,6 @@ Navigation components help users move through the application. They must be cons
 ## Top Navigation Bar
 
 ### Desktop Header
-
-<div class="component-example">
-  <header class="top-nav">
-    <div class="top-nav-container">
-      <div class="top-nav-brand">Instica</div>
-      
-      <nav class="top-nav-menu">
-        <a href="#" class="top-nav-link top-nav-link--active">
-          Inventory
-        </a>
-        <a href="#" class="top-nav-link">
-          Marketplaces
-        </a>
-        <a href="#" class="top-nav-link">
-          Analytics
-        </a>
-        <a href="#" class="top-nav-link">
-          Settings
-        </a>
-      </nav>
-    </div>
-  </header>
-</div>
 
 ```html
 <header class="top-nav">
@@ -470,16 +303,6 @@ Navigation components help users move through the application. They must be cons
 
 ## Breadcrumbs
 
-<div class="component-example">
-  <nav aria-label="Breadcrumb" class="breadcrumb">
-    <a href="#" class="breadcrumb-link">Home</a>
-    <span class="breadcrumb-separator">/</span>
-    <a href="#" class="breadcrumb-link">Inventory</a>
-    <span class="breadcrumb-separator">/</span>
-    <span class="breadcrumb-current">Item Details</span>
-  </nav>
-</div>
-
 ```html
 <nav aria-label="Breadcrumb" class="breadcrumb">
   <ol class="breadcrumb-list">
@@ -542,15 +365,6 @@ Navigation components help users move through the application. They must be cons
 ```
 
 ## Tabs
-
-<div class="component-example">
-  <div class="tabs">
-    <button class="tab tab--active">Details</button>
-    <button class="tab">Pricing</button>
-    <button class="tab">Images</button>
-    <button class="tab">History</button>
-  </div>
-</div>
 
 ```html
 <div class="tabs">
@@ -646,26 +460,6 @@ Navigation components help users move through the application. They must be cons
 ```
 
 ## Pagination
-
-<div class="component-example">
-  <nav aria-label="Pagination" class="pagination">
-    <button class="pagination-btn" disabled aria-label="Previous page">
-      ‹
-    </button>
-    
-    <button class="pagination-btn pagination-btn--active" aria-current="page">
-      1
-    </button>
-    <button class="pagination-btn">2</button>
-    <button class="pagination-btn">3</button>
-    <span style="color: #94A3B8;">…</span>
-    <button class="pagination-btn">10</button>
-    
-    <button class="pagination-btn" aria-label="Next page">
-      ›
-    </button>
-  </nav>
-</div>
 
 ```html
 <nav aria-label="Pagination" class="pagination">

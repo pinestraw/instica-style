@@ -3,209 +3,11 @@ title: Feedback & Overlays
 outline: deep
 ---
 
-<style>
-.toast {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  min-width: 320px;
-  max-width: 480px;
-  padding: 16px;
-  background: #FFFFFF;
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  margin: 0 auto;
-}
+## Live Examples
 
-.toast-icon {
-  font-size: 24px;
-}
+<FeedbackDemo />
 
-.toast-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.toast-title {
-  font-size: 15px;
-  font-weight: 600;
-  color: #1E293B;
-}
-
-.toast-message {
-  font-size: 14px;
-  color: #64748B;
-  line-height: 1.5;
-}
-
-.toast-close {
-  font-size: 20px;
-  color: #94A3B8;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-
-.toast-success {
-  border-left: 4px solid #059669;
-}
-
-.toast-error {
-  border-left: 4px solid #DC2626;
-}
-
-.toast-warning {
-  border-left: 4px solid #F59E0B;
-}
-
-.toast-info {
-  border-left: 4px solid #3B82F6;
-}
-
-.modal-backdrop {
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
-  padding: 60px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  background: white;
-  border-radius: 12px;
-  width: 100%;
-  max-width: 480px;
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
-}
-
-.modal-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24px;
-  border-bottom: 1px solid #F1F5F9;
-}
-
-.modal-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #0F172A;
-  margin: 0;
-}
-
-.modal-close {
-  font-size: 24px;
-  color: #94A3B8;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-}
-
-.modal-close:hover {
-  background: #F1F5F9;
-}
-
-.modal-body {
-  padding: 24px;
-  color: #64748B;
-  line-height: 1.6;
-}
-
-.modal-footer {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  padding: 24px;
-  border-top: 1px solid #F1F5F9;
-}
-
-.alert {
-  padding: 16px;
-  border-radius: 8px;
-  border-left: 4px solid;
-  display: flex;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.alert-success {
-  background: #F0FDF4;
-  border-color: #16A34A;
-}
-
-.alert-error {
-  background: #FEF2F2;
-  border-color: #DC2626;
-}
-
-.alert-warning {
-  background: #FFFBEB;
-  border-color: #F59E0B;
-}
-
-.alert-info {
-  background: #EFF6FF;
-  border-color: #3B82F6;
-}
-
-.alert-icon {
-  font-size: 20px;
-  flex-shrink: 0;
-}
-
-.alert-content {
-  flex: 1;
-}
-
-.alert-title {
-  font-size: 14px;
-  font-weight: 600;
-  color: #0F172A;
-  margin-bottom: 4px;
-}
-
-.alert-message {
-  font-size: 14px;
-  color: #64748B;
-}
-
-.component-example {
-  padding: 32px;
-  background: #F8FAFC;
-  border-radius: 12px;
-  margin: 24px 0;
-  border: 1px solid #E2E8F0;
-}
-
-.btn {
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.btn-primary {
-  background: #4F46E5;
-  color: white;
-}
-
-.btn-secondary {
-  background: #F1F5F9;
-  color: #334155;
-}
-</style>
+---
 
 # Feedback & Overlays
 
@@ -214,17 +16,6 @@ Feedback components communicate system status and guide users through interactio
 ## Toast Notifications
 
 ### Success Toast
-
-<div class="component-example">
-  <div class="toast toast-success">
-    <div class="toast-icon">✓</div>
-    <div class="toast-content">
-      <div class="toast-title">Item saved successfully</div>
-      <div class="toast-message">Your changes have been saved to inventory</div>
-    </div>
-    <button class="toast-close" aria-label="Close">×</button>
-  </div>
-</div>
 
 ```html
 <div class="toast toast-success">
@@ -367,26 +158,6 @@ Feedback components communicate system status and guide users through interactio
 ## Modal Dialogs
 
 ### Standard Modal
-
-<div class="component-example">
-  <div class="modal-backdrop">
-    <div class="modal">
-      <div class="modal-header">
-        <h2 class="modal-title">Delete Item</h2>
-        <button class="modal-close" aria-label="Close">×</button>
-      </div>
-      
-      <div class="modal-body">
-        <p>Are you sure you want to delete this item? This action cannot be undone.</p>
-      </div>
-      
-      <div class="modal-footer">
-        <button class="btn btn-secondary">Cancel</button>
-        <button class="btn btn-primary">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 ```html
 <div class="modal-overlay">
@@ -944,42 +715,6 @@ Feedback components communicate system status and guide users through interactio
 ```
 
 ## Alerts
-
-<div class="component-example">
-  <div style="display: flex; flex-direction: column; gap: 16px;">
-    <div class="alert alert-success">
-      <div class="alert-icon">✓</div>
-      <div class="alert-content">
-        <div class="alert-title">Success</div>
-        <div class="alert-message">Your listing has been published</div>
-      </div>
-    </div>
-    
-    <div class="alert alert-warning">
-      <div class="alert-icon">⚠</div>
-      <div class="alert-content">
-        <div class="alert-title">Warning</div>
-        <div class="alert-message">Low stock alert: Only 2 items remaining</div>
-      </div>
-    </div>
-    
-    <div class="alert alert-error">
-      <div class="alert-icon">✕</div>
-      <div class="alert-content">
-        <div class="alert-title">Error</div>
-        <div class="alert-message">Failed to sync with marketplace</div>
-      </div>
-    </div>
-    
-    <div class="alert alert-info">
-      <div class="alert-icon">ℹ</div>
-      <div class="alert-content">
-        <div class="alert-title">New feature available</div>
-        <div class="alert-message">Try our new bulk editing tools to save time</div>
-      </div>
-    </div>
-  </div>
-</div>
 
 ```html
 <div class="alert alert-info">
