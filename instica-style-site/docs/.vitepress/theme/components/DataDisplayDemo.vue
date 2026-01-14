@@ -316,13 +316,12 @@ const toggleTheme = () => {
   border-radius: 14px;
   background: #FFFFFF;
   padding: 10px;
-  border: 1px solid #EEF2F7;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: none;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
 }
 
 .dark-theme .table-wrapper {
   background: #0F172A;
-  border-color: #1E293B;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
@@ -347,12 +346,14 @@ const toggleTheme = () => {
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  border-left: none;
+  border-right: none;
 }
 
 .dark-theme .data-table th {
   color: #8B95A7;
-  border-bottom-color: #1F2937;
+  border-bottom-color: rgba(148, 163, 184, 0.12);
 }
 
 .data-table td {
@@ -360,13 +361,15 @@ const toggleTheme = () => {
   font-size: 14px;
   color: #1F2937;
   background: #FFFFFF;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+  border-left: none;
+  border-right: none;
 }
 
 .dark-theme .data-table td {
   color: #E5E7EB;
   background: #0F172A;
-  border-bottom-color: #1F2937;
+  border-bottom-color: rgba(148, 163, 184, 0.12);
 }
 
 .data-table tbody tr {
@@ -374,11 +377,11 @@ const toggleTheme = () => {
 }
 
 .data-table tbody tr:hover td {
-  background: #F8FAFF;
+  background: #F7F9FD;
 }
 
 .dark-theme .data-table tbody tr:hover td {
-  background: #162033;
+  background: #121C2C;
 }
 
 .data-table tbody tr:last-child td {

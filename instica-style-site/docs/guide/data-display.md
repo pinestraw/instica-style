@@ -16,8 +16,8 @@ outline: deep
   border-radius: 14px;
   background: white;
   padding: 10px;
-  border: 1px solid #EEF2F7;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: none;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
 }
 
 .table {
@@ -38,12 +38,12 @@ outline: deep
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #A1AAB6;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .table td {
   padding: 16px 18px;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
   color: #1F2937;
 }
 
@@ -52,7 +52,7 @@ outline: deep
 }
 
 .table tbody tr:hover {
-  background: #F8FAFF;
+  background: #F7F9FD;
 }
 
 .badge {
@@ -231,8 +231,8 @@ Data display components present information clearly and enable users to scan, un
   border-radius: 14px;
   background: #FFFFFF;
   padding: 10px;
-  border: 1px solid #EEF2F7;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: none;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
 }
 
 .table {
@@ -253,13 +253,13 @@ Data display components present information clearly and enable users to scan, un
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #A1AAB6;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .table td {
   padding: 16px 18px;
   color: #1F2937;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
 }
 
 .table tbody tr:last-child td {
@@ -267,7 +267,7 @@ Data display components present information clearly and enable users to scan, un
 }
 
 .table tbody tr:hover {
-  background: #F8FAFF;
+  background: #F7F9FD;
 }
 
 .table-cell-content {
@@ -343,8 +343,8 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   border-radius: 14px;
   background: #FFFFFF;
   padding: 10px;
-  border: 1px solid #EEF2F7;
-  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  border: none;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
 }
 
 .table {
@@ -362,14 +362,14 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .table td {
   padding: 16px 18px;
   font-size: 14px;
   color: #1F2937;
-  border-bottom: 1px solid #EEF2F7;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.05);
 }
 
 .table tbody tr:last-child td {
@@ -377,28 +377,27 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 }
 
 .table tbody tr:hover {
-  background: #F8FAFF;
+  background: #F7F9FD;
 }
 
 /* Dark mode */
 .dark-theme .table-wrapper {
   background: #0F172A;
-  border-color: #1E293B;
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
 }
 
 .dark-theme .table th {
   color: #8B95A7;
-  border-bottom-color: #1F2937;
+  border-bottom-color: rgba(148, 163, 184, 0.12);
 }
 
 .dark-theme .table td {
   color: #E5E7EB;
-  border-bottom-color: #1F2937;
+  border-bottom-color: rgba(148, 163, 184, 0.12);
 }
 
 .dark-theme .table tbody tr:hover {
-  background: #162033;
+  background: #121C2C;
 }
 </style>
 ```
@@ -417,16 +416,16 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   <table style="width: 100%; border-collapse: collapse; font-size: 13px;">
     <thead>
       <tr style="text-align: left; color: #A1AAB6; font-size: 10px; text-transform: uppercase; letter-spacing: 0.05em;">
-        <th style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7;">SKU</th>
-        <th style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7;">Stock</th>
-        <th style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7;">Price</th>
+        <th style="padding: 10px 14px; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">SKU</th>
+        <th style="padding: 10px 14px; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">Stock</th>
+        <th style="padding: 10px 14px; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">Price</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">CAM-001</td>
-        <td style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">5</td>
-        <td style="padding: 10px 14px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">$249.99</td>
+        <td style="padding: 10px 14px; border-bottom: 1px solid rgba(15, 23, 42, 0.05); color: #1F2937;">CAM-001</td>
+        <td style="padding: 10px 14px; border-bottom: 1px solid rgba(15, 23, 42, 0.05); color: #1F2937;">5</td>
+        <td style="padding: 10px 14px; border-bottom: 1px solid rgba(15, 23, 42, 0.05); color: #1F2937;">$249.99</td>
       </tr>
       <tr>
         <td style="padding: 10px 14px; color: #1F2937;">BAG-045</td>
@@ -496,21 +495,21 @@ For dense data displays with more columns:
   <table style="width: 100%; border-collapse: collapse; font-size: 14px;">
     <thead>
       <tr style="text-align: left; color: #A1AAB6; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em;">
-        <th style="padding: 14px 18px; border-bottom: 1px solid #EEF2F7;">Product</th>
-        <th style="padding: 14px 18px; border-bottom: 1px solid #EEF2F7;">Price</th>
-        <th style="padding: 14px 18px; border-bottom: 1px solid #EEF2F7;">Status</th>
+        <th style="padding: 14px 18px; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">Product</th>
+        <th style="padding: 14px 18px; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">Price</th>
+        <th style="padding: 14px 18px; border-bottom: 1px solid rgba(15, 23, 42, 0.06);">Status</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td style="padding: 16px 18px; border-bottom: 1px solid #EEF2F7;">
+        <td style="padding: 16px 18px; border-bottom: 1px solid rgba(15, 23, 42, 0.05);">
           <div style="display: flex; align-items: center; gap: 12px;">
             <div style="width: 36px; height: 36px; border-radius: 6px; background: #F3F6FB;"></div>
             <span style="color: #1F2937;">Vintage Camera</span>
           </div>
         </td>
-        <td style="padding: 16px 18px; border-bottom: 1px solid #EEF2F7; color: #1F2937;">$249.99</td>
-        <td style="padding: 16px 18px; border-bottom: 1px solid #EEF2F7;"><span style="background: #DCFCE7; color: #166534; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">Active</span></td>
+        <td style="padding: 16px 18px; border-bottom: 1px solid rgba(15, 23, 42, 0.05); color: #1F2937;">$249.99</td>
+        <td style="padding: 16px 18px; border-bottom: 1px solid rgba(15, 23, 42, 0.05);"><span style="background: #DCFCE7; color: #166534; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 500;">Active</span></td>
       </tr>
       <tr>
         <td style="padding: 16px 18px;">
