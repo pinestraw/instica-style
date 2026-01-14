@@ -50,6 +50,92 @@
         </div>
       </div>
 
+      <!-- Condensed Table -->
+      <div class="demo-section">
+        <h4>Condensed Table with Images</h4>
+        <div class="table-wrapper">
+          <table class="data-table data-table-condensed">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Stock</th>
+                <th>Status</th>
+                <th>Price</th>
+                <th>Last Updated</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="table-cell-product">
+                    <div class="table-thumb">📱</div>
+                    <span>iPhone 13 Pro</span>
+                  </div>
+                </td>
+                <td>Electronics</td>
+                <td>45</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>$999.00</td>
+                <td>2 hours ago</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-cell-product">
+                    <div class="table-thumb">💻</div>
+                    <span>MacBook Air M2</span>
+                  </div>
+                </td>
+                <td>Computers</td>
+                <td>12</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>$1,199.00</td>
+                <td>5 hours ago</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-cell-product">
+                    <div class="table-thumb">🎧</div>
+                    <span>AirPods Pro</span>
+                  </div>
+                </td>
+                <td>Audio</td>
+                <td>3</td>
+                <td><span class="badge badge-warning">Low Stock</span></td>
+                <td>$249.00</td>
+                <td>1 day ago</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-cell-product">
+                    <div class="table-thumb">⌚</div>
+                    <span>Apple Watch Series 8</span>
+                  </div>
+                </td>
+                <td>Wearables</td>
+                <td>0</td>
+                <td><span class="badge badge-error">Out of Stock</span></td>
+                <td>$399.00</td>
+                <td>3 days ago</td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="table-cell-product">
+                    <div class="table-thumb">📷</div>
+                    <span>Canon EOS R6</span>
+                  </div>
+                </td>
+                <td>Cameras</td>
+                <td>8</td>
+                <td><span class="badge badge-success">Active</span></td>
+                <td>$2,499.00</td>
+                <td>1 week ago</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
       <!-- Badges -->
       <div class="demo-section">
         <h4>Status Badges</h4>
@@ -206,7 +292,7 @@ const toggleTheme = () => {
 .dark-theme .data-table th {
   background: #1E293B;
   border-bottom-color: #334155;
-  color: #64748B;
+  color: #94A3B8;
 }
 
 .data-table td {
@@ -247,6 +333,40 @@ const toggleTheme = () => {
 
 .dark-theme .data-table tbody tr:hover {
   background: #312E81 !important;
+}
+
+/* Condensed Table */
+.data-table-condensed th {
+  padding: 10px 16px;
+  font-size: 11px;
+}
+
+.data-table-condensed td {
+  padding: 10px 16px;
+  font-size: 13px;
+}
+
+/* Table Cell with Image */
+.table-cell-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.dark-theme .table-thumb {
+  background: #334155;
 }
 
 .badge-row {

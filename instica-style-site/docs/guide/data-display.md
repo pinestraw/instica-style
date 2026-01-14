@@ -414,6 +414,7 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   font-size: 15px;
   color: #1E293B;
   border-bottom: 1px solid #E2E8F0;
+  /* No border-left or border-right - clean columns */
 }
 
 /* Alternating row backgrounds */
@@ -442,7 +443,7 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 .dark-theme .table th {
   background: #1E293B;
   border-bottom-color: #334155;
-  color: #64748B;
+  color: #94A3B8; /* Lighter for better contrast */
 }
 
 .dark-theme .table td {
@@ -466,12 +467,134 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
 ```
 
 **Key Dark Mode Guidelines:**
+- Header text: `#94A3B8` (not `#64748B`) for excellent contrast on dark backgrounds
 - Use `#1E293B` and `#0F172A` for alternating row backgrounds
-- Text color: `#F1F5F9` for excellent contrast (WCAG AAA)
-- Header background: `#1E293B` with `#64748B` text
+- Body text: `#F1F5F9` (slate-100) - WCAG AAA compliant
 - Border color: `#1E293B` between rows, `#334155` for wrapper
+- **No vertical borders** between columns - cleaner appearance
 - Hover: `#312E81` (brand primary night) for clear interaction feedback
 - Always test with real data - empty cells should remain readable
+
+### Condensed Tables
+
+For dense data displays with more columns:
+
+```html
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Stock</th>
+      <th>Status</th>
+      <th>Price</th>
+      <th>Last Updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>iPhone 13 Pro</td>
+      <td>Electronics</td>
+      <td>45</td>
+      <td><span class="badge badge-success">Active</span></td>
+      <td>$999.00</td>
+      <td>2 hours ago</td>
+    </tr>
+    <tr>
+      <td>MacBook Air M2</td>
+      <td>Computers</td>
+      <td>12</td>
+      <td><span class="badge badge-success">Active</span></td>
+      <td>$1,199.00</td>
+      <td>5 hours ago</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+.table-condensed th {
+  padding: 10px 16px;
+  font-size: 11px;
+}
+
+.table-condensed td {
+  padding: 10px 16px;
+  font-size: 13px;
+}
+</style>
+```
+
+**When to use condensed tables:**
+- Dashboards with multiple data columns (6+)
+- Admin panels showing detailed records
+- Data exports or reports with many fields
+- Not recommended for mobile - use standard tables
+
+### Tables with Images
+
+Display product thumbnails or user avatars:
+
+```html
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Stock</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <div class="table-cell-product">
+          <img src="/product-thumb.jpg" alt="" class="table-thumb" />
+          <span>iPhone 13 Pro</span>
+        </div>
+      </td>
+      <td>Electronics</td>
+      <td>45</td>
+      <td>$999.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+.table-cell-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table-thumb {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: #F1F5F9;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.dark-theme .table-thumb {
+  background: #334155;
+}
+
+/* For condensed tables with images */
+.table-condensed .table-thumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+</style>
+```
+
+**Image Guidelines:**
+- Size: 36×36px standard, 32×32px condensed
+- Border radius: 6px standard, 4px condensed
+- Always use `flex-shrink: 0` to prevent squishing
+- Include `alt=""` for decorative images
+- Use `object-fit: cover` for product photos
+- Background color for loading/fallback states
 
 ## Cards
 
