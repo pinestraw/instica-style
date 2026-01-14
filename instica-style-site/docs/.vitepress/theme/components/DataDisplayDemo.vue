@@ -318,49 +318,54 @@ const toggleTheme = () => {
   overflow-x: auto;
   border-radius: 12px;
   background: white;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.04);
+  padding: 8px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
 .dark-theme .table-wrapper {
   background: #0B1220;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .data-table {
   width: 100%;
-  border-collapse: collapse;
-  background: white;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: transparent;
   font-variant-numeric: tabular-nums;
 }
 
 .dark-theme .data-table {
-  background: #0B1220;
+  background: transparent;
 }
 
 .data-table th {
   text-align: left;
-  padding: 16px 20px;
-  font-size: 13px;
+  padding: 12px 16px;
+  font-size: 12px;
   font-weight: 600;
   color: #64748B;
-  background: #F8FAFC;
+  background: transparent;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .dark-theme .data-table th {
-  background: #111827;
   color: #94A3B8;
 }
 
 .data-table td {
-  padding: 16px 20px;
+  padding: 14px 16px;
   font-size: 15px;
   color: #0F172A;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .dark-theme .data-table td {
   color: #F1F5F9;
+  background: #0B1220;
+  border-bottom-color: rgba(148, 163, 184, 0.08);
 }
 
 .data-table tbody tr {
@@ -368,27 +373,35 @@ const toggleTheme = () => {
 }
 
 .data-table tbody tr:nth-child(even) {
-  background: #F8FAFC;
+  background: transparent;
 }
 
 .dark-theme .data-table tbody tr:nth-child(even) {
-  background: #0B1220;
+  background: transparent;
 }
 
 .data-table tbody tr:nth-child(odd) {
-  background: white;
+  background: transparent;
 }
 
 .dark-theme .data-table tbody tr:nth-child(odd) {
-  background: #111827;
+  background: transparent;
 }
 
 .data-table tbody tr:hover {
-  background: #EEF2FF !important;
+  background: transparent;
 }
 
 .dark-theme .data-table tbody tr:hover {
-  background: #1E293B !important;
+  background: transparent;
+}
+
+.data-table tbody tr:hover td {
+  background: #EEF2FF;
+}
+
+.dark-theme .data-table tbody tr:hover td {
+  background: #111827;
 }
 
 /* Condensed Table */

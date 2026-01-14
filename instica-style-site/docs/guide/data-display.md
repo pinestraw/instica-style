@@ -217,17 +217,20 @@ Data display components present information clearly and enable users to scan, un
   overflow-x: auto;
   border-radius: 12px;
   background: #FFFFFF;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.04);
+  padding: 8px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
 .table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-size: 14px;
+  background: transparent;
 }
 
 .table thead {
-  background: #F8FAFC;
+  background: transparent;
 }
 
 .table th {
@@ -236,25 +239,23 @@ Data display components present information clearly and enable users to scan, un
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: #64748B;
 }
 
 .table td {
-  padding: 12px 16px;
+  padding: 14px 16px;
   color: #0F172A;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
 }
 
 .table tbody tr:hover {
+  background: transparent;
+}
+
+.table tbody tr:hover td {
   background: #EEF2FF;
-}
-
-.table tbody tr:nth-child(odd) {
-  background: #FFFFFF;
-}
-
-.table tbody tr:nth-child(even) {
-  background: #F8FAFC;
 }
 
 .table-cell-content {
@@ -356,88 +357,101 @@ Tables must have excellent contrast in dark mode with proper alternating row sty
   overflow-x: auto;
   border-radius: 12px;
   background: #FFFFFF;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 8px 24px rgba(15, 23, 42, 0.06);
+  padding: 8px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06), 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
 .table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
   font-variant-numeric: tabular-nums;
-  background: white;
+  background: transparent;
 }
 
 .table th {
   text-align: left;
-  padding: 16px 20px;
-  font-size: 13px;
+  padding: 12px 16px;
+  font-size: 12px;
   font-weight: 600;
   color: #475569;
-  background: #F8FAFC;
+  background: transparent;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .table td {
-  padding: 16px 20px;
+  padding: 14px 16px;
   font-size: 15px;
   color: #1E293B;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
   /* No border-left or border-right - clean columns */
 }
 
 /* Alternating row backgrounds */
 .table tbody tr:nth-child(odd) {
-  background: white;
+  background: transparent;
 }
 
 .table tbody tr:nth-child(even) {
-  background: #F8FAFC;
+  background: transparent;
 }
 
 .table tbody tr:hover {
-  background: #EEF2FF !important;
+  background: transparent !important;
+}
+
+.table tbody tr:hover td {
+  background: #EEF2FF;
 }
 
 /* Dark mode */
 .dark-theme .table-wrapper {
   background: #0B1220;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 30px rgba(0, 0, 0, 0.35);
 }
 
 .dark-theme .table {
-  background: #0B1220;
+  background: transparent;
 }
 
 .dark-theme .table th {
-  background: #111827;
+  background: transparent;
   color: #94A3B8; /* Lighter for better contrast */
 }
 
 .dark-theme .table td {
   color: #F1F5F9;
+  background: #0B1220;
+  border-bottom-color: rgba(148, 163, 184, 0.08);
 }
 
 /* Dark mode alternating rows - critical for readability */
 .dark-theme .table tbody tr:nth-child(odd) {
-  background: #111827;
+  background: transparent;
 }
 
 .dark-theme .table tbody tr:nth-child(even) {
-  background: #0B1220;
+  background: transparent;
 }
 
 .dark-theme .table tbody tr:hover {
-  background: #1E293B !important; /* Subtle hover */
+  background: transparent !important; /* Subtle hover */
+}
+
+.dark-theme .table tbody tr:hover td {
+  background: #111827;
 }
 </style>
 ```
 
 **Key Dark Mode Guidelines:**
 - Header text: `#94A3B8` (not `#64748B`) for excellent contrast on dark backgrounds
-- Use `#111827` and `#0B1220` for alternating row backgrounds
 - Body text: `#F1F5F9` (slate-100) - WCAG AAA compliant
-- **Minimize borders**: rely on zebra striping and soft shadows instead of row lines
+- **Minimize borders**: soft card shadow + faint row separators only
 - **No vertical borders** between columns - cleaner appearance
-- Hover: `#1E293B` for subtle interaction feedback
+- Hover: `#111827` for subtle interaction feedback
 - Always test with real data - empty cells should remain readable
 
 ### Condensed Tables
