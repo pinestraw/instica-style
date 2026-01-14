@@ -1006,6 +1006,433 @@ Display product thumbnails or user avatars:
 </style>
 ```
 
+## Image Galleries & Carousels
+
+### Photo Carousel with Thumbnails
+
+A primary image viewer with thumbnail navigation strip, based on the iOS inventory app pattern:
+
+```html
+<div class="gallery-section">
+  <!-- Main Carousel -->
+  <div class="photo-carousel">
+    <div class="carousel-container">
+      <img src="/photo-1.jpg" alt="Product view 1" class="carousel-image" />
+      
+      <!-- Gradient overlay for controls -->
+      <div class="carousel-gradient"></div>
+      
+      <!-- Page indicator dots -->
+      <div class="carousel-indicators">
+        <span class="indicator active"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+        <span class="indicator"></span>
+      </div>
+      
+      <!-- Full screen button -->
+      <button class="carousel-fullscreen-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+          <path d="M2 2h4v2H4v2H2V2zm0 8v4h4v-2H4v-2H2zm12 4h-4v-2h2v-2h2v4zm0-12v4h-2V4h-2V2h4z"/>
+        </svg>
+        Full Screen
+      </button>
+      
+      <!-- Photo counter -->
+      <div class="carousel-counter">
+        <span class="counter-text">1 of 4 photos</span>
+        <div class="counter-actions">
+          <button class="counter-btn">
+            <svg width="16" height="16"><!-- grid icon --></svg>
+            View Gallery
+          </button>
+          <button class="counter-btn">
+            <svg width="16" height="16"><!-- plus icon --></svg>
+            Add Photos
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Thumbnail Strip -->
+  <div class="thumbnail-section">
+    <label class="thumbnail-label">Preview deck</label>
+    <div class="thumbnail-strip">
+      <!-- Hero thumbnail (larger) -->
+      <button class="thumbnail thumbnail-hero active">
+        <img src="/photo-1.jpg" alt="Photo 1" />
+        <div class="thumbnail-overlay">
+          <div class="thumbnail-meta">
+            <span class="thumbnail-title">Photo 1</span>
+            <span class="thumbnail-subtitle">Hero image</span>
+          </div>
+        </div>
+      </button>
+      
+      <!-- Regular thumbnails -->
+      <button class="thumbnail">
+        <img src="/photo-2.jpg" alt="Photo 2" />
+      </button>
+      <button class="thumbnail">
+        <img src="/photo-3.jpg" alt="Photo 3" />
+      </button>
+      <button class="thumbnail">
+        <img src="/photo-4.jpg" alt="Photo 4" />
+      </button>
+      
+      <!-- Add more button -->
+      <button class="thumbnail thumbnail-add">
+        <svg width="20" height="20"><!-- plus icon --></svg>
+        <span>Add</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<style>
+.gallery-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Carousel */
+.photo-carousel {
+  width: 100%;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F8FAFC;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 4px;
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s;
+}
+
+.indicator.active {
+  background: #4F46E5;
+}
+
+.carousel-fullscreen-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.carousel-fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-counter {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.counter-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.counter-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4F46E5;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Thumbnail Strip */
+.thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.thumbnail-label {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.thumbnail-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.thumbnail {
+  position: relative;
+  flex-shrink: 0;
+  width: 80px;
+  height: 120px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F1F5F9;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.thumbnail:hover {
+  border-color: #CBD5E1;
+}
+
+.thumbnail.active {
+  border-color: #4F46E5;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.15);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hero thumbnail (larger) */
+.thumbnail-hero {
+  width: 180px;
+  height: 120px;
+}
+
+.thumbnail-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65));
+}
+
+.thumbnail-meta {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.thumbnail-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.thumbnail-subtitle {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.thumbnail-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4F46E5;
+  background: #F8FAFC;
+}
+
+.thumbnail-add:hover {
+  background: #F1F5F9;
+  border-color: #4F46E5;
+}
+
+/* Dark mode */
+.dark-theme .carousel-container {
+  background: #1E293B;
+}
+
+.dark-theme .thumbnail {
+  background: #334155;
+  border-color: #475569;
+}
+
+.dark-theme .thumbnail.active {
+  border-color: #818CF8;
+}
+
+.dark-theme .thumbnail-add {
+  background: #1E293B;
+  color: #818CF8;
+}
+</style>
+```
+
+### Grid Gallery
+
+For viewing all photos in a grid layout:
+
+```html
+<div class="grid-gallery">
+  <div class="gallery-grid">
+    <button class="gallery-tile">
+      <img src="/photo-1.jpg" alt="Photo 1" />
+    </button>
+    <button class="gallery-tile">
+      <img src="/photo-2.jpg" alt="Photo 2" />
+    </button>
+    <button class="gallery-tile">
+      <img src="/photo-3.jpg" alt="Photo 3" />
+    </button>
+    <button class="gallery-tile">
+      <img src="/photo-4.jpg" alt="Photo 4" />
+    </button>
+    <button class="gallery-tile">
+      <img src="/photo-5.jpg" alt="Photo 5" />
+    </button>
+    <button class="gallery-tile">
+      <img src="/photo-6.jpg" alt="Photo 6" />
+    </button>
+  </div>
+</div>
+
+<style>
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.gallery-tile {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #F1F5F9;
+  border: 1px solid #E2E8F0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gallery-tile:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive grid */
+@media (min-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Dark mode */
+.dark-theme .gallery-tile {
+  background: #334155;
+  border-color: #475569;
+}
+</style>
+```
+
+**Gallery Guidelines:**
+
+**Carousel Pattern:**
+- Main image: 280px height, 16px border radius
+- Gradient overlay: 110px height, `rgba(0, 0, 0, 0.3)`
+- Page indicators: 6px circles, brand primary for active
+- Counter: 13px font, slate-500 color
+- Full screen button: Capsule shape, 60% black background
+
+**Thumbnail Strip:**
+- Hero thumbnail: 180×120px (active photo)
+- Regular thumbnails: 80×120px
+- Border: 2px, brand primary when active
+- Overlay: Gradient with photo number and label
+- Spacing: 12px gap, horizontal scroll
+- Add button: Same size, centered icon + label
+
+**Grid Gallery:**
+- Responsive columns: 2 (mobile), 3 (tablet+)
+- Tiles: 1:1 aspect ratio, 12px radius
+- Hover: 1.02 scale + shadow
+- Gap: 12px between tiles
+
+**Loading States:**
+- Empty state: Dashed border, centered icon
+- Loading: Circular progress, brand primary
+- Failed: Photo icon, tertiary text
+
+**iOS Specific:**
+- Use `aspectRatio(1, contentMode: .fit)` for tiles
+- `TabView` with `.page` style for carousel
+- Enable swipe gestures with drag detection
+- Support full-screen `.fullScreenCover`
+
 ## Tags
 
 ```html

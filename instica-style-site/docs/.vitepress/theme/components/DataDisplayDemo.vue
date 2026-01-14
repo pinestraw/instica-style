@@ -135,7 +135,65 @@
           </table>
         </div>
       </div>
-
+      <!-- Image Gallery -->>
+      <div class="demo-section">
+        <h4>Image Gallery with Carousel</h4>
+        
+        <!-- Main Carousel -->
+        <div class="photo-carousel">
+          <div class="carousel-container">
+            <img :src="`https://via.placeholder.com/400x280/4F46E5/FFFFFF?text=Photo+${activeGalleryIndex + 1}`" :alt="`Photo ${activeGalleryIndex + 1}`" class="carousel-image" />
+            
+            <div class="carousel-gradient"></div>
+            
+            <div class="carousel-indicators">
+              <span v-for="i in 4" :key="i" class="indicator" :class="{ active: activeGalleryIndex === i - 1 }"></span>
+            </div>
+            
+            <button class="carousel-fullscreen-btn">
+              ⛶ Full Screen
+            </button>
+          </div>
+          
+          <div class="carousel-counter">
+            <span class="counter-text">{{ activeGalleryIndex + 1 }} of 4 photos</span>
+            <div class="counter-actions">
+              <button class="counter-btn">⊞ View Gallery</button>
+              <button class="counter-btn">+ Add Photos</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Thumbnail Strip -->
+        <div class="thumbnail-section">
+          <label class="thumbnail-label">Preview deck</label>
+          <div class="thumbnail-strip">
+            <button 
+              v-for="i in 4" 
+              :key="i"
+              class="thumbnail"
+              :class="{ 
+                'thumbnail-hero': i === 1,
+                active: activeGalleryIndex === i - 1 
+              }"
+              @click="activeGalleryIndex = i - 1"
+            >
+              <img :src="`https://via.placeholder.com/${i === 1 ? '180' : '80'}x120/4F46E5/FFFFFF?text=${i}`" :alt="`Photo ${i}`" />
+              <div v-if="i === 1" class="thumbnail-overlay">
+                <div class="thumbnail-meta">
+                  <span class="thumbnail-title">Photo {{ i }}</span>
+                  <span class="thumbnail-subtitle">Hero image</span>
+                </div>
+              </div>
+            </button>
+            
+            <button class="thumbnail thumbnail-add">
+              <span class="add-icon">+</span>
+              <span class="add-label">Add</span>
+            </button>
+          </div>
+        </div>
+      </div>
       <!-- Badges -->
       <div class="demo-section">
         <h4>Status Badges</h4>
@@ -194,6 +252,8 @@
 import { ref } from 'vue'
 
 const isDark = ref(false)
+const activeGalleryIndex = ref(0)
+
 const toggleTheme = () => {
   isDark.value = !isDark.value
 }
@@ -367,6 +427,266 @@ const toggleTheme = () => {
 
 .dark-theme .table-thumb {
   background: #334155;
+}
+
+/* Gallery Carousel */
+.photo-carousel {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F8FAFC;
+}
+
+.dark-theme .carousel-container {
+  background: #1E293B;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-gradient {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+  pointer-events: none;
+}
+
+.carousel-indicators {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  gap: 4px;
+  z-index: 2;
+}
+
+.indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background 0.2s;
+}
+
+.indicator.active {
+  background: #4F46E5;
+}
+
+.carousel-fullscreen-btn {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+  z-index: 2;
+}
+
+.carousel-fullscreen-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 4px;
+  font-size: 13px;
+  color: #64748B;
+}
+
+.dark-theme .carousel-counter {
+  color: #94A3B8;
+}
+
+.counter-text {
+  font-size: 13px;
+}
+
+.counter-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.counter-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4F46E5;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.dark-theme .counter-btn {
+  color: #818CF8;
+}
+
+.counter-btn:hover {
+  opacity: 0.8;
+}
+
+/* Thumbnail Strip */
+.thumbnail-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.thumbnail-label {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.dark-theme .thumbnail-label {
+  color: #94A3B8;
+}
+
+.thumbnail-strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.thumbnail {
+  position: relative;
+  flex-shrink: 0;
+  width: 80px;
+  height: 120px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #F1F5F9;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 0;
+}
+
+.dark-theme .thumbnail {
+  background: #334155;
+}
+
+.thumbnail:hover {
+  border-color: #CBD5E1;
+}
+
+.dark-theme .thumbnail:hover {
+  border-color: #64748B;
+}
+
+.thumbnail.active {
+  border-color: #4F46E5;
+  box-shadow: 0 12px 24px rgba(79, 70, 229, 0.15);
+}
+
+.dark-theme .thumbnail.active {
+  border-color: #818CF8;
+  box-shadow: 0 12px 24px rgba(129, 140, 248, 0.2);
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail-hero {
+  width: 180px;
+  height: 120px;
+}
+
+.thumbnail-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.65));
+}
+
+.thumbnail-meta {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.thumbnail-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: white;
+}
+
+.thumbnail-subtitle {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.thumbnail-add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #4F46E5;
+  background: #F8FAFC;
+}
+
+.dark-theme .thumbnail-add {
+  background: #1E293B;
+  color: #818CF8;
+}
+
+.thumbnail-add:hover {
+  background: #F1F5F9;
+  border-color: #4F46E5;
+}
+
+.dark-theme .thumbnail-add:hover {
+  background: #334155;
+  border-color: #818CF8;
+}
+
+.add-icon {
+  font-size: 20px;
+}
+
+.add-label {
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .badge-row {
