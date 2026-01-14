@@ -53,6 +53,12 @@ export default defineConfig({
 					]
 				},
 				{
+					text: 'Platform-Specific',
+					items: [
+						{ text: 'Mobile Components (iOS)', link: '/guide/mobile-ios' }
+					]
+				},
+				{
 					text: 'Guidelines',
 					items: [
 						{ text: 'Accessibility', link: '/guide/accessibility' },
