@@ -352,7 +352,8 @@ const toggleTheme = () => {
 }
 
 .dark-theme .data-table th {
-  color: #EDE3D4;
+  color: #F5EFE0;
+  font-weight: 600;
   border-bottom-color: rgba(148, 163, 184, 0.18);
 }
 
