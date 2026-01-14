@@ -3,6 +3,120 @@ title: Data Display
 outline: deep
 ---
 
+<style scoped>
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  background: white;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table thead {
+  background: #F8FAFC;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748B;
+}
+
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #F1F5F9;
+  color: #334155;
+}
+
+.table tbody tr:hover {
+  background: #FAFBFC;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.badge-success {
+  background: #DCFCE7;
+  color: #166534;
+}
+
+.badge-warning {
+  background: #FEF3C7;
+  color: #92400E;
+}
+
+.badge-error {
+  background: #FEE2E2;
+  color: #991B1B;
+}
+
+.badge-info {
+  background: #DBEAFE;
+  color: #1E40AF;
+}
+
+.card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0F172A;
+  margin: 0 0 8px 0;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #64748B;
+  margin: 0 0 16px 0;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+  border-top: 1px solid #F1F5F9;
+}
+
+.component-example {
+  padding: 32px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 # Data Display
 
 Data display components present information clearly and enable users to scan, understand, and act on content efficiently.
@@ -10,6 +124,45 @@ Data display components present information clearly and enable users to scan, un
 ## Tables
 
 ### Basic Table
+
+<div class="component-example">
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>SKU</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vintage Camera</td>
+          <td>CAM-001</td>
+          <td>5</td>
+          <td>$249.99</td>
+          <td><span class="badge badge-success">Active</span></td>
+        </tr>
+        <tr>
+          <td>Leather Bag</td>
+          <td>BAG-045</td>
+          <td>0</td>
+          <td>$89.99</td>
+          <td><span class="badge badge-warning">Out of Stock</span></td>
+        </tr>
+        <tr>
+          <td>Wooden Desk</td>
+          <td>DESK-112</td>
+          <td>3</td>
+          <td>$399.00</td>
+          <td><span class="badge badge-success">Active</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
 
 ```html
 <div class="table-container">
@@ -536,6 +689,15 @@ Data display components present information clearly and enable users to scan, un
 ```
 
 ## Badges
+
+<div class="component-example">
+  <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+    <span class="badge badge-success">Active</span>
+    <span class="badge badge-warning">Pending</span>
+    <span class="badge badge-error">Error</span>
+    <span class="badge badge-info">Processing</span>
+  </div>
+</div>
 
 ```html
 <span class="badge badge-primary">New</span>

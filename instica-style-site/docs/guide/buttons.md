@@ -3,6 +3,97 @@ title: Buttons & Actions
 outline: deep
 ---
 
+<style scoped>
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: #4F46E5;
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background: #4338CA;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
+.btn-secondary {
+  background: #F8FAFC;
+  color: #334155;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-secondary:hover {
+  background: #F1F5F9;
+  border-color: #CBD5E1;
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: #64748B;
+  border: none;
+}
+
+.btn-tertiary:hover {
+  background: #F8FAFC;
+  color: #334155;
+}
+
+.btn-destructive {
+  background: #EF4444;
+  color: #FFFFFF;
+}
+
+.btn-destructive:hover {
+  background: #DC2626;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.btn-sm {
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.btn-lg {
+  padding: 16px 32px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-group {
+  display: inline-flex;
+  gap: 12px;
+}
+
+.component-example {
+  padding: 32px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 # Buttons & Actions
 
 Buttons are the primary way users take action. They must be clear, accessible, and provide appropriate feedback for every interaction.
@@ -12,6 +103,10 @@ Buttons are the primary way users take action. They must be clear, accessible, a
 ### Primary Button
 
 Used for the main action on a page or section.
+
+<div class="component-example">
+  <button class="btn btn-primary">Create Listing</button>
+</div>
 
 ```html
 <button class="btn btn-primary">Create Listing</button>
@@ -60,6 +155,10 @@ Used for the main action on a page or section.
 
 For secondary actions or when multiple buttons appear together.
 
+<div class="component-example">
+  <button class="btn btn-secondary">Save Draft</button>
+</div>
+
 ```html
 <button class="btn btn-secondary">Save Draft</button>
 
@@ -90,6 +189,10 @@ For secondary actions or when multiple buttons appear together.
 
 For low-emphasis actions that don't need visual weight.
 
+<div class="component-example">
+  <button class="btn btn-tertiary">Cancel</button>
+</div>
+
 ```html
 <button class="btn btn-tertiary">Cancel</button>
 
@@ -114,6 +217,10 @@ For low-emphasis actions that don't need visual weight.
 ### Destructive Button
 
 For dangerous or irreversible actions like delete.
+
+<div class="component-example">
+  <button class="btn btn-destructive">Delete Item</button>
+</div>
 
 ```html
 <button class="btn btn-destructive">Delete Item</button>
@@ -143,6 +250,14 @@ For dangerous or irreversible actions like delete.
 
 ## Button Sizes
 
+<div class="component-example">
+  <div class="btn-group">
+    <button class="btn btn-primary btn-sm">Small</button>
+    <button class="btn btn-primary">Medium (Default)</button>
+    <button class="btn btn-primary btn-lg">Large</button>
+  </div>
+</div>
+
 ```html
 <button class="btn btn-primary btn-sm">Small</button>
 <button class="btn btn-primary">Medium (Default)</button>
@@ -166,6 +281,12 @@ For dangerous or irreversible actions like delete.
 ## Button States
 
 ### Disabled
+
+<div class="component-example">
+  <button class="btn btn-primary" disabled>
+    Create Listing
+  </button>
+</div>
 
 ```html
 <button class="btn btn-primary" disabled>

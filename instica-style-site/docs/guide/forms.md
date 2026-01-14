@@ -3,6 +3,115 @@ title: Forms & Inputs
 outline: deep
 ---
 
+<style scoped>
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+}
+
+.form-input {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  background: #FFFFFF;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-helper {
+  font-size: 13px;
+  color: #64748B;
+}
+
+.form-field--error .form-input {
+  border-color: #DC2626;
+}
+
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #DC2626;
+}
+
+.form-field--success .form-input {
+  border-color: #16A34A;
+}
+
+.form-success {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #16A34A;
+}
+
+.form-textarea {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+}
+
+.form-textarea:focus {
+  outline: none;
+  border-color: #4F46E5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.form-select {
+  padding: 12px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.form-checkbox {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #CBD5E1;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-checkbox:checked {
+  background: #4F46E5;
+  border-color: #4F46E5;
+}
+
+.component-example {
+  padding: 32px;
+  background: #F8FAFC;
+  border-radius: 12px;
+  margin: 24px 0;
+  border: 1px solid #E2E8F0;
+}
+</style>
+
 # Forms & Inputs
 
 Form components are the primary interface for user data collection. All form elements must be accessible, provide clear feedback, and maintain visual consistency.
@@ -10,6 +119,19 @@ Form components are the primary interface for user data collection. All form ele
 ## Text Inputs
 
 ### Standard Text Input
+
+<div class="component-example">
+  <div class="form-field">
+    <label for="product-name" class="form-label">Product Name</label>
+    <input 
+      type="text" 
+      id="product-name" 
+      class="form-input"
+      placeholder="Enter product name"
+    />
+    <span class="form-helper">Used in listings and reports</span>
+  </div>
+</div>
 
 ```html
 <div class="form-field">
@@ -62,6 +184,22 @@ Form components are the primary interface for user data collection. All form ele
 ### Input States
 
 **Error State**
+
+<div class="component-example">
+  <div class="form-field form-field--error">
+    <label for="email" class="form-label">Email Address</label>
+    <input 
+      type="email" 
+      id="email" 
+      class="form-input"
+      value="invalid-email"
+      aria-invalid="true"
+      aria-describedby="email-error"
+    />
+    <span id="email-error" class="form-error">⚠ Please enter a valid email address</span>
+  </div>
+</div>
+
 ```html
 <div class="form-field form-field--error">
   <label for="email" class="form-label">Email Address</label>
@@ -100,6 +238,20 @@ Form components are the primary interface for user data collection. All form ele
 ```
 
 **Success State**
+
+<div class="component-example">
+  <div class="form-field form-field--success">
+    <label for="username" class="form-label">Username</label>
+    <input 
+      type="text" 
+      id="username" 
+      class="form-input"
+      value="john_seller"
+    />
+    <span class="form-success">✓ Username is available</span>
+  </div>
+</div>
+
 ```html
 <div class="form-field form-field--success">
   <label for="username" class="form-label">Username</label>
@@ -153,6 +305,19 @@ Form components are the primary interface for user data collection. All form ele
 
 ## Textarea
 
+<div class="component-example">
+  <div class="form-field">
+    <label for="description" class="form-label">Description</label>
+    <textarea 
+      id="description" 
+      class="form-textarea"
+      rows="4"
+      placeholder="Describe your item in detail..."
+    ></textarea>
+    <span class="form-helper">Include condition, features, and specifications</span>
+  </div>
+</div>
+
 ```html
 <div class="form-field">
   <label for="description" class="form-label">Description</label>
@@ -187,6 +352,19 @@ Form components are the primary interface for user data collection. All form ele
 ```
 
 ## Select Dropdown
+
+<div class="component-example">
+  <div class="form-field">
+    <label for="category" class="form-label">Category</label>
+    <select id="category" class="form-select">
+      <option value="">Select a category</option>
+      <option value="electronics">Electronics</option>
+      <option value="clothing">Clothing</option>
+      <option value="books">Books</option>
+      <option value="home">Home & Garden</option>
+    </select>
+  </div>
+</div>
 
 ```html
 <div class="form-field">
