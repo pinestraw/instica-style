@@ -42,8 +42,21 @@ export default defineConfig({
 					text: 'Components',
 					items: [
 						{ text: 'UI Library', link: '/guide/components' },
+						{ text: 'Forms & Inputs', link: '/guide/forms' },
+						{ text: 'Buttons & Actions', link: '/guide/buttons' },
+						{ text: 'Navigation', link: '/guide/navigation' },
+						{ text: 'Data Display', link: '/guide/data-display' },
+						{ text: 'Feedback & Overlays', link: '/guide/feedback-overlays' },
+						{ text: 'Layout Patterns', link: '/guide/layout' },
 						{ text: 'Authentication & Login', link: '/guide/authentication' },
 						{ text: 'Error States & Feedback', link: '/guide/error-states' }
+					]
+				},
+				{
+					text: 'Guidelines',
+					items: [
+						{ text: 'Accessibility', link: '/guide/accessibility' },
+						{ text: 'Motion & Animation', link: '/guide/motion' }
 					]
 				}
 			],
