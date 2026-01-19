@@ -10,6 +10,9 @@ export default defineConfig({
 	description: 'Unified design system for Instica surfaces',
 	lang: 'en-US',
 	lastUpdated: true,
+	head: [
+		['link', { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+	],
 	themeConfig: {
 		logo: '/logo.png',
 		nav: [
